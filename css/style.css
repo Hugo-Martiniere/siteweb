@@ -1600,6 +1600,11 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
     z-index: 1;
 }
 
+.contact .contact-intro {
+    font-weight: bold; /* Met le texte en gras */
+	padding-bottom: 30px;
+}
+
 
 .contact .contact-form {
     position: relative;
