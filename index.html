@@ -1,86 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-    <head>
-        <meta charset="utf-8">
-        <title>DevFolio - Developer Portfolio Template</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free Website Template" name="keywords">
-        <meta content="Free Website Template" name="description">
+<head>
+    <meta charset="utf-8">
+    <title data-i18n="title">DevFolio - Portfolio Développeur</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Portfolio Data Scientist" name="keywords">
+    <meta content="Portfolio Data Scientist" name="description">
 
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRYH9BWKW2"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
 
-		  gtag('config', 'G-QRYH9BWKW2');
-		</script>
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
 
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-light navbar-light">
+        <div class="container-fluid">
+            <a href="Hugo_Martiniere.html" class="navbar-brand">DataFolio</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    </head>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="#home" class="nav-item nav-link active" data-i18n="home">Accueil</a>
+                    <a href="#about" class="nav-item nav-link" data-i18n="about">Qui je suis</a>
+                    <a href="#experience" class="nav-item nav-link" data-i18n="experience">Parcours</a>
+                    <a href="#portfolio" class="nav-item nav-link" data-i18n="portfolio">Compétences</a>
+                    <a href="#projets" class="nav-item nav-link" data-i18n="projets">Projets</a>
+                    <a href="#review" class="nav-item nav-link" data-i18n="review">Avis</a>
+                    <a href="#interet" class="nav-item nav-link" data-i18n="interet">Mes intérêts</a>
+                    <a href="#contact" class="nav-item nav-link" data-i18n="contact">Contact</a>
 
-    <body data-spy="scroll" data-target=".navbar" data-offset="51">
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="container-fluid">
-                <a href="Hugo_Martiniere.html" class="navbar-brand">DataFolio</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="#home" class="nav-item nav-link active">Accueil</a>
-                        <a href="#about" class="nav-item nav-link">Qui je suis </a>
-                        <!--<a href="#service" class="nav-item nav-link">Service</a>-->
-                        <a href="#experience" class="nav-item nav-link">Parcours</a>
-                        <a href="#portfolio" class="nav-item nav-link">Compétences</a>
-                        <a href="#projets" class="nav-item nav-link">Projets</a>
-                        <a href="#review" class="nav-item nav-link">Avis</a>
-                        <!--<a href="#team" class="nav-item nav-link">Team</a>-->
-                        <a href="#interet" class="nav-item nav-link">Mes intérêts</a>
-                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <!-- Sélecteur de Langue -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" data-toggle="dropdown">
+                            <img id="languageIcon" src="img/langue/fr_flag.png" width="20px">
+                            <span id="languageDropdownText" data-i18n="language">Langue</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('fr')">
+                                <img src="img/langue/fr_flag.png" width="20px"> Français
+                            </a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('en')">
+                                <img src="img/langue/uk_flag.png" width="20px"> English
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Nav Bar End -->
+    </div>
+    <!-- Nav Bar End -->
 
 
-        <!-- Hero Start -->
+		 <!-- Hero Start -->
 		<div class="hero" id="home">
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="col-sm-12 col-md-6">
 						<div class="hero-content">
 							<div class="hero-text">
-								<p>I'm</p>
-								<h1>Hugo Martinière</h1>
+								<p data-i18n="hero-introduction">Je suis</p>
+								<h1 data-i18n="hero-name">Hugo Martinière</h1>
 								<h2></h2>
-								<div class="typed-text">Data Analyst, Data Scientist, Data Engineer</div>
+								<div class="typed-text" data-i18n="hero-description">Data Analyst, Data Scientist, Data Engineer</div>
 							</div>
 							<div class="hero-btn">
-								
-								<a class="btn" style="margin-bottom:10px" href="#contact" id="scrollToContactBtn">Me contacter</a>
-								<a class="btn" style="margin-bottom:10px" href="img/cv/Hugo_Martiniere_CV.pdf" >📄 Télécharger mon CV</a>
+								<a class="btn" style="margin-bottom:10px" href="#contact" id="scrollToContactBtn" data-i18n="hero-contact-btn">Me contacter</a>
+								<a class="btn" style="margin-bottom:10px" id="cv-link" href="img/cv/Hugo_Martiniere_CV.pdf" data-i18n="hero-download-cv">📄 Télécharger mon CV</a>
 							</div>
 						</div>
 					</div>
@@ -89,9 +91,12 @@
 							<img src="img/Photo_ID.jfif" alt="Hero Image">
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
+		<!-- Hero End -->
+
 		<!-- Ajout du script JavaScript juste avant la balise </body> -->
 		<script>
 			// Cibler le bouton avec l'ID "scrollToContactBtn"
@@ -108,58 +113,54 @@
         <!-- Hero End -->
 
 
-        <!-- About Start -->
-        <div class="about wow fadeInUp" data-wow-delay="0.1s" id="about" style="padding: 50px 0;>
-            <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6">
-                        <div class="about-img">
-                            <img src="img/quijesuis/icons.png" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-content">
-                            <div class="section-header text-left">
-                                <p>À propos de moi</p>
-                                <h2>Étudiant en Data Science</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-                                    Bonjour, je m'appelle Hugo, étudiant en Data Science. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je vous invite à explorer mon site où je partage mes projets, compétences et centres d'intérêt. Bonne visite !
-                                </p>
-                            </div>
-                            <div class="skills">
-                                <div class="skill-name">
-                                    <p>Data Visualisation</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Data Science</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <div class="skill-name">
-                                    <p>Data Engineering</p><p>70%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                                <!--<div class="skill-name">
-                                    <p>Apps Development</p><p>85%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>-->
-                            </div>
-                            <a class="btn" href="#interet"id="scrollTointeretBtn">En savoir plus sur moi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- About Start -->
+		<div class="about wow fadeInUp" data-wow-delay="0.1s" id="about" style="padding: 50px 0;">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="about-img">
+							<img src="img/quijesuis/icons.png" alt="Image">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-content">
+							<div class="section-header text-left">
+								<p data-i18n="about-title">À propos de moi</p>
+								<h2 data-i18n="about-subtitle">Étudiant en Data Science</h2>
+							</div>
+							<div class="about-text">
+								<p data-i18n="about-description">
+									Bonjour, je m'appelle Hugo, étudiant en Data Science. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je vous invite à explorer mon site où je partage mes projets, compétences et centres d'intérêt. Bonne visite !
+								</p>
+							</div>
+							<div class="skills">
+								<div class="skill-name">
+									<p data-i18n="skill-visualisation">Data Visualisation</p><p>85%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<div class="skill-name">
+									<p data-i18n="skill-science">Data Science</p><p>85%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<div class="skill-name">
+									<p data-i18n="skill-engineering">Data Engineering</p><p>70%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+							<a class="btn" href="#interet" id="scrollTointeretBtn" data-i18n="about-more-info">En savoir plus sur moi</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About End -->
+
 		<script>
 			// Cibler le bouton avec l'ID "scrollTointeretBtn"
 			document.querySelector('#scrollTointeretBtn').addEventListener('click', function(e) {
@@ -174,267 +175,269 @@
         <!-- About End -->
         
 
-         <!-- Experience Start -->
-        <div class="experience" id="experience">
-            <div class="container">
-                <header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Parcours Académique</p>
-                    <h2>Formations & Expériences Professionnelles</h2>
-                </header>
-                <div class="timeline">
+		<!-- Experience Start -->
+		<div class="experience" id="experience">
+			<div class="container">
+				<header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+					<p data-i18n="experience-title">Parcours Académique</p>
+					<h2 data-i18n="experience-subtitle">Formations & Expériences Professionnelles</h2>
+				</header>
+				<div class="timeline">
 
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;">
-                            <div class="timeline-date">Septembre 2024 - Jusqu'à présent</div>
-                            <h2>Alternant Data Scientist </h2>
-                            <h4>Société Générale, La Défense, Paris</h4>
+					<div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-1-date">Septembre 2024 - Jusqu'à présent</div>
+							<h2 data-i18n="experience-1-role">Alternant Data Scientist</h2>
+							<h4 data-i18n="experience-1-company">Société Générale, La Défense, Paris</h4>
 							<img src="img/parcours/Logo_societe_general.png" alt="Logo du stade lavallois" style="width:140px; height:auto; position:absolute; top:0px; right:15px;">
-                            <p>
-                                Extraction, analyse de données et modélisation statistique pour soutenir la prise de décision
-                            </p>
-                        </div>
-                    </div>	
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;  margin-left: -50px;">
-                            <div class="timeline-date">2024 - Jusqu'à présent</div>
-                            <h2>Master 2 Science des Données</h2>
-                            <h4>Université Bretagne Sud, UFR SSI, Vannes</h4>
-							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
-                            <p>
-                                Perfectionnement de mes compétences en Data Science et Data Analyse
-                            </p>
-                        </div>
-                    </div>          
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;">
-                            <div class="timeline-date">Janvier 2024 - Mai 2024</div>
-                            <h2>Projet Data Science</h2>
-                            <h4>Université Bretagne Sud, UFR SSI, Vannes</h4>
-							<img src="img/parcours/Stade_Lavallois.png" alt="Logo du stade lavallois" style="width:60px; height:auto; position:absolute; top:5px; right:15px;">
-                            <p>
-                                Analyse et comparaison des critères physiques de réussite entre la ligue 1 et la ligue 2 pour le Stade Lavallois FC	
+							<p data-i18n="experience-1-description">
+								Extraction, analyse de données et modélisation statistique pour soutenir la prise de décision
+							</p>
+						</div>
+					</div>
 
-                            </p>
-                        </div>
-                    </div>		
 					<div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
-                            <div class="timeline-date">2023 - 2024</div>
-                            <h2>Master 1 Data Science et Modélisation Statistique</h2>
-                            <h4>Université Bretagne Sud, UFR SSI, Vannes</h4>
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
+							<div class="timeline-date" data-i18n="experience-2-date">2024 - Jusqu'à présent</div>
+							<h2 data-i18n="experience-2-role">Master 2 Science des Données</h2>
+							<h4 data-i18n="experience-2-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
 							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
-                            <p>
-                                Spécialisation dans la modélisation statistique, avec un focus sur l'application des méthodes avancées pour analyser et interpréter les données
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;" >
-                            <div class="timeline-date">2022 - 2023</div>
-							<!--<img src="img/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; display: block; margin-bottom: 10px;">-->
+							<p data-i18n="experience-2-description">
+								Perfectionnement de mes compétences en Data Science et Data Analyse
+							</p>
+						</div>
+					</div>
 
-                            <h2>Licence Mathématiques, Informatique, </h2>
-							<h2>  Statistique parcours Statistique</h2>
-                            <h4>Université Bretagne Sud, UFR SSI, Vannes</h4>
+					<div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-3-date">Janvier 2024 - Mai 2024</div>
+							<h2 data-i18n="experience-3-role">Projet Data Science</h2>
+							<h4 data-i18n="experience-3-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/Stade_Lavallois.png" alt="Logo du Stade Lavallois" style="width:60px; height:auto; position:absolute; top:5px; right:15px;">
+							<p data-i18n="experience-3-description">
+								Analyse et comparaison des critères physiques de réussite entre la Ligue 1 et la Ligue 2 pour le Stade Lavallois FC
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
+							<div class="timeline-date" data-i18n="experience-4-date">2023 - 2024</div>
+							<h2 data-i18n="experience-4-role">Master 1 Data Science et Modélisation Statistique</h2>
+							<h4 data-i18n="experience-4-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
 							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
-                            <p>
-                                Approfondissement de mes compétences en théorie des statistiques et renforcement de mes connaissances en informatique, notamment pour la gestion et l'optimisation des bases de données
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;  margin-left: -50px;">
-                            <div class="timeline-date">Avril 2022 - Juin 2022</div>
-                            <h2>Stagiaire chargé d'études statistique</h2>
-                            <h4>L'APRAS, Rennes</h4>
+							<p data-i18n="experience-4-description">
+								Spécialisation dans la modélisation statistique, avec un focus sur l'application des méthodes avancées pour analyser et interpréter les données
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-5-date">2022 - 2023</div>
+							<h2 data-i18n="experience-5-role">Licence Mathématiques, Informatique, Statistique parcours Statistique</h2>
+							<h4 data-i18n="experience-5-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
+							<p data-i18n="experience-5-description">
+								Approfondissement de mes compétences en théorie des statistiques et renforcement de mes connaissances en informatique, notamment pour la gestion et l'optimisation des bases de données
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item left wow slideInLeft" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
+							<div class="timeline-date" data-i18n="experience-6-date">Avril 2022 - Juin 2022</div>
+							<h2 data-i18n="experience-6-role">Stagiaire chargé d'études statistiques</h2>
+							<h4 data-i18n="experience-6-company">L'APRAS, Rennes</h4>
 							<img src="img/parcours/apras.png" alt="Logo de l'APRAS" style="width:120px; height:auto; position:absolute; top:5px; right:5px;">
-                            <p>
-                                Création de différents indices de vulnérabilité sur l’agglomération Rennaise, création de tableaux de bord
-                            </p>
-                        </div>
-                    </div>
-                    <div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
-                        <div class="timeline-text" style="width: 580px; padding: 20px;">
-                            <div class="timeline-date">2020 - 2022</div>
-                            <h2> DUT STID (Statistique et Informatique Décisionnelle)</h2>
-                            <h4>IUT Vannes</h4>
-							<!-- Ajout de l'image ici -->
+							<p data-i18n="experience-6-description">
+								Création de différents indices de vulnérabilité sur l’agglomération Rennaise, création de tableaux de bord
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item right wow slideInRight" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-7-date">2020 - 2022</div>
+							<h2 data-i18n="experience-7-role">DUT STID (Statistique et Informatique Décisionnelle)</h2>
+							<h4 data-i18n="experience-7-university">IUT Vannes</h4>
 							<img src="img/parcours/IUT_png.png" alt="Logo de l'IUT Vannes" style="width:120px; height:auto; position:absolute; top:5px; right:0px;">
-                            <p>
-                                Découverte du domaine de la data, apprentissage de la gestion des bases de données et de la data visualisation
+							<p data-i18n="experience-7-description">
+								Découverte du domaine de la data, apprentissage de la gestion des bases de données et de la data visualisation
+							</p>
+						</div>
+					</div>
 
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Job Experience End -->
-        
-        
-        <!-- Portfolio Start -->
-        <div class="portfolio" id="portfolio">
-            <div class="container">
-                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-                    <p>Mon Expertise Technique</p>
-                    <h2>Langages & Logiciels</h2>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul id="portfolio-filter">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-1">Data Visualisation</li>
-                            <li data-filter=".filter-2">Langage de programmation</li>
-                            <li data-filter=".filter-3">Logiciel</li>
-							<li data-filter=".filter-4">Data Engineering</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row portfolio-container">
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+				</div>
+			</div>
+		</div>
+		<!-- Job Experience End -->
 
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Power_BI_400_300.jpg" alt="Image" style=" padding: 0px;"><!--style="width:300px; height:300px; object-fit: cover;"-->
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Power BI</h3>
-                                <a class="btn" href="img/Power_BI_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Python_400_300.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Python</h3>
-                                <a class="btn" href="img/Python_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Rstudio_400_300.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>R Studio</h3>
-                                <a class="btn" href="img/Rstudio_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+        
+		 <!-- Portfolio Start -->
+		<div class="portfolio" id="portfolio">
+			<div class="container">
+				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+					<p data-i18n="portfolio-expertise">Mon Expertise Technique</p>
+					<h2 data-i18n="portfolio-title">Langages & Logiciels</h2>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<ul id="portfolio-filter">
+							<li data-filter="*" class="filter-active" data-i18n="portfolio-all">Tout</li>
+							<li data-filter=".filter-1" data-i18n="portfolio-filter-1">Data Visualisation</li>
+							<li data-filter=".filter-2" data-i18n="portfolio-filter-2">Langage de programmation</li>
+							<li data-filter=".filter-3" data-i18n="portfolio-filter-3">Logiciel</li>
+							<li data-filter=".filter-4" data-i18n="portfolio-filter-4">Data Engineering</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row portfolio-container">
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 						<div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Tableau_400_300.jpg" alt="Image" style=" padding: 0px; ">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Tableau</h3>
-                                <a class="btn" href="img/Tableau_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/SQL_400_300.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>SQL</h3>
-                                <a class="btn" href="img/SQL_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+							<div class="portfolio-img">
+								<img src="img/skill/Power_BI_400_300.jpg" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Power BI</h3>
+								<a class="btn" href="img/Power_BI_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Python_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Python</h3>
+								<a class="btn" href="img/Python_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Rstudio_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>R Studio</h3>
+								<a class="btn" href="img/Rstudio_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Tableau_400_300.jpg" alt="Image" style=" padding: 0px; ">
+							</div>
+							<div class="portfolio-text">
+								<h3>Tableau</h3>
+								<a class="btn" href="img/Tableau_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/SPARK_400_300.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Spark</h3>
-                                <a class="btn" href="img/SPARK_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/SAS_400_300.jpg" alt="Image">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>SAS</h3>
-                                <a class="btn" href="img/SAS_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SQL_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>SQL</h3>
+								<a class="btn" href="img/SQL_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SPARK_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Spark</h3>
+								<a class="btn" href="img/SPARK_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SAS_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>SAS</h3>
+								<a class="btn" href="img/SAS_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Shiny_400_300.png" alt="Image" style=" padding: 0px;">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Shiny</h3>
-                                <a class="btn" href="img/Shiny_400_300.png" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Shiny_400_300.png" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Shiny</h3>
+								<a class="btn" href="img/Shiny_400_300.png" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4 wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/ORACLE_400_300.jpg" alt="Image" style=" padding: 0px;">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Oracle</h3>
-                                <a class="btn" href="img/ORACLE_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/ORACLE_400_300.jpg" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Oracle</h3>
+								<a class="btn" href="img/ORACLE_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-4  wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Talend_400_300.jpg" alt="Image" style=" padding: 0px;">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Talend</h3>
-                                <a class="btn" href="img/Talend_400_300.jpg" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Talend_400_300.jpg" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Talend</h3>
+								<a class="btn" href="img/Talend_400_300.jpg" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/Hive_400_300.png" alt="Image" style=" padding: 0px;">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Hive</h3>
-                                <a class="btn" href="img/Hive_400_300.png" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Hive_400_300.png" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Hive</h3>
+								<a class="btn" href="img/Hive_400_300.png" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-img">
-                                <img src="img/skill/dataiku_400_300.png" alt="Image" style=" padding: 0px;">
-                            </div>
-                            <div class="portfolio-text">
-                                <h3>Dataiku</h3>
-                                <a class="btn" href="img/dataiku_400_300.png" data-lightbox="portfolio">+</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio End -->
-		
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/dataiku_400_300.png" alt="Image" style=" padding: 0px;">
+							</div>
+							<div class="portfolio-text">
+								<h3>Dataiku</h3>
+								<a class="btn" href="img/dataiku_400_300.png" data-lightbox="portfolio">+</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Portfolio End -->
+
+
+				
 		<!-- Project start-->
 		<div class="projects-section" id="projets" style="background-color: #f8f9fa; padding: 50px 0;">
 			<div class="container">
 				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-					<p>Projets</p>
-					<h2>Découvrez mes réalisations</h2>
+					<p data-i18n="projects-title">Projets</p>
+					<h2 data-i18n="projects-subtitle">Découvrez mes réalisations</h2>
 				</div>
 				<div id="projectsCarousel" class="carousel slide" data-ride="carousel">
 					<!-- Points de navigation sous forme de ronds -->
@@ -452,18 +455,17 @@
 						<div class="carousel-item">
 							<div class="row align-items-center">
 								<div class="col-lg-6">
-									<div class="project-img" >
+									<div class="project-img">
 										<img src="img/projet/ligues_400_300.png" alt="Projet 1" class="img-fluid" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px;">
-										
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title">Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?</h3>
-										<p>
+										<h3 id="spec-title" data-i18n="project-1-title">Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?</h3>
+										<p data-i18n="project-1-description">
 											Dans cette étude, réalisée en collaboration avec le Stade Lavallois FC, mon objectif était d’analyser les différences athlétiques entre les deux premières divisions du football français, la Ligue 1 et la Ligue 2. De plus, j’ai cherché à établir un lien entre les performances athlétiques des équipes et leur classement en fin de saison.
 										</p>
-										<p><strong>Logiciels utilisés :</strong> Python, R</p>
+										<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python, R</p>
 									</div>
 								</div>
 							</div>
@@ -472,18 +474,17 @@
 						<div class="carousel-item">
 							<div class="row align-items-center">
 								<div class="col-lg-6">
-									<div class="project-img" >
+									<div class="project-img">
 										<img src="img/projet/elmy.png" alt="Projet 2" class="img-fluid" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px;">
-										
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title">Prédiction de prix de l'électricité :</h3>
-										<p>
+										<h3 id="spec-title" data-i18n="project-2-title">Prédiction de prix de l'électricité :</h3>
+										<p data-i18n="project-2-description">
 											Modélisation de l'écart de prix entre le marché Intraday et le marché SPOT (marché de l'électricité où les transactions s'effectuent pour une livraison le jour suivant) afin de prévoir son évolution à la hausse ou à la baisse pour les jours à venir.
 										</p>
-										<p><strong>Logiciels utilisés :</strong> Python </p>
+										<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python </p>
 									</div>
 								</div>
 							</div>
@@ -498,13 +499,12 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="project-text" style="margin-left: -70px; margin-right:100px;">
-										<h3 id="spec-title">Hospitalisation : Classique ou Ambulatoire ?</h3>
-										<p>
+										<h3 id="spec-title" data-i18n="project-3-title">Hospitalisation : Classique ou Ambulatoire ?</h3>
+										<p data-i18n="project-3-description">
 											Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique, afin de déterminer si le mode ambulatoire présentait un risque accru.
 										</p>
 										<div class="info-container">
-											<p><strong>Logiciels utilisés :</strong> SAS</p>
-											<!--<a class="btn_read_more" href="img/Rapport_ambuvasc.pdf">Read More <i class="fa fa-angle-right"></i> </a>-->
+											<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
 										</div>
 									</div>
 								</div>
@@ -521,19 +521,18 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title">Modélisation des Prix d'une Assurance Automobile</h3>
-										<p>
+										<h3 id="spec-title" data-i18n="project-4-title">Modélisation des Prix d'une Assurance Automobile</h3>
+										<p data-i18n="project-4-description">
 											Modélisation des tarifs de deux garanties d'assurance : la couverture des dommages, qui protège contre les pertes matérielles dues aux sinistres, et la garantie bris de glace, qui couvre les dommages aux vitrages et surfaces en verre, dans le but de mieux comprendre les critères qui influencent la fixation de ces tarifs.
 										</p>
 										<div class="info-container">
-											<p><strong>Logiciels utilisés :</strong> SAS</p>
-											<!--<a class="btn_read_more" href="img/Rapport_ambuvasc.pdf">Read More <i class="fa fa-angle-right"></i> </a>-->
+											<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!-- Cinquieme Projet -->
+						<!-- Cinquième Projet -->
 						<div class="carousel-item">
 							<div class="row align-items-center">
 								<div class="col-lg-6">
@@ -543,16 +542,15 @@
 								</div>
 								<div class="col-lg-6">
 									<div class="project-text" style="margin-left: -70px; margin-right: 100px;">
-										<h3 id="spec-title">Réussir un Pénalty : Les Facteurs Clés</h3>
-										<p>
+										<h3 id="spec-title" data-i18n="project-5-title">Réussir un Pénalty : Les Facteurs Clés</h3>
+										<p data-i18n="project-5-description">
 											Dans le cadre de l’analyse des facteurs influençant la réussite des penalties, j'ai comparé les performances des tireurs lors de la saison 2019-2020 des cinq grands championnats européens, en prenant en compte une vingtaine de critères tels que l’identité du tireur, l’enjeu du penalty, la période de jeu, etc., afin de déterminer les éléments ayant un impact significatif sur la réussite des tirs.
 										</p>
-										<p><strong>Logiciels utilisés :</strong> SAS</p>
+										<p><strong data-i18n="used-software">Logiciels utilisés : </strong> SAS</p>
 									</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
 
 					<!-- Contrôles de navigation (flèches inchangées) -->
@@ -584,60 +582,63 @@
 			});
 		</script>
 
- 
 
-        
-        <!-- Testimonial Start -->
-        <div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
-            <div class="container">
-                <div class="testimonial-icon">
-                    <i class="fa fa-quote-left"></i>
-                </div>
-                <div class="owl-carousel testimonials-carousel">
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/review/apras.png" alt="Image" class="resize-image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Poulard Irma & Meurou Gaëlle</h3>
-                            <h4>Réponsable de stage & Tutrice</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/review/IUT_vannes.jpg" alt="Image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Béchet Nicolas</h3>
-                            <h4>Maître de conférences en Informatique</h4>
-                        </div>
-                    </div>
-                    <div class="testimonial-item">
-                        <div class="testimonial-img">
-                            <img src="img/review/SSI_vannes_1000_700.jpg" alt="Image" class="resize-image">
-                        </div>
-                        <div class="testimonial-text">
-                            <p>
-                                Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
-                            </p>
-                            <h3>Septier François</h3>
-                            <h4>Responsable pédagogique / Directeur de site / Ancien professeur</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Testimonial End -->
+		<!-- Testimonial Start -->
+		<div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+			<div class="container">
+				<div class="testimonial-icon">
+					<i class="fa fa-quote-left"></i>
+				</div>
+				<div class="owl-carousel testimonials-carousel" id="testimonial-container">
+					<!-- Avis 1 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/apras.png" alt="Image" class="resize-image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-1-text">
+								Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+							</p>
+							<h3 data-i18n="testimonial-1-name">Poulard Irma & Meurou Gaëlle</h3>
+							<h4 data-i18n="testimonial-1-role">Responsable de stage & Tutrice</h4>
+						</div>
+					</div>
+					<!-- Avis 2 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/IUT_vannes.jpg" alt="Image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-2-text">
+								J'ai eu la responsabilité d'encadrer Hugo Martinière pendant son stage à l'IUT de Vannes. Cette expérience s'est révélée très positive. Il a fait preuve d'un excellent niveau de sérieux et d'autonomie, accomplissant toujours ses tâches avec rigueur. Hugo s'est très bien adapté à son environnement de travail et a abordé ses missions de manière professionnelle. Sa curiosité et son implication ont été notables, lui permettant de progresser dans ses apprentissages. Il a également démontré des qualités relationnelles très appréciables. Je suis convaincu que toutes ses qualités apporteront une contribution très positive à son futur employeur.
+							</p>
+							<h3 data-i18n="testimonial-2-name">Béchet Nicolas</h3>
+							<h4 data-i18n="testimonial-2-role">Maître de conférences en Informatique / Ancien professeur</h4>
+						</div>
+					</div>
+					<!-- Avis 3 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/socgen.jpg" alt="Image" class="resize-image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-3-text">
+								Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+							</p>
+							<h3 data-i18n="testimonial-3-name">Beroldy Carole</h3>
+							<h4 data-i18n="testimonial-3-role">Tutrice alternance</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Testimonial End -->
+
+
 
 
 		<!-- Interet Start -->
-		<div class="about wow fadeInUp" data-wow-delay="0.1s" id="interet" style="margin-top:100px background-color: #f8f9fa; padding: 50px 0;">
+		<div class="about wow fadeInUp" data-wow-delay="0.1s" id="interet" style="margin-top:100px;  padding: 50px 0;">
 			<div class="container-fluid">
 				<div class="row align-items-center">
 					<div class="col-lg-6">
@@ -648,39 +649,38 @@
 					<div class="col-lg-6">
 						<div class="about-content">
 							<div class="section-header text-center wow zoomIn">
-								<p>Ce qui m’anime</p>
-								<h3></h3>
+								<p data-i18n="interet-title">Ce qui m’anime</p>
+								<h3 data-i18n="interet-heading"></h3>
 							</div>
 							<div class="about-text">
-								<h3></h3>
+								<h3 data-i18n="interet-subheading"></h3>
 								<ul>
 									<li style="margin-bottom: 15px;">
-										<strong>Défis :</strong> J’aime me dépasser, que ce soit en apprenant une langue ou en relevant des défis sportifs.
+										<strong data-i18n="interet-challenge">Défis :</strong> <span data-i18n="interet-challenge-text">J’aime me dépasser, que ce soit en apprenant une langue ou en relevant des défis sportifs.</span>
 									</li>
 									<li style="margin-bottom: 15px;">
-										<strong>Sport :</strong> Le football et le badminton, que j’ai pratiqués en club, sont au cœur de ma passion pour le sport.
+										<strong data-i18n="interet-sport">Sport :</strong> <span data-i18n="interet-sport-text">Le football et le badminton, que j’ai pratiqués en club, sont au cœur de ma passion pour le sport.</span>
 									</li>
 									<li style="margin-bottom: 15px;">
-										<strong>Innovation :</strong> Les avancées technologiques, notamment en intelligence artificielle, attisent ma curiosité.
+										<strong data-i18n="interet-innovation">Innovation :</strong> <span data-i18n="interet-innovation-text">Les avancées technologiques, notamment en intelligence artificielle, attisent ma curiosité.</span>
 									</li>
 									<li style="margin-bottom: 15px;">
-										<strong>Voyages :</strong> J’adore explorer de nouveaux horizons, admirer des paysages et découvrir des cultures.
+										<strong data-i18n="interet-travel">Voyages :</strong> <span data-i18n="interet-travel-text">J’adore explorer de nouveaux horizons, admirer des paysages et découvrir des cultures.</span>
 									</li>
 									<li style="margin-bottom: 15px;">
-										<strong>Activités culturelles :</strong> J’apprécie les musées, le cinéma, la lecture et les reportages enrichissants.
+										<strong data-i18n="interet-culture">Activités culturelles :</strong> <span data-i18n="interet-culture-text">J’apprécie les musées, le cinéma, la lecture et les reportages enrichissants.</span>
 									</li>
 								</ul>
-							</div>
-							
+							</div>   
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- Interet End -->
 
-        <!-- Interet End -->
         
-        <!-- Contact Start -->
+		 <!-- Contact Start -->
 		<div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
 			<div class="container-fluid">
 				<div class="container">
@@ -689,30 +689,30 @@
 						<div class="col-md-8">
 							<div class="contact-form">
 								<!-- Texte d'introduction -->
-								<p class="text-white contact-intro mb-4" >
-								Besoin d’informations ou envie de collaborer ? Envoyez-moi un message  !
+								<p class="text-white contact-intro mb-4" data-i18n="contact-intro">
+									Besoin d’informations ou envie de collaborer ? Envoyez-moi un message !
 								</p>
 
 								<div id="success"></div>
 								<form name="sentMessage" id="contactForm" novalidate="novalidate">
 									<div class="control-group">
-										<input type="text" class="form-control" id="name" placeholder="Votre Nom & Prénom" required="required" data-validation-required-message="Please enter your name" />
+										<input type="text" class="form-control" id="name" placeholder="Votre Nom & Prénom" data-i18n="contact-name-placeholder" required="required" />
 										<p class="help-block"></p>
 									</div>
 									<div class="control-group">
-										<input type="email" class="form-control" id="email" placeholder="Votre Email" required="required" data-validation-required-message="Please enter your email" />
+										<input type="email" class="form-control" id="email" placeholder="Votre Email" data-i18n="contact-email-placeholder" required="required" />
 										<p class="help-block"></p>
 									</div>
 									<div class="control-group">
-										<input type="text" class="form-control" id="subject" placeholder="Sujet" required="required" data-validation-required-message="Please enter a subject" />
+										<input type="text" class="form-control" id="subject" placeholder="Sujet" data-i18n="contact-subject-placeholder" required="required" />
 										<p class="help-block"></p>
 									</div>
 									<div class="control-group">
-										<textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+										<textarea class="form-control" id="message" placeholder="Message" data-i18n="contact-message-placeholder" required="required"></textarea>
 										<p class="help-block"></p>
 									</div>
 									<div>
-										<button class="btn" type="submit" id="sendMessageButton">Envoyer</button>
+										<button class="btn" type="submit" id="sendMessageButton" data-i18n="contact-send-button">Envoyer</button>
 									</div>
 								</form>
 							</div>
@@ -721,10 +721,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- Contact End -->
 
 
 
-        <!-- Contact End -->
+
 
 
         <!-- Footer Start -->
@@ -749,7 +750,7 @@
                     </div>
                 </div>
                 <div class="container copyright">
-                    <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved | 
+                    <p>&copy; <a href="#">Hugo Martinière Site-Web</a>, All Right Reserved | 
 					
 					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
@@ -772,6 +773,9 @@
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/i18next@21.6.0/i18next.min.js"></script>
+
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/wow/wow.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
@@ -802,5 +806,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+		
     </body>
 </html>

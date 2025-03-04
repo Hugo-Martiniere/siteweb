@@ -1,0 +1,259 @@
+{
+  "fr": {
+    "title": "DevFolio - Portfolio Développeur",
+    "hero-introduction": "Je suis",
+    "hero-name": "Hugo Martinière",
+    "hero-description": "Data Analyst, Data Scientist, Data Engineer",
+    "hero-contact-btn": "Me contacter",
+    "hero-download-cv": "📄 Télécharger mon CV",
+    "home": "Accueil",
+    "about": "Qui je suis",
+    "experience": "Parcours",
+    "portfolio": "Compétences",
+    "projets": "Projets",
+    "review": "Avis",
+    "interet": "Mes intérêts",
+    "contact": "Contact",
+    "language": "Langue",
+    "welcome": "Bienvenue sur mon portfolio",
+    "description": "Je suis un data scientist passionné par l'analyse de données.",
+	"about-title": "À propos de moi",
+	"about-subtitle": "Étudiant en Data Science",
+	"about-description": "Bonjour, je m'appelle Hugo, étudiant en Data Science. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je vous invite à explorer mon site où je partage mes projets, compétences et centres d'intérêt. Bonne visite !",
+	"skill-visualisation": "Data Visualisation",
+	"skill-science": "Data Science",
+	"skill-engineering": "Data Engineering",
+	"about-more-info": "En savoir plus sur moi",
+	
+	"experience-title": "Parcours Académique",
+    "experience-subtitle": "Formations & Expériences Professionnelles",
+    "experience-1-date": "Septembre 2024 - Jusqu'à présent",
+    "experience-1-role": "Alternant Data Scientist",
+    "experience-1-company": "Société Générale, La Défense, Paris",
+    "experience-1-description": "Extraction, analyse de données et modélisation statistique pour soutenir la prise de décision",
+	
+    "experience-2-date": "2024 - Jusqu'à présent",
+    "experience-2-role": "Master 2 Science des Données",
+    "experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-2-description": "Perfectionnement de mes compétences en Data Science et Data Analyse",
+	
+    "experience-3-date": "Janvier 2024 - Mai 2024",
+    "experience-3-role": "Projet Data Science",
+    "experience-3-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-3-description": "Analyse et comparaison des critères physiques de réussite entre la Ligue 1 et la Ligue 2 pour le Stade Lavallois FC",
+	
+    "experience-4-date": "2023 - 2024",
+    "experience-4-role": "Master 1 Data Science et Modélisation Statistique",
+    "experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-4-description": "Spécialisation dans la modélisation statistique, avec un focus sur l'application des méthodes avancées pour analyser et interpréter les données",
+	
+    "experience-5-date": "2022 - 2023",
+    "experience-5-role": "Licence Mathématiques, Informatique, Statistique parcours Statistique",
+    "experience-5-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-5-description": "Approfondissement de mes compétences en théorie des statistiques et renforcement de mes connaissances en informatique, notamment pour la gestion et l'optimisation des bases de données",
+	
+    "experience-6-date": "Avril 2022 - Juin 2022",
+    "experience-6-role": "Stagiaire chargé d'études statistiques",
+    "experience-6-company": "L'APRAS, Rennes",
+    "experience-6-description": "Création de différents indices de vulnérabilité sur l’agglomération Rennaise, création de tableaux de bord",
+	
+    "experience-7-date": "2020 - 2022",
+    "experience-7-role": "DUT STID (Statistique et Informatique Décisionnelle)",
+    "experience-7-university": "IUT Vannes",
+    "experience-7-description": "Découverte du domaine de la data, apprentissage de la gestion des bases de données et de la data visualisation",
+	
+	
+	"portfolio-expertise": "Mon Expertise Technique",
+    "portfolio-title": "Langages & Logiciels",
+    "portfolio-all": "Tout",
+    "portfolio-filter-1": "Data Visualisation",
+    "portfolio-filter-2": "Langage de programmation",
+    "portfolio-filter-3": "Logiciel",
+    "portfolio-filter-4": "Data Engineering",
+	
+	"projects-title": "Projets",
+    "projects-subtitle": "Découvrez mes réalisations",
+    "project-1-title": "Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?",
+    "project-1-description": "Dans cette étude, réalisée en collaboration avec le Stade Lavallois FC, mon objectif était d’analyser les différences athlétiques entre les deux premières divisions du football français, la Ligue 1 et la Ligue 2. De plus, j’ai cherché à établir un lien entre les performances athlétiques des équipes et leur classement en fin de saison.",
+    "project-2-title": "Prédiction de prix de l'électricité :",
+    "project-2-description": "Modélisation de l'écart de prix entre le marché Intraday et le marché SPOT (marché de l'électricité où les transactions s'effectuent pour une livraison le jour suivant) afin de prévoir son évolution à la hausse ou à la baisse pour les jours à venir.",
+    "project-3-title": "Hospitalisation : Classique ou Ambulatoire ?",
+    "project-3-description": "Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique, afin de déterminer si le mode ambulatoire présentait un risque accru.",
+    "project-4-title": "Modélisation des Prix d'une Assurance Automobile",
+    "project-4-description": "Modélisation des tarifs de deux garanties d'assurance : la couverture des dommages, qui protège contre les pertes matérielles dues aux sinistres, et la garantie bris de glace, qui couvre les dommages aux vitrages et surfaces en verre, dans le but de mieux comprendre les critères qui influencent la fixation de ces tarifs.",
+    "project-5-title": "Réussir un Pénalty : Les Facteurs Clés",
+    "project-5-description": "Dans le cadre de l’analyse des facteurs influençant la réussite des penalties, j'ai comparé les performances des tireurs lors de la saison 2019-2020 des cinq grands championnats européens, en prenant en compte une vingtaine de critères tels que l’identité du tireur, l’enjeu du penalty, la période de jeu, etc., afin de déterminer les éléments ayant un impact significatif sur la réussite des tirs.",
+    "used-software": "Logiciels utilisés : ",
+	
+	"testimonial-1-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-1-name": "Poulard Irma & Meurou Gaëlle",
+    "testimonial-1-role": "Responsable de stage & Tutrice",
+    
+    "testimonial-2-text": "J'ai eu la responsabilité d'encadrer Hugo Martinière pendant son stage à l'IUT de Vannes. Cette expérience s'est révélée très positive. Il a fait preuve d'un excellent niveau de sérieux et d'autonomie, accomplissant toujours ses tâches avec rigueur. Hugo s'est très bien adapté à son environnement de travail et a abordé ses missions de manière professionnelle. Sa curiosité et son implication ont été notables, lui permettant de progresser dans ses apprentissages. Il a également démontré des qualités relationnelles très appréciables. Je suis convaincu que toutes ses qualités apporteront une contribution très positive à son futur employeur.",
+    "testimonial-2-name": "Béchet Nicolas",
+    "testimonial-2-role": "Maître de conférences en Informatique / Ancien professeur",
+
+    "testimonial-3-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-3-name": "Beroldy Carole",
+    "testimonial-3-role": "Tutrice alternance",
+	
+	"interet-title": "Ce qui m’anime",
+    "interet-heading": "",
+    "interet-subheading": "",
+
+    "interet-challenge": "Défis : ",
+    "interet-challenge-text": "J’aime me dépasser, que ce soit en apprenant une langue ou en relevant des défis sportifs.",
+
+    "interet-sport": "Sport : ",
+    "interet-sport-text": "Le football et le badminton, que j’ai pratiqués en club, sont au cœur de ma passion pour le sport.",
+
+    "interet-innovation": "Innovation : ",
+    "interet-innovation-text": "Les avancées technologiques, notamment en intelligence artificielle, attisent ma curiosité.",
+
+    "interet-travel": "Voyages : ",
+    "interet-travel-text": "J’adore explorer de nouveaux horizons, admirer des paysages et découvrir des cultures.",
+
+    "interet-culture": "Activités culturelles : ",
+    "interet-culture-text": "J’apprécie les musées, le cinéma, la lecture et les reportages enrichissants.",
+	
+	"contact-intro": "Besoin d’informations ou envie de collaborer ? Envoyez-moi un message !",
+    "contact-name-placeholder": "Votre Nom & Prénom",
+    "contact-email-placeholder": "Votre Email",
+    "contact-subject-placeholder": "Sujet",
+    "contact-message-placeholder": "Message",
+    "contact-send-button": "Envoyer"
+  
+	
+	
+  },
+  "en": {
+    "title": "DevFolio - Developer Portfolio",
+    "hero-introduction": "I am",
+    "hero-name": "Hugo Martinière",
+    "hero-description": "Data Analyst, Data Scientist, Data Engineer",
+    "hero-contact-btn": "Contact Me",
+    "hero-download-cv": "📄 Download My CV",
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "portfolio": "Skills",
+    "projets": "Projects",
+    "review": "Reviews",
+    "interet": "My Interests",
+    "contact": "Contact",
+    "language": "Language",
+    "welcome": "Welcome to my portfolio",
+    "description": "I am a data scientist passionate about data analysis.",
+	"about-title": "About Me",
+	"about-subtitle": "Data Science Student",
+	"about-description": "Hello, my name is Hugo, a Data Science student. Passionate about data exploration, machine learning, and artificial intelligence, I invite you to explore my website where I share my projects, skills, and interests. Enjoy your visit!",
+	"skill-visualisation": "Data Visualisation",
+	"skill-science": "Data Science",
+	"skill-engineering": "Data Engineering",
+	"about-more-info": "Learn more about me"
+	,
+	"experience-title": "Academic Journey",
+	"experience-subtitle": "Education & Professional Experiences",
+	
+	"experience-1-date": "September 2024 - Present",
+	"experience-1-role": "Data Scientist Intern",
+	"experience-1-company": "Société Générale, La Défense, Paris",
+	"experience-1-description": "Data extraction, analysis, and statistical modeling to support decision-making",
+	
+	"experience-2-date": "2024 - Present",
+	"experience-2-role": "Master's Degree 2 in Data Science",
+	"experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-2-description": "Enhancing my skills in Data Science and Data Analysis",
+	
+	"experience-3-date": "January 2024 - May 2024",
+	"experience-3-role": "Data Science Project",
+	"experience-3-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-3-description": "Analysis and comparison of physical success criteria between Ligue 1 and Ligue 2 for Stade Lavallois FC",
+	
+	"experience-4-date": "2023 - 2024",
+	"experience-4-role": "Master's Degree 1 in Data Science and Statistical Modeling",
+	"experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-4-description": "Specialization in statistical modeling with a focus on advanced methods for data analysis and interpretation",
+	
+	"experience-5-date": "2022 - 2023",
+	"experience-5-role": "Bachelor's Degree in Mathematics, Computer Science, Statistics (Statistics track)",
+	"experience-5-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-5-description": "Deepening my skills in statistical theory and strengthening my knowledge in computer science, especially for database management and optimization",
+	
+	  
+	"experience-6-date": "April 2022 - June 2022",
+	"experience-6-role": "Intern - Statistical Study Manager",
+	"experience-6-company": "L'APRAS, Rennes",
+	"experience-6-description": "Creation of various vulnerability indices for the Rennes agglomeration, development of dashboards",
+	
+	"experience-7-date": "2020 - 2022",
+	"experience-7-role": "DUT STID (Statistical and Decision-Making Computing)",
+	"experience-7-university": "IUT Vannes",
+	"experience-7-description": "Introduction to the field of data, learning database management, and data visualization",
+	
+	"portfolio-expertise": "My Technical Expertise",
+    "portfolio-title": "Languages & Software",
+    "portfolio-all": "All",
+    "portfolio-filter-1": "Data Visualization",
+    "portfolio-filter-2": "Programming Languages",
+    "portfolio-filter-3": "Software",
+    "portfolio-filter-4": "Data Engineering", 
+	
+	"projects-title": "Projects",
+    "projects-subtitle": "Discover my work",
+    "project-1-title": "Ligue 1 vs Ligue 2: What Are the Athletic Differences?",
+    "project-1-description": "In this study, conducted in collaboration with Stade Lavallois FC, my goal was to analyze the athletic differences between the top two divisions of French football, Ligue 1 and Ligue 2. Additionally, I aimed to establish a link between the athletic performance of the teams and their final season ranking.",
+    "project-2-title": "Electricity Price Prediction:",
+    "project-2-description": "Modeling the price gap between the Intraday market and the SPOT market (the electricity market where transactions are made for next-day delivery) to forecast its rise or fall in the coming days.",
+    "project-3-title": "Hospitalization: Classic or Ambulatory?",
+    "project-3-description": "In the context of growing ambulatory care, I compared the complication risks within 30 days of ambulatory hospitalization versus traditional hospitalization to determine if ambulatory care presented an increased risk.",
+    "project-4-title": "Modeling Car Insurance Prices",
+    "project-4-description": "Modeling the rates for two insurance covers: damage coverage, which protects against material loss due to accidents, and glass breakage coverage, which covers damage to glass surfaces, to better understand the criteria influencing the setting of these rates.",
+    "project-5-title": "Scoring a Penalty: Key Factors",
+    "project-5-description": "In analyzing the factors influencing penalty success, I compared the performances of penalty takers during the 2019-2020 season of the five major European leagues, considering various factors such as the taker's identity, penalty importance, the game period, etc., to identify the elements impacting the success rate.",
+    "used-software": "Software used : ",
+	
+	"testimonial-1-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-1-name": "Poulard Irma & Meurou Gaëlle",
+    "testimonial-1-role": "Internship Supervisor & Tutor",
+
+    "testimonial-2-text": "I had the responsibility of supervising Hugo Martinière during his internship at the IUT of Vannes. This experience was very positive. He demonstrated an excellent level of seriousness and autonomy, always completing his tasks with precision. Hugo adapted very well to his work environment and approached his missions professionally. His curiosity and involvement were noticeable, allowing him to make progress in his learning. He also showed very valuable interpersonal qualities. I am convinced that all his qualities will make a positive contribution to his future employer.",
+    "testimonial-2-name": "Béchet Nicolas",
+    "testimonial-2-role": "Associate Professor in Computer Science / Former Teacher",
+
+    "testimonial-3-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-3-name": "Beroldy Carole",
+    "testimonial-3-role": "Work-study Supervisor",
+	
+	"interet-title": "What motivates me",
+    "interet-heading": "",
+    "interet-subheading": "",
+
+    "interet-challenge": "Challenges : ",
+    "interet-challenge-text": "I love pushing myself, whether it's learning a language or taking on sports challenges.",
+
+    "interet-sport": "Sport : ",
+    "interet-sport-text": "Football and badminton, which I have practiced in a club, are at the heart of my passion for sports.",
+
+    "interet-innovation": "Innovation : ",
+    "interet-innovation-text": "Technological advancements, especially in artificial intelligence, spark my curiosity.",
+
+    "interet-travel": "Travel : ",
+    "interet-travel-text": "I love exploring new horizons, admiring landscapes, and discovering cultures.",
+
+    "interet-culture": "Cultural activities : ",
+    "interet-culture-text": "I enjoy museums, cinema, reading, and enriching documentaries.",
+	
+    "contact-intro": "Need information or want to collaborate? Send me a message!",
+    "contact-name-placeholder": "Your Name",
+    "contact-email-placeholder": "Your Email",
+    "contact-subject-placeholder": "Subject",
+    "contact-message-placeholder": "Message",
+    "contact-send-button": "Send"
+  
+
+
+ 
+  }
+}
+
