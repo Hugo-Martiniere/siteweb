@@ -135,7 +135,7 @@ function changeLanguage(lang) {
     document.getElementById("languageDropdownText").textContent = languageText;
 
     // Charger les traductions depuis le fichier JSON
-    fetch("/js/translations.json")
+    fetch("translations.json")
         .then(response => response.json())
         .then(data => {
             const translations = data[lang];
