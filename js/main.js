@@ -129,7 +129,7 @@ function changeLanguage(lang) {
     document.documentElement.lang = lang;
 
     // Mise à jour de l'icône et du texte du menu déroulant
-    const flagSrc = lang === 'fr' ? "img/langue/fr_flag.png" : "img/langue/uk_flag.png";
+    const flagSrc = lang === 'fr' ? "img/langue/france.png" : "img/langue/anglais.png";
     const languageText = lang === 'fr' ? "Langue" : "Language";
     document.getElementById("languageIcon").src = flagSrc;
     document.getElementById("languageDropdownText").textContent = languageText;
