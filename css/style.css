@@ -707,20 +707,20 @@ body {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -793,12 +793,12 @@ body {
 /* Media Query pour les petits écrans */
 @media (max-width: 767.98px) {
     .experience .timeline::after {
-        left: 8px;
+        left: 8px; /* Réduit la ligne centrale pour mieux s'adapter aux petits écrans */
     }
 
     .experience .timeline .timeline-item {
         width: 100%;
-        padding-left: 38px;
+        padding-left: 20px;
     }
 
     .experience .timeline .timeline-item.left {
@@ -807,7 +807,7 @@ body {
 
     .experience .timeline .timeline-item.right {
         left: 0%;
-        padding-left: 38px;
+        padding-left: 20px;
     }
 
     .experience .timeline .timeline-item.left::after, 
@@ -831,22 +831,24 @@ body {
         margin-bottom: 10px;
     }
 
-    .experience .timeline .timeline-item.left .timeline-text,
-    .experience .timeline .timeline-item.right .timeline-text {
-        border-right: none;
-        border-left: 5px solid #dddddd;
+    /* Ajustement de la largeur du texte pour les petits écrans */
+    .experience .timeline .timeline-text {
+        width: 100% !important; /* Réduit la largeur du texte à 100% */
+        padding: 20px;  /* Ajuste les paddings si nécessaire */
+        margin-left: 0 !important; /* Élimine le décalage négatif */
     }
 
+    /* Augmenter la taille du texte */
     .experience .timeline .timeline-text h2 {
-        font-size: 16px !important;
+        font-size: 20px !important;  /* Augmente la taille du titre */
     }
 
     .experience .timeline .timeline-text h4 {
-        font-size: 12px !important;
+        font-size: 16px !important;  /* Augmente la taille du sous-titre */
     }
 
     .experience .timeline .timeline-text p {
-        font-size: 12px !important;
+        font-size: 16px !important;  /* Augmente la taille du texte */
     }
 }
 
@@ -1014,6 +1016,24 @@ body {
     width: 120px !important;
     height: auto !important;
 }
+/* Ajuster la taille du texte pour les petits écrans (téléphones) */
+/* Ajuster la taille du texte pour les petits écrans (téléphones) */
+@media screen and (max-width: 768px) {
+    .testimonial-text p {
+        font-size: 12px !important; /* Réduit la taille du texte du paragraphe */
+        line-height: 1.4 !important; /* Augmente un peu l'espace entre les lignes pour plus de lisibilité */
+    }
+
+    .testimonial-text h3 {
+        font-size: 10px !important; /* Réduit la taille du nom du témoignage */
+    }
+
+    .testimonial-text h4 {
+        font-size: 9px !important; /* Réduit la taille du rôle */
+    }
+}
+
+
 /***********review end */
 
 
@@ -1110,47 +1130,9 @@ body {
 
 
 /*******************************/
+/* Portfolio CSS */
 
-.portfolio-item {
-	margin-bottom: 30px;
-}
-
-.portfolio-text {
-	background-color: #f8f9fa;
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	max-width: 100%;
-}
-
-.portfolio-img img {
-	display: block;
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-}
-
-.portfolio-carousel .owl-nav {
-	display: none;
-}
-
-.portfolio-carousel .owl-dots {
-	margin-top: 20px;
-}
-
-.portfolio-carousel .owl-dot span {
-	width: 10px;
-	height: 10px;
-	background: #007bff;
-	border-radius: 50%;
-	margin: 5px;
-}
-
-.portfolio-carousel .owl-dot.active span {
-	background: #0056b3;
-}
-/******** Portfolio CSS ********/
-/*******************************/
+/* Conteneur général */
 .portfolio {
     position: relative;
     padding: 45px 0 15px 0;
@@ -1189,8 +1171,10 @@ body {
     border-color: #00233C;
 }
 
+/* Ajustement de l'image et du texte */
 .portfolio .portfolio-item {
     position: relative;
+    margin-bottom: 0; /* Réduit l'écart entre les éléments */
 }
 
 .portfolio .portfolio-wrap {
@@ -1201,57 +1185,58 @@ body {
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
-	z-index: -1; /* S'assurer que l'image soit derrière le contenu */
-
+    z-index: -1; /* S'assurer que l'image soit derrière le contenu */
 }
 
 .portfolio .portfolio-img img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: scale(1.1);
     transition: .0s;
 }
 
+/* Supprimer le décalage dans l'effet hover */
 .portfolio .portfolio-item:hover img {
-    margin-left: 15px;
+    margin-left: 0; /* Supprime le décalage */
 }
 
+/* Ajuster le texte */
 .portfolio .portfolio-text {
     position: relative;
-    height: 60px;
+    height: auto; /* Laisser la hauteur s'adapter au contenu */
     width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
+    margin: 0 15px 15px 15px; /* Ajuste les marges pour éviter l'écart */
     display: flex;
     align-items: center;
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
-} 
-
-
+}
 
 .portfolio .portfolio-text h3 {
-    width: calc(100% - 70px);
+    width: 100%;
     font-size: 18px;
     font-weight: 600;
     margin: 0 0 0 15px;
     white-space: nowrap;
     overflow: hidden;
 }
+
+/* Portfolio Special */
 #portfolio-special .portfolio-text {
-    margin-top: -20px; /* Ajustez la valeur pour remonter le bouton */
+    margin-top: -20px; /* Ajuste la position du bouton dans les éléments spéciaux */
     position: relative;
-    height: 60px;
+    height: auto;
     width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
+    margin: 0 15px 15px 15px;
     display: flex;
     align-items: center;
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
 }
 
-
+/* Bouton dans le texte */
 .portfolio .portfolio-text a.btn {
     width: 50px;
     height: 50px;
@@ -1261,12 +1246,11 @@ body {
     justify-content: center;
     font-size: 45px;
     font-weight: 100;
-	
-	/* Assurez-vous que ces deux règles sont présentes */
     visibility: visible;
     opacity: 1;
 }
 
+/* Effet de hover pour le bouton */
 .portfolio .portfolio-item:hover a.btn {
     color: #00233C;
     background: transparent;
@@ -1274,7 +1258,28 @@ body {
     border-color: #00233C;
 }
 
+@media (max-width: 767px) {
+    .portfolio .portfolio-item {
+        width: 33.33%; /* 3 éléments par ligne sur mobile */
+    }
 
+    /* Réduire la taille des titres et des textes sur mobile */
+    .portfolio .portfolio-text h3 {
+        font-size: 8px; /* Taille plus petite pour les titres */
+    }
+
+    .portfolio .portfolio-text a.btn {
+        font-size: 10px; /* Réduire la taille du bouton */
+		height: 30px; /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+
+    }
+
+    /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+    .portfolio .portfolio-text {
+        height: 30px; /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+
+    }
+}
 
 
 /*******************************/
@@ -1963,25 +1968,6 @@ body {
 
 .footer .copyright p a:hover {
     color: #414141;
-}
-
-@media (max-width: 575.98px) {
-    .footer .footer-info h2 {
-        margin-bottom: 20px;
-        font-size: 20px;
-        font-weight: 600;
-    }
-
-    .footer .footer-info h3 {
-        margin-bottom: 20px;
-        font-size: 16px;
-    }
-
-    .footer .footer-menu p {
-        font-size: 16px;
-        line-height: 16px;
-        padding: 0 5px;
-    }
 }
 
 
