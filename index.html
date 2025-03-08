@@ -6,9 +6,11 @@
 
     <meta charset="utf-8">
     <title data-i18n="title">Hugo Martinière - Site Web</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Portfolio Data Scientist" name="keywords">
     <meta content="Portfolio Data Scientist" name="description">
+	<!-- Lien vers le CSS de Bootstrap -->
+	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">-->
+
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -81,32 +83,32 @@
 
 
 		 <!-- Hero Start -->
-		<div class="hero" id="home">
-			<div class="container-fluid">
-				<div class="row align-items-center">
-					<div class="col-sm-12 col-md-6">
-						<div class="hero-content">
-							<div class="hero-text">
-								<p data-i18n="hero-introduction">Je suis</p>
-								<h1 data-i18n="hero-name">Hugo Martinière</h1>
-								<h2></h2>
-								<div class="typed-text" data-i18n="hero-description">Data Analyst, Data Scientist, Data Engineer</div>
-							</div>
-							<div class="hero-btn">
-								<a class="btn" style="margin-bottom:10px" href="#contact" id="scrollToContactBtn" data-i18n="hero-contact-btn">Me contacter</a>
-								<a class="btn" style="margin-bottom:10px" id="cv-link" href="img/cv/Hugo_Martiniere_CV.pdf" data-i18n="hero-download-cv">📄 Télécharger mon CV</a>
-							</div>
+	<div class="hero" id="home">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-sm-12 col-md-6">
+					<div class="hero-content">
+						<div class="hero-text">
+							<p data-i18n="hero-introduction">Je suis</p>
+							<h1 data-i18n="hero-name">Hugo Martinière</h1>
+							<h2></h2>
+							<div class="typed-text" data-i18n="hero-description">Data Analyst, Data Scientist, Data Engineer</div>
+						</div>
+						<div class="hero-btn">
+							<a class="btn" style="margin-bottom:10px" href="#contact" id="scrollToContactBtn" data-i18n="hero-contact-btn">Me contacter</a>
+							<a class="btn" style="margin-bottom:10px" id="cv-link" href="img/cv/Hugo_Martiniere_CV.pdf" data-i18n="hero-download-cv">📄 Télécharger mon CV</a>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 d-none d-md-block">
-						<div class="hero-image">
-							<img src="img/photo.JPG" alt="Hero Image">
-						</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="hero-image">
+						<img src="img/photo.JPG" alt="Hero Image" class="img-fluid">
 					</div>
-
 				</div>
 			</div>
 		</div>
+	</div>
+
 		<!-- Hero End -->
 
 		<!-- Ajout du script JavaScript juste avant la balise </body> -->
@@ -225,7 +227,7 @@
 							<div class="timeline-date" data-i18n="experience-3-date">Janvier 2024 - Mai 2024</div>
 							<h2 data-i18n="experience-3-role">Projet Data Science</h2>
 							<h4 data-i18n="experience-3-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
-							<img src="img/parcours/Stade_Lavallois.png" alt="Logo du Stade Lavallois" style="width:60px; height:auto; position:absolute; top:5px; right:15px;">
+							<img src="img/parcours/Stade_Lavallois.png" alt="Logo du Stade Lavallois" style="width:20px; height:auto; position:absolute; top:5px; right:15px;">
 							<p data-i18n="experience-3-description">
 								Analyse et comparaison des critères physiques de réussite entre la Ligue 1 et la Ligue 2 pour le Stade Lavallois FC
 							</p>
@@ -286,7 +288,7 @@
 		<!-- Job Experience End -->
 
         
-		 <!-- Portfolio Start -->
+		<!-- Portfolio Start -->
 		<div class="portfolio" id="portfolio">
 			<div class="container">
 				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
@@ -305,10 +307,11 @@
 					</div>
 				</div>
 				<div class="row portfolio-container">
+					<!-- Portfolio Items -->
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/Power_BI_400_300.jpg" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/Power_BI_400_300.jpg" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Power BI</h3>
@@ -316,6 +319,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
@@ -327,6 +331,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
@@ -338,10 +343,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/Tableau_400_300.jpg" alt="Image" style=" padding: 0px; ">
+								<img src="img/skill/Tableau_400_300.jpg" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Tableau</h3>
@@ -349,6 +355,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
@@ -360,6 +367,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
@@ -371,6 +379,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
@@ -382,10 +391,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/Shiny_400_300.png" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/Shiny_400_300.png" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Shiny</h3>
@@ -393,10 +403,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4 wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/ORACLE_400_300.jpg" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/ORACLE_400_300.jpg" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Oracle</h3>
@@ -404,10 +415,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-4  wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/Talend_400_300.jpg" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/Talend_400_300.jpg" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Talend</h3>
@@ -415,10 +427,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/Hive_400_300.png" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/Hive_400_300.png" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Hive</h3>
@@ -426,10 +439,11 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="col-lg-3 col-md-6 col-sm-12 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
 						<div class="portfolio-wrap">
 							<div class="portfolio-img">
-								<img src="img/skill/dataiku_400_300.png" alt="Image" style=" padding: 0px;">
+								<img src="img/skill/dataiku_400_300.png" alt="Image">
 							</div>
 							<div class="portfolio-text">
 								<h3>Dataiku</h3>
@@ -442,157 +456,150 @@
 		</div>
 		<!-- Portfolio End -->
 
+		<!-- Portfolio End -->
+
 
 				
-		<!-- Project start-->
+		<!-- Project start -->
 		<div class="projects-section" id="projets" style="background-color: #f8f9fa; padding: 50px 0;">
-			<div class="container">
-				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
-					<p data-i18n="projects-title">Projets</p>
-					<h2 data-i18n="projects-subtitle">Découvrez mes réalisations</h2>
-				</div>
-				<div id="projectsCarousel" class="carousel slide" data-ride="carousel">
-					<!-- Points de navigation sous forme de ronds -->
-					<ol class="carousel-indicators">
-						<li data-target="#projectsCarousel" data-slide-to="0" class="active" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
-						<li data-target="#projectsCarousel" data-slide-to="1" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
-						<li data-target="#projectsCarousel" data-slide-to="2" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
-						<li data-target="#projectsCarousel" data-slide-to="3" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
-						<li data-target="#projectsCarousel" data-slide-to="4" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
-					</ol>
-
-					<!-- Contenu du carousel -->
-					<div class="carousel-inner">
-						<!-- Premier Projet -->
-						<div class="carousel-item">
-							<div class="row align-items-center">
-								<div class="col-lg-6">
-									<div class="project-img">
-										<img src="img/projet/ligues_400_300.png" alt="Projet 1" class="img-fluid" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px;">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title" data-i18n="project-1-title">Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?</h3>
-										<p data-i18n="project-1-description">
-											Dans cette étude, réalisée en collaboration avec le Stade Lavallois FC, mon objectif était d’analyser les différences athlétiques entre les deux premières divisions du football français, la Ligue 1 et la Ligue 2. De plus, j’ai cherché à établir un lien entre les performances athlétiques des équipes et leur classement en fin de saison.
-										</p>
-										<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python, R</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Deuxième Projet -->
-						<div class="carousel-item">
-							<div class="row align-items-center">
-								<div class="col-lg-6">
-									<div class="project-img">
-										<img src="img/projet/elmy.png" alt="Projet 2" class="img-fluid" style="max-width: 100%; border-radius: 10px; margin-bottom: 10px;">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title" data-i18n="project-2-title">Prédiction de prix de l'électricité :</h3>
-										<p data-i18n="project-2-description">
-											Modélisation de l'écart de prix entre le marché Intraday et le marché SPOT (marché de l'électricité où les transactions s'effectuent pour une livraison le jour suivant) afin de prévoir son évolution à la hausse ou à la baisse pour les jours à venir.
-										</p>
-										<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python </p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Troisième Projet -->
-						<div class="carousel-item active">
-							<div class="row align-items-center">
-								<div class="col-lg-6">
-									<div class="project-img">
-										<img src="img/projet/hopital.png" alt="Projet 3" class="img-fluid" style="max-width: 40%; margin-left: 175px; border-radius: 10px;">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="project-text" style="margin-left: -70px; margin-right:100px;">
-										<h3 id="spec-title" data-i18n="project-3-title">Hospitalisation : Classique ou Ambulatoire ?</h3>
-										<p data-i18n="project-3-description">
-											Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique, afin de déterminer si le mode ambulatoire présentait un risque accru.
-										</p>
-										<div class="info-container">
-											<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
-										</div>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<!-- Quatrième Projet -->
-						<div class="carousel-item">
-							<div class="row align-items-center">
-								<div class="col-lg-6">
-									<div class="project-img">
-										<img src="img/projet/protection.png" alt="Projet 4" class="img-fluid" style="max-width: 40%; margin-left: 175px;  border-radius: 10px;">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="project-text" style="margin-left: -70px; margin-right:100px">
-										<h3 id="spec-title" data-i18n="project-4-title">Modélisation des Prix d'une Assurance Automobile</h3>
-										<p data-i18n="project-4-description">
-											Modélisation des tarifs de deux garanties d'assurance : la couverture des dommages, qui protège contre les pertes matérielles dues aux sinistres, et la garantie bris de glace, qui couvre les dommages aux vitrages et surfaces en verre, dans le but de mieux comprendre les critères qui influencent la fixation de ces tarifs.
-										</p>
-										<div class="info-container">
-											<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- Cinquième Projet -->
-						<div class="carousel-item">
-							<div class="row align-items-center">
-								<div class="col-lg-6">
-									<div class="project-img">
-										<img src="img/projet/Projet_3.jpg" alt="Projet 5" class="img-fluid" style="max-width: 80%; border-radius: 10px;">
-									</div>
-								</div>
-								<div class="col-lg-6">
-									<div class="project-text" style="margin-left: -70px; margin-right: 100px;">
-										<h3 id="spec-title" data-i18n="project-5-title">Réussir un Pénalty : Les Facteurs Clés</h3>
-										<p data-i18n="project-5-description">
-											Dans le cadre de l’analyse des facteurs influençant la réussite des penalties, j'ai comparé les performances des tireurs lors de la saison 2019-2020 des cinq grands championnats européens, en prenant en compte une vingtaine de critères tels que l’identité du tireur, l’enjeu du penalty, la période de jeu, etc., afin de déterminer les éléments ayant un impact significatif sur la réussite des tirs.
-										</p>
-										<p><strong data-i18n="used-software">Logiciels utilisés : </strong> SAS</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Contrôles de navigation (flèches inchangées) -->
-					<a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
-						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-						<span class="sr-only">Précédent</span>
-					</a>
-					<a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
-						<span class="carousel-control-next-icon" aria-hidden="true"></span>
-						<span class="sr-only">Suivant</span>
-					</a>
-				</div>
+		  <div class="container">
+			<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+			  <p data-i18n="projects-title">Projets</p>
+			  <h2 data-i18n="projects-subtitle">Découvrez mes réalisations</h2>
 			</div>
-		</div>
+			<div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Points de navigation sous forme de ronds -->
+			  <ol class="carousel-indicators">
+				<li data-target="#projectsCarousel" data-slide-to="0" class="active" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+				<li data-target="#projectsCarousel" data-slide-to="1" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+				<li data-target="#projectsCarousel" data-slide-to="2" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+				<li data-target="#projectsCarousel" data-slide-to="3" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+				<li data-target="#projectsCarousel" data-slide-to="4" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+			  </ol>
 
-		<!-- Styles CSS -->
-		<style>
-			
-		
-		</style>
+			  <!-- Contenu du carousel -->
+			  <div class="carousel-inner">
+				<!-- Premier Projet -->
+				<div class="carousel-item active">
+				  <div class="row align-items-center">
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-img">
+						<img src="img/projet/ligues_400_300.png" alt="Projet 1" class="img-fluid" style="border-radius: 10px; margin-bottom: 10px;">
+					  </div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-text mx-3">
+						<h3 id="spec-title" data-i18n="project-1-title">Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?</h3>
+						<p data-i18n="project-1-description">
+						  Dans cette étude, réalisée en collaboration avec le Stade Lavallois FC, mon objectif était d’analyser les différences athlétiques entre les deux premières divisions du football français...
+						</p>
+						<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python, R</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- Deuxième Projet -->
+				<div class="carousel-item">
+				  <div class="row align-items-center">
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-img">
+						<img src="img/projet/elmy.png" alt="Projet 2" class="img-fluid" style="border-radius: 10px; margin-bottom: 10px;">
+					  </div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-text mx-3">
+						<h3 id="spec-title" data-i18n="project-2-title">Prédiction de prix de l'électricité :</h3>
+						<p data-i18n="project-2-description">
+						  Modélisation de l'écart de prix entre le marché Intraday et le marché SPOT (marché de l'électricité où les transactions s'effectuent pour une livraison le jour suivant) afin de prévoir son évolution...
+						</p>
+						<p><strong data-i18n="used-software">Logiciels utilisés :</strong> Python</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- Troisième Projet -->
+				<div class="carousel-item">
+				  <div class="row align-items-center">
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-img">
+						<img src="img/projet/hopital.png" alt="Projet 3" class="img-fluid" style="border-radius: 10px; width:40%; margin-bottom: 10px;">
+					  </div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-text mx-3">
+						<h3 id="spec-title" data-i18n="project-3-title">Hospitalisation : Classique ou Ambulatoire ?</h3>
+						<p data-i18n="project-3-description">
+						  Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique...
+						</p>
+						<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- Quatrième Projet -->
+				<div class="carousel-item">
+				  <div class="row align-items-center">
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-img">
+						<img src="img/projet/protection.png" alt="Projet 4" class="img-fluid" style="border-radius: 10px; width:40%; margin-bottom: 10px; margin-right: 110px;">
+					  </div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-text mx-3">
+						<h3 id="spec-title" data-i18n="project-4-title">Modélisation des Prix d'une Assurance Automobile</h3>
+						<p data-i18n="project-4-description">
+						  Modélisation des tarifs de deux garanties d'assurance : la couverture des dommages, qui protège contre les pertes matérielles dues aux sinistres, et la garantie bris de glace...
+						</p>
+						<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+				<!-- Cinquième Projet -->
+				<div class="carousel-item">
+				  <div class="row align-items-center">
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-img">
+						<img src="img/projet/Projet_3.jpg" alt="Projet 5" class="img-fluid" style="border-radius: 10px; margin-bottom: 10px;">
+					  </div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-6">
+					  <div class="project-text mx-3">
+						<h3 id="spec-title" data-i18n="project-5-title">Réussir un Pénalty : Les Facteurs Clés</h3>
+						<p data-i18n="project-5-description">
+						  Dans le cadre de l’analyse des facteurs influençant la réussite des penalties, j'ai comparé les performances des tireurs lors de la saison 2019-2020 des cinq grands championnats européens...
+						</p>
+						<p><strong data-i18n="used-software">Logiciels utilisés :</strong> SAS</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+
+			  <!-- Contrôles de navigation (flèches inchangées) -->
+			  <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Précédent</span>
+			  </a>
+			  <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Suivant</span>
+			  </a>
+			</div>
+		  </div>
+		</div>
 
 		<!-- Script JS -->
 		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				var carousel = new bootstrap.Carousel(document.getElementById('projectsCarousel'), {
-					interval: 5000,
-					ride: 'carousel'
-				});
+		  document.addEventListener('DOMContentLoaded', function() {
+			var carousel = new bootstrap.Carousel(document.getElementById('projectsCarousel'), {
+			  interval: 5000,
+			  ride: 'carousel'
 			});
+		  });
 		</script>
+
+
 
 
 		<!-- Testimonial Start -->
@@ -796,8 +803,13 @@
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
         
-        <!-- Contact Javascript File -->
-		
+        <!-- Bosstrap responsive-->
+		<!-- Lien vers le JavaScript de Bootstrap -->
+		<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>-->
+		<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+
+				
 		<!-- Inclusion de la bibliothèque EmailJS -->
 		<script type="text/javascript"
 				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">

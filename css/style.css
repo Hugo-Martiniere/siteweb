@@ -179,31 +179,48 @@ body {
 /**********************************/
 /*********** Adaptabilite **********/
 /**********************************/
+* {
+    box-sizing: border-box;
+}
 
-/* Pour les tablettes (écrans entre 768px et 1024px) */
-@media (max-width: 1024px) {
+
+/* Pour les écrans de bureau (plus de 1024px) */
+@media (min-width: 1025px) {
     body {
-        font-size: 14px;
+        font-size: 16px; /* Taille de texte plus grande pour les grands écrans */
+    }
+}
+
+/* Pour les tablettes et petits écrans (de 768px à 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        font-size: 14px; /* Taille de texte réduite */
+    }
+}
+
+/* Pour les téléphones (moins de 768px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px; /* Taille de texte encore plus petite */
+    }
+
+    .menu {
+        display: block; /* Modifier le menu pour qu'il devienne un menu burger */
     }
 
     .container {
-        flex-direction: column;
-        text-align: center;
+        width: 100%; /* Utiliser toute la largeur pour éviter les marges inutiles */
     }
 }
 
-/* Pour les téléphones (écrans de moins de 768px) */
-@media (max-width: 768px) {
-    body {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
+
+
+
 
 
 /**********************************/
@@ -633,6 +650,7 @@ body {
 /*******************************/
 /******* Experience CSS ********/
 /*******************************/
+/* Style général pour l'expérience */
 .experience {
     position: relative;
     padding: 45px 0 15px 0;
@@ -733,31 +751,46 @@ body {
     position: relative;
     border-right: 5px solid #dddddd;
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    padding-right: 40px; /* Ajout d'un espacement à droite pour éviter le chevauchement avec le logo */
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
     border-right: none;
     border-left: 5px solid #dddddd;
+    padding-left: 40px; /* Ajout d'un espacement à gauche pour éviter le chevauchement avec le logo */
+}
+
+.experience .timeline .timeline-text img {
+    width: 80px !important;
+    height: auto !important;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin-top: 10px; /* Ajout d'un peu de marge en haut */
 }
 
 .experience .timeline .timeline-text h2 {
     margin: 0 0 5px 0;
-    font-size: 22px;
+    font-size: 18px !important;
     font-weight: 600;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
 }
 
 .experience .timeline .timeline-text h4 {
     margin: 0 0 10px 0;
-    font-size: 16px;
+    font-size: 14px !important;
     font-style: italic;
     font-weight: 400;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
 }
 
 .experience .timeline .timeline-text p {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px !important;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
 }
 
+/* Media Query pour les petits écrans */
 @media (max-width: 767.98px) {
     .experience .timeline::after {
         left: 8px;
@@ -767,11 +800,11 @@ body {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
@@ -781,13 +814,13 @@ body {
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -797,57 +830,102 @@ body {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
         border-left: 5px solid #dddddd;
     }
+
+    .experience .timeline .timeline-text h2 {
+        font-size: 16px !important;
+    }
+
+    .experience .timeline .timeline-text h4 {
+        font-size: 12px !important;
+    }
+
+    .experience .timeline .timeline-text p {
+        font-size: 12px !important;
+    }
+}
+
+.experience .timeline .timeline-item img[alt="Logo du Stade Lavallois"] {
+    width: 50px !important;
+    height: auto !important;
 }
 
 /************Projects*******************/
+/* Global Styles */
 .projects-section {
     padding: 50px 20px;
     background-color: #ffffff;
-	margin-top: 00px;
+    margin-top: 00px;
 }
 
+/* Styles pour les images des projets */
 .project-img img {
     width: 100%; /* Adapte la largeur à celle du conteneur parent */
     height: auto; /* Maintient les proportions */
     max-width: 300px; /* Taille maximale de largeur */
-    max-height: 300px; /* Taille maximale de hauteur */
     object-fit: contain; /* Adapte l'image sans la couper */
     border-radius: 10px; /* Optionnel : coins arrondis */
+    display: block; /* Pour centrer l'image */
+    margin-left: auto; /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
 }
 
 /* Fond du titre ayant la même couleur que celui de la section */
 .projects-section .section-header {
     margin-bottom: 40px;
-    background-color: #ffffff; /* Même fond que la section f8f9fa*/ 
+    background-color: #00233C; /* Fond sombre pour la section du titre */
     padding: 30px 0;  /* Espacement autour du texte du titre */
+    border-radius: 20px;
 }
 
+/* Style des titres dans la section */
 .projects-section .section-header p {
     font-size: 18px;
-    color: #414141;
-	background-color: #FFFFFF; /* Même fond que la section */
-	
+    color: #FFFFFF; /* Texte blanc sur fond sombre */
+    background-color: #00233C; /* Conserver le fond sombre */
 }
 
 .projects-section .section-header h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #00233C;
+    color: #FFFFFF; /* Texte blanc sur fond sombre */
+    background-color: #00233C; /* Fond sombre */
 }
 
-
-.project-image {
-    width: 80%;
-    height: auto;
+/* Adjusts image size in general for the project carousel */
+.project-img img {
+    width: 70%;
     border-radius: 10px;
+    box-shadow: none;
+    margin-left: 100px;
 }
 
+/* Text Styles in Project */
+.project-text {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-left: -100px;
+}
+
+.project-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/* Style for carousel controls */
 .carousel-indicators li {
     background-color: #00233C;
 }
@@ -855,101 +933,76 @@ body {
 .carousel-indicators .active {
     background-color: #414141;
 }
+
 .carousel-indicators {
     position: absolute;
-    bottom: -30px;  /* Ajustez cette valeur pour déplacer les points plus bas ou plus haut */
+    bottom: -30px;
     z-index: 1;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: brightness(0) saturate(100%) invert(14%) sepia(22%) saturate(2704%) hue-rotate(202deg) brightness(88%) contrast(96%);
-    /* Ce filtre applique le bleu marine (#00233C) à l'icône existante */
+/* Media query to adjust images for smaller screens */
+@media (max-width: 767px) {
+    /* Réduit les images à 50% pour les petits écrans (mobile) */
+    .carousel-item:nth-child(3) .project-img img,
+    .carousel-item:nth-child(4) .project-img img {
+        width: 50%; /* Réduit les images à 50% */
+        max-width: 200px;  /* Largeur maximale pour éviter qu'elles deviennent trop grandes */
+    }
+
+    /* Ajuste la taille générale des images sur petits écrans */
+    .project-img img {
+        width: 50%; /* Réduit les images à 50% pour tous les projets */
+        margin-left: auto;  /* Centrer l'image horizontalement */
+        margin-right: auto;
+        max-width: 200px;  /* Largeur maximale pour éviter qu'elles deviennent trop grandes */
+    }
+
+    /* Ajuste la taille des titres des projets */
+    .project-text h3 {
+        font-size: 20px; /* Réduit légèrement la taille des titres des projets */
+    }
+
+    /* Ajuste la taille du texte dans les projets */
+    .project-text p {
+        font-size: 14px; /* Réduit légèrement la taille du texte */
+    }
+
+    /* Ajuste les contrôles du carousel (flèches) */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: none; /* Aucune modification de couleur des flèches, elles restent noires */
+    }
+
+    /* Ajuste les indicateurs du carousel (ronds) */
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
 }
 
+/* Media query pour les écrans plus grands (PC) */
+@media (min-width: 768px) {
+    /* Réduit les images "Hospitalisation" et "Assurance Automobile" à 80% uniquement sur PC */
+    .carousel-item:nth-child(3) .project-img img,
+    .carousel-item:nth-child(4) .project-img img {
+        width: 80%; /* Réduit ces images spécifiques à 80% */
+        max-width: 400px;  /* Largeur maximale pour éviter les images trop grandes */
+    }
+}
+
+/* Flèches de navigation (noires transparentes) */
 .carousel-control-prev,
 .carousel-control-next {
     background-color: transparent; /* Fond transparent pour la zone de clic */
     border: none; /* Pas de bordure */
 }
 
-#projectsCarousel .carousel-indicators {
-    position: absolute;
-    bottom: -50px; /* Vous pouvez ajuster cette valeur */
-    z-index: 10;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center; /* Centre les indicateurs horizontalement */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(22%) saturate(2704%) hue-rotate(202deg) brightness(88%) contrast(96%);
 }
 
 
-.project-img img {
-	width: 70%;
-	border-radius: 10px;
-	box-shadow: none; /* Suppression de l'ombre sur l'image */
-	margin-left: 100px;
-}
-
-.projects-section .section-header {
-border-radius: 20px;
-margin-bottom: 40px;
-background-color: #00233C; /* Même fond que la section f8f9fa*/ 
-padding: 30px 0;  /* Espacement autour du texte du titre */
-}
-
-.projects-section .section-header p {
-font-size: 18px;
-color: #FFFFFF;
-background-color: #00233C; /* Même fond que la section */
-}
-.projects-section .section-header h2 {
-font-size: 32px;
-font-weight: 700;
-color: #FFFFFF;
-background-color: #00233C;
-}
-
-
-.project-text {
-	padding: 20px;
-	border-radius: 8px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-	background-color: #ffffff;
-	margin-left: -100px; /* Réduction de l'espace entre l'image et le texte */
-}
-
-.project-text h3 {
-	font-size: 24px;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-.project-text p {
-	font-size: 16px;
-	color: #6c757d;
-}
-.carousel-indicators {
-position: absolute;
-bottom: -30px; /* Décalage vers le bas (vous pouvez ajuster cette valeur) */
-z-index: 10; /* Assure que les points sont au-dessus des autres éléments */
-}
-
-
-.carousel-indicators li {
-	background-color: #00233C;
-	border-radius: 10%;
-	width: 12px;
-	height: 12px;
-}
-
-.projects-section {
-	background-color: #f8f9fa;
-}
-
-#spec-title {
-font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
-}
 
 /***********Projects end */
 
@@ -972,6 +1025,7 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
     background-color: #ffffff;
 	margin-top: 00px;
 }
+
 /***********Ineret end */
 
 
@@ -1221,7 +1275,11 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
 }
 
 
+
+
 /*******************************/
+
+
 /********* Banner CSS **********/
 /*******************************/
 .banner {
@@ -1612,6 +1670,7 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
 /*******************************/
 /********* Contact CSS *********/
 /*****************************contact_mail_2.jpg**/
+/* Contact Section Styles */
 .contact {
     position: relative;
     width: 100%;
@@ -1621,45 +1680,40 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
 
 .contact .container-fluid {
     position: relative;
+    padding: 0; /* Retirer le padding par défaut pour avoir un contrôle total */
 }
 
 .contact .container-fluid::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 5%; /* Garde la position */
-    width: 30%; /* Ajuste la taille */
+    left: 0;
+    width: 30%; /* Taille de l'image sur les grands écrans */
     height: 100%;
     background: url(../img/contact/e-mail.png) no-repeat center;
-    background-size: contain;
+    background-size: contain; /* L'image doit s'adapter sans déformation */
     filter: invert(1); /* Inverse uniquement l’image */
     z-index: 1;
 }
 
 .contact .contact-intro {
-    font-weight: bold; /* Met le texte en gras */
-	padding-bottom: 30px;
+    font-weight: bold; /* Mettre le texte en gras */
+    padding-bottom: 30px;
+    color: #ffffff; /* Couleur du texte en blanc pour contraster */
+    z-index: 2; /* Placer au-dessus de l'image */
 }
-
 
 .contact .contact-form {
     position: relative;
-    padding: 90px 0 90px 45px;
+    padding: 90px 0;
     background: #00233C;
+    z-index: 2; /* Placer au-dessus de l'image de fond */
+    color: white;
 }
 
-.contact .contact-form input {
-    color: #ffffff;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid rgba(256, 256, 256, .5);
-}
-
+.contact .contact-form input,
 .contact .contact-form textarea {
     color: #ffffff;
-    height: 90px;
     padding: 15px 0;
     background: none;
     border-radius: 0;
@@ -1670,11 +1724,6 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
 .contact .contact-form .form-control::placeholder {
     color: #ffffff;
     opacity: 1;
-}
-
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #ffffff;
 }
 
 .contact .contact-form .btn {
@@ -1700,13 +1749,30 @@ font-size: 20px; /* Ajustez la taille du titre selon vos besoins */
     color: #ffffff;
 }
 
+/* Masquer l'image de fond sur les petits écrans */
 @media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: none;
+    .contact .container-fluid::before {
+        display: none; /* Masquer l'image de fond uniquement sur les petits écrans */
     }
-    
+
+    /* Ajustements pour les petits écrans */
     .contact .contact-form {
-        padding: 90px 0;
+        padding: 50px 15px; /* Réduire le padding du formulaire */
+    }
+
+    .contact .contact-intro {
+        font-size: 16px; /* Ajuster la taille du texte pour les petits écrans */
+    }
+
+    .contact .contact-form input,
+    .contact .contact-form textarea {
+        width: 100%; /* Champs du formulaire prennent toute la largeur sur mobile */
+        margin-bottom: 20px; /* Espacement entre les champs */
+    }
+
+    .contact .contact-form .btn {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+        margin-top: 20px;
     }
 }
 
