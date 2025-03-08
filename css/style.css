@@ -990,6 +990,7 @@ body {
     .carousel-item:nth-child(4) .project-img img {
         width: 80%; /* Réduit ces images spécifiques à 80% */
         max-width: 400px;  /* Largeur maximale pour éviter les images trop grandes */
+		margin-right: 50px;  /* Centrer l'image horizontalement */
     }
 }
 
