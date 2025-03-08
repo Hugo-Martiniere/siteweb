@@ -217,6 +217,7 @@ body {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+	margin-left: 140px;
 }
 
 
@@ -1040,11 +1041,67 @@ body {
 /*******************************/
 /********* Interet  *********/
 /*******************************/
+/* Style de la section interet */
 .interet-section {
     padding: 50px 20px;
     background-color: #ffffff;
-	margin-top: 00px;
+    margin-top: 00px;
 }
+
+/* Style pour l'image dans la section "interet" */
+.interet-img img {
+    width: 100%; /* Par défaut, l'image occupe 100% de la largeur disponible */
+    height: auto; /* Garder les proportions de l'image */
+    object-fit: cover; /* Permet de couvrir l'espace tout en maintenant l'aspect */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+    display: block; /* Permet de centrer l'image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media query pour les écrans petits (moins de 767px de large) */
+@media (max-width: 767px) {
+    /* Réduire la taille de l'image à 50% sur les petits écrans */
+    .interet-img img {
+        width: 100%; /* Image à 50% de la largeur du conteneur */
+        max-width: 300px; /* Largeur maximale pour éviter qu'elle soit trop grande */
+    }
+}
+
+/* Autres styles de la section */
+.about-content {
+    padding: 20px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #414141; /* Texte de sous-titre */
+    background-color: #FFFFFF; /* Fond blanc pour le sous-titre */
+}
+
+.section-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00233C; /* Titre principal en bleu marine */
+}
+
+.about-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text li {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
 
 /***********Ineret end */
 
