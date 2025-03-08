@@ -168,6 +168,42 @@ a:focus {
 .back-to-top:hover i {
     color: #414141;
 }
+/* Par défaut, pour les grands écrans */
+body {
+    font-size: 16px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/**********************************/
+/*********** Adaptabilite **********/
+/**********************************/
+
+/* Pour les tablettes (écrans entre 768px et 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Pour les téléphones (écrans de moins de 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 
 /**********************************/

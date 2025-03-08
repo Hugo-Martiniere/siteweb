@@ -135,23 +135,29 @@ function changeLanguage(lang) {
     document.getElementById("languageDropdownText").textContent = languageText;
 
     // Charger les traductions depuis le fichier JSON
-    fetch("js/translations.json")
-        .then(response => response.json())
-        .then(data => {
-            const translations = data[lang];
+	fetch("js/translations.json")
+		.then(response => response.json())
+		.then(data => {
+			const translations = data[lang];
 
-            // Appliquer les traductions aux éléments HTML
-            document.querySelectorAll("[data-i18n]").forEach(element => {
-                const key = element.getAttribute("data-i18n");
-                if (translations[key]) {
-                    element.textContent = translations[key];
-                }
-            });
+			// Appliquer les traductions aux éléments HTML
+			document.querySelectorAll("[data-i18n]").forEach(element => {
+				const key = element.getAttribute("data-i18n");
+				if (translations[key]) {
+					// Vérifie si le texte contient "\n" pour gérer les retours à la ligne
+					if (translations[key].includes("\n")) {
+						element.innerHTML = translations[key].replace(/\n/g, "<br>");
+					} else {
+						element.textContent = translations[key];
+					}
+				}
+			});
 
-            // Met à jour le lien du CV après le changement de langue
-            updateCVLink();
-        })
-        .catch(error => console.error("Erreur de chargement des traductions :", error));
+			// Met à jour le lien du CV après le changement de langue
+			updateCVLink();
+		})
+		.catch(error => console.error("Erreur de chargement des traductions :", error));
+
 }
 
 // Appliquer la langue sauvegardée ou par défaut au chargement
