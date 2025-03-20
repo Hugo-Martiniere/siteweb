@@ -120,7 +120,7 @@ function updateCVLink() {
         cvLink.href = 'img/cv/Hugo_Martiniere_CV.pdf';
     } else {
         // Si la langue est en anglais, utiliser le lien du CV anglais
-        cvLink.href = 'img/cv/Hugo_Martiniere_resume.pdf';
+        cvLink.href = 'img/cv/Hugo_Martiniere_resume_2.pdf';
     }
 }
 

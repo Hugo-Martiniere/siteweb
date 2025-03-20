@@ -216,12 +216,9 @@ body {
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px !important;
 	margin-left: 148px;
 }
-
-
-
 
 
 /**********************************/
@@ -634,7 +631,7 @@ body {
     width: 0px;
     background: #00233C;
     border-radius: 10px;
-    transition: 2s;
+    transition: 1s;
 }
 
 .about .about-text a.btn {
@@ -690,6 +687,7 @@ body {
     padding-left: 30px;
 }
 
+/* Style des points */
 .experience .timeline .timeline-item::after {
     content: '';
     position: absolute;
@@ -697,8 +695,8 @@ body {
     height: 16px;
     top: 48px;
     right: -8px;
-    background: #ffffff;
-    border: 2px solid #00233C;
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #8A2BE2;  /* Bordure violette */
     border-radius: 16px;
     z-index: 1;
 }
@@ -857,6 +855,25 @@ body {
     width: 50px !important;
     height: auto !important;
 }
+
+/* Règles spécifiques pour la formation */
+div.formation .timeline-item::after {
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #FFD700 !important;  /* Bordure dorée pour la formation */
+}
+
+/* Règles spécifiques pour l'expérience professionnelle (expériencepro) */
+div.experiencepro .timeline-item::after {
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #8A2BE2 ;  /* Bordure violette pour l'expérience */
+}
+
+
+
+
+
+
+
 
 /************Projects*******************/
 /* Global Styles */
@@ -1238,6 +1255,9 @@ body {
 .portfolio .portfolio-wrap {
     position: relative;
     width: 100%;
+	border-radius: 8px; /* Ajouter des coins arrondis */
+
+	
 }
 
 .portfolio .portfolio-img {
@@ -1263,22 +1283,26 @@ body {
 /* Ajuster le texte */
 .portfolio .portfolio-text {
     position: relative;
-    height: auto; /* Laisser la hauteur s'adapter au contenu */
+    height: 54px; /* Augmenter la hauteur */
     width: calc(100% - 30px);
-    margin: 0 15px 15px 15px; /* Ajuste les marges pour éviter l'écart */
+    margin: 0 15px 15px 15px;
     display: flex;
     align-items: center;
+    justify-content: center; /* Centrer le texte horizontalement et verticalement */
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    border-radius: 8px; /* Ajouter des coins arrondis */
+    text-align: center; /* Centrer le texte */
 }
 
 .portfolio .portfolio-text h3 {
     width: 100%;
     font-size: 18px;
     font-weight: 600;
-    margin: 0 0 0 15px;
+    margin: 0;  /* Retirer les marges pour bien centrer */
     white-space: nowrap;
     overflow: hidden;
+    text-align: center; /* S'assurer que le texte est centré */
 }
 
 /* Portfolio Special */
@@ -1316,6 +1340,32 @@ body {
     border-color: #00233C;
 }
 
+.portfolio .portfolio-item:hover .portfolio-text {
+    background: #f7f7f7;  /* Change légèrement la couleur de fond au survol */
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2); /* Ajouter un léger ombrage */
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition sur l'image */
+}
+
+/* Effet lors du survol sur l'image */
+.portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.20); /* Agrandir l'image de 5% */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ajouter une ombre légère */
+}
+
+@media (min-width: 1024px) {
+    .portfolio-item {
+        width: 19.2% !important; /* Force 5 éléments par ligne sur les écrans de PC */
+        padding: 10px; /* Ajustez la marge si nécessaire */
+    }
+}
+
+
+
+
+
 @media (max-width: 767px) {
     .portfolio .portfolio-item {
         width: 33.33%; /* 3 éléments par ligne sur mobile */
@@ -1338,6 +1388,7 @@ body {
 
     }
 }
+
 
 
 /*******************************/
