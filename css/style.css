@@ -880,7 +880,8 @@ div.experiencepro .timeline-item::after {
 .projects-section {
     padding: 50px 20px;
     background-color: #ffffff;
-    margin-top: 00px;
+    margin-top: 75px;
+	margin-bottom: 75px;
 }
 
 /* Styles pour les images des projets */
@@ -1215,6 +1216,7 @@ div.experiencepro .timeline-item::after {
 
 .portfolio #portfolio-filter {
     padding: 0;
+	margin-bottom: 200px; 
     margin: -15px 0 25px 0;
     list-style: none;
     font-size: 0;
