@@ -33,7 +33,7 @@
     "experience-1-description": "Extraction, analyse, réalisation et automatisation d'études statistiques sur des millions de données. Présentation et vulgarisation des résultats aux équipes métiers. Mise à jour des indicateurs de scoring. Utilisation des langages SQL, Python et Spark",
 	
     "experience-2-date": "2024 - Jusqu'à présent",
-    "experience-2-role": "Master 2 Science des Données | Major de promotion",
+    "experience-2-role": "Master en Science des Données, 2e année | Major de Promotion",
     "experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
     "experience-2-description": "Approfondissement des techniques avancées en intelligence artificielle, notamment le Machine Learning et le Deep Learning pour la modélisation prédictive et l'entraînement de réseaux de neurones.",
 	
@@ -43,7 +43,7 @@
     "experience-3-description": "Analyse et comparaison des critères de réussite physique entre la Ligue 1 et la Ligue 2 sur deux ans pour optimiser les stratégies du marché des transferts du club. Le projet, réalisé en collaboration avec le Stade Lavallois Mayenne FC, a porté sur plus de vingt critères de performance et près de 1000 matchs, avec un prétraitement des données, analyse et modélisation réalisés sous Python",
 	
     "experience-4-date": "2023 - 2024",
-    "experience-4-role": "Master 1 Data Science et Modélisation Statistique",
+    "experience-4-role": "Master en Data Science et Modélisation Statistique, 1ère année",
     "experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
     "experience-4-description": "Spécialisation dans la modélisation statistique : Modèles linéaires généralisés, Séries Temporelles, Statistique Bayésienne, Méthode de Monté Carlo, Modèles de durées et analyse de Survie ",
 	
@@ -168,7 +168,7 @@
 	"experience-1-description": "Extraction, analysis, execution, and automation of statistical studies on millions of data points. Presentation and simplification of results to business teams. Updating of scoring indicators. Use of SQL, Python, and Spark",
 	
 	"experience-2-date": "2024 - Present",
-	"experience-2-role": "Master's Degree 2 in Data Science | Class Valedictorian",
+	"experience-2-role": "Master’s in Data Science, Year 2 | Class Valedictorian",
 	"experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
 	"experience-2-description": "Deepening of advanced techniques in artificial intelligence, particularly Machine Learning and Deep Learning for predictive modeling and neural network training",
 	
@@ -178,7 +178,7 @@
 	"experience-3-description": "Analysis and comparison of physical success criteria between Ligue 1 and Ligue 2 over two years to optimize the club's transfer market strategies. The project, in collaboration with Stade Lavallois Mayenne FC, focused on over twenty performance criteria and nearly 1000 matches, with data preprocessing, analysis, and modeling done using Python",
 	
 	"experience-4-date": "2023 - 2024",
-	"experience-4-role": "Master's Degree 1 in Data Science and Statistical Modeling",
+	"experience-4-role": "Master’s in Data Science and Statistical Modeling, Year 1",
 	"experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
 	"experience-4-description": "Specialization in statistical modeling: Generalized Linear Models, Time Series, Bayesian Statistics, Monte Carlo Method, Duration Models, and Survival Analysis",
 	
