@@ -828,6 +828,7 @@ body {
         left: 0;
         text-align: left;
         margin-bottom: 10px;
+		font-size: 16px; /* Réduire la taille de la date sur mobile */
     }
 
     /* Ajustement de la largeur du texte pour les petits écrans */
@@ -856,17 +857,34 @@ body {
     height: auto !important;
 }
 
-/* Règles spécifiques pour la formation */
-div.formation .timeline-item::after {
+/* Style des points pour les expériences professionnelles */
+.experience .timeline .timeline-item.experiencepro::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
     background: #ffffff;  /* Fond blanc à l'intérieur du point */
-    border: 2px solid #FFD700 !important;  /* Bordure dorée pour la formation */
+    border: 2px solid #8A2BE2;  /* Bordure violette pour expérience pro */
+    border-radius: 16px;
+    z-index: 1;
 }
 
-/* Règles spécifiques pour l'expérience professionnelle (expériencepro) */
-div.experiencepro .timeline-item::after {
+/* Style des points pour les formations */
+.experience .timeline .timeline-item.formation::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
     background: #ffffff;  /* Fond blanc à l'intérieur du point */
-    border: 2px solid #8A2BE2 ;  /* Bordure violette pour l'expérience */
+    border: 2px solid #40E0D0;  /* Bordure verte pour les formations */
+    border-radius: 16px;
+    z-index: 1;
 }
+
 
 
 
