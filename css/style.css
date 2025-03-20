@@ -378,6 +378,9 @@ body {
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 15px;
+	text-align: justify;  /* Justifie le texte */
+
+	
 }
 
 .hero .hero-text h1 {
@@ -577,6 +580,12 @@ body {
 .about .col-lg-6 {
     padding: 0;
 }
+/* Justifie le texte dans la section "À propos de moi" */
+.about-text p {
+    text-align: justify;  /* Justifie le texte dans la section */
+    margin-bottom: 15px;   /* Ajoute une marge inférieure pour l'espacement */
+}
+
 
 .about .section-header {
     margin-bottom: 30px;
@@ -748,19 +757,18 @@ body {
     padding: 30px;
     background: #ffffff;
     position: relative;
-    border-right: 5px solid #dddddd;
+    border-right: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à gauche */
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
     padding-right: 40px; /* Ajout d'un espacement à droite pour éviter le chevauchement avec le logo */
 }
 
 .experience .timeline .timeline-item.right .timeline-text {
-    border-right: none;
-    border-left: 5px solid #dddddd;
+    border-left: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à droite */
     padding-left: 40px; /* Ajout d'un espacement à gauche pour éviter le chevauchement avec le logo */
 }
 
 .experience .timeline .timeline-text img {
-    width: 80px !important;
+    width: 60px !important;
     height: auto !important;
     position: absolute;
     top: 0;
@@ -787,7 +795,17 @@ body {
     margin: 0;
     font-size: 14px !important;
     padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
+	text-align: justify;  /* Justifie le texte */
+
 }
+
+/* Correction pour déplacer la flèche */
+.experience .timeline .timeline-item.left::before {
+    right: 5px !important;  /* Déplace la flèche de 100px vers la gauche */
+    border-color: transparent #dddddd transparent transparent;
+}
+
+
 
 /* Media Query pour les petits écrans */
 @media (max-width: 767.98px) {
@@ -806,7 +824,7 @@ body {
 
     .experience .timeline .timeline-item.right {
         left: 0%;
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     .experience .timeline .timeline-item.left::after, 
@@ -816,10 +834,35 @@ body {
 
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
-        left: 18px;
+        /* Ajoutons explicitement ici le déplacement */
+        left: 10px !important;  /* Déplace la flèche de 100px vers la gauche */
         border-color: transparent #dddddd transparent transparent;
     }
 
+    /* Ajustement pour ajouter une marge supplémentaire pour les flèches */
+
+
+    /* Ajout de marges supplémentaires pour le texte afin d'éviter le chevauchement avec le logo */
+    .experience .timeline .timeline-item.left .timeline-text {
+        padding-left: 90px; /* Ajout d'un espace supplémentaire à gauche pour le texte */
+    }
+
+    .experience .timeline .timeline-item.right .timeline-text {
+        padding-right: 90px; /* Ajout d'un espace supplémentaire à droite pour le texte */
+    }
+
+    /* Ajouter un espacement supplémentaire pour éviter le chevauchement avec les logos */
+    .experience .timeline .timeline-text p {
+        margin: 0;
+        font-size: 14px !important; /* Taille de police réduite pour les petits écrans */
+        padding-right: 10px; /* Ajoute de l'espace à droite pour éviter le chevauchement avec le logo */
+    }
+
+    .experience .timeline .timeline-date {
+        padding-right: 40px !important; /* Augmente l'espace à droite pour éviter tout chevauchement */
+    }
+
+    /* Ajustement de la taille du texte pour les petits écrans */
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -828,7 +871,7 @@ body {
         left: 0;
         text-align: left;
         margin-bottom: 10px;
-		font-size: 16px; /* Réduire la taille de la date sur mobile */
+        font-size: 16px; /* Réduire la taille de la date sur mobile */
     }
 
     /* Ajustement de la largeur du texte pour les petits écrans */
@@ -840,22 +883,29 @@ body {
 
     /* Augmenter la taille du texte */
     .experience .timeline .timeline-text h2 {
-        font-size: 20px !important;  /* Augmente la taille du titre */
+        font-size: 16px !important;  /* Augmente la taille du titre */
     }
 
     .experience .timeline .timeline-text h4 {
-        font-size: 16px !important;  /* Augmente la taille du sous-titre */
+        font-size: 14px !important;  /* Augmente la taille du sous-titre */
     }
 
     .experience .timeline .timeline-text p {
-        font-size: 16px !important;  /* Augmente la taille du texte */
+        font-size: 15px !important;  /* Augmente la taille du texte */
     }
 }
+
 
 .experience .timeline .timeline-item img[alt="Logo du Stade Lavallois"] {
     width: 50px !important;
     height: auto !important;
 }
+
+.experience .timeline .timeline-item img[alt="Logo Societe Generale"] {
+    width: 80px !important;
+    height: auto !important;
+}
+
 
 /* Style des points pour les expériences professionnelles */
 .experience .timeline .timeline-item.experiencepro::after {
@@ -884,14 +934,63 @@ body {
     border-radius: 16px;
     z-index: 1;
 }
+/* Style général pour les éléments */
+.experience .timeline .timeline-item .timeline-text {
+    padding: 25px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    padding-right: 40px;
+    border-right: 5px solid #dddddd; /* Bordure grise par défaut à droite */
+}
 
+/* Éléments à gauche */
+.experience .timeline .timeline-item.left .timeline-text {
+    border-right: 5px solid #dddddd; /* Bordure droite grise par défaut pour les éléments à gauche */
+}
 
+/* Éléments à droite : enlever la bordure droite et appliquer la bordure gauche */
+.experience .timeline .timeline-item.right .timeline-text {
+    border-right: none; /* Enlever la bordure droite pour les éléments à droite */
+    border-left: 5px solid #dddddd; /* Bordure gauche grise par défaut pour les éléments à droite */
+}
 
+/* Changer la couleur de la bordure et du triangle pour les expériences professionnelles à gauche */
+.experience .timeline .timeline-item.left.experiencepro .timeline-text {
+    border-right: 5px solid #8A2BE2; /* Bordure violette pour les expériences professionnelles à gauche */
+}
 
+.experience .timeline .timeline-item.left.experiencepro::before {
+    border-color: transparent transparent transparent #8A2BE2; /* Triangle violet pour les expériences professionnelles à gauche */
+}
 
+/* Changer la couleur de la bordure et du triangle pour les formations à gauche */
+.experience .timeline .timeline-item.left.formation .timeline-text {
+    border-right: 5px solid #40E0D0; /* Bordure turquoise pour les formations à gauche */
+}
 
+.experience .timeline .timeline-item.left.formation::before {
+    border-color: transparent transparent transparent #40E0D0; /* Triangle turquoise pour les formations à gauche */
 
+}
 
+/* Changer la couleur de la bordure et du triangle pour les expériences professionnelles à droite */
+.experience .timeline .timeline-item.right.experiencepro .timeline-text {
+    border-left: 5px solid #8A2BE2; /* Bordure violette pour les expériences professionnelles à droite */
+}
+
+.experience .timeline .timeline-item.right.experiencepro::before {
+    border-color: transparent #8A2BE2 transparent transparent; /* Triangle violet pour les expériences professionnelles à droite */
+}
+
+/* Changer la couleur de la bordure et du triangle pour les formations à droite */
+.experience .timeline .timeline-item.right.formation .timeline-text {
+    border-left: 5px solid #40E0D0; /* Bordure turquoise pour les formations à droite */
+}
+
+.experience .timeline .timeline-item.right.formation::before {
+    border-color: transparent #40E0D0 transparent transparent; /* Triangle turquoise pour les formations à droite */
+}
 
 /************Projects*******************/
 /* Global Styles */

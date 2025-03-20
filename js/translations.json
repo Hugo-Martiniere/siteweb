@@ -1,7 +1,7 @@
 {
   "fr": {
     "title": "Hugo Martinière - Site Web",
-    "hero-introduction": "Je suis",
+    "hero-introduction": "",
     "hero-name": "Hugo Martinière",
     "hero-description": "Data Analyst, Data Scientist, Data Engineer",
     "hero-contact-btn": "Me contacter",
@@ -135,7 +135,7 @@
   },
   "en": {
     "title": "Hugo Martinière - Website",
-    "hero-introduction": "I am",
+    "hero-introduction": "",
     "hero-name": "Hugo Martinière",
     "hero-description": "Data Analyst, Data Scientist, Data Engineer",
     "hero-contact-btn": "Contact Me",
