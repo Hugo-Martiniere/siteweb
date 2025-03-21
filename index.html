@@ -792,8 +792,44 @@
 			</div>
 		</div>
 		<!-- Contact End -->
+		
+		
+		<!-- Chat bot Start-->
+		<div id="chat-icon" onclick="toggleChatWindow()">
+			<img src="img/chatbot/robot.png" alt="Chatbot" id="robot-icon">
+		</div>
+
+		<!-- Fenêtre de chat cachée -->
+		<div id="chat-window" class="chat-window">
+			<div class="chat-header">
+				<h3>Chatbot</h3>
+				<button onclick="toggleChatWindow()">×</button>
+			</div>
+			<div id="chatbox" class="chatbox">
+				<!-- Les messages du chatbot apparaîtront ici -->
+			</div>
+			<div class="message-input">
+				<input type="text" id="question" placeholder="Posez une question..." onkeydown="if(event.key === 'Enter'){sendMessage();}">
+				<div id="send-btn" onclick="sendMessage()">
+					<img src="img/chatbot/envoi.png" alt="Envoyer" id="send-icon">
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Fonction pour afficher/masquer la fenêtre du chatbot avec animation
+			function toggleChatWindow() {
+				let chatWindow = document.getElementById('chat-window');
+				chatWindow.classList.toggle('show'); // Bascule la classe "show" pour afficher/masquer
+			}
+
+			// Vérification : Si l'élément #chat-icon est cliqué, la fenêtre s'ouvre
+			document.getElementById('chat-icon').addEventListener('click', toggleChatWindow);
+
+		</script>
 
 
+		<!-- Chat bot End-->
 
 
         <!-- Footer Start -->
@@ -838,7 +874,7 @@
         </div>
 
         
-		<script src="//code.tidio.co/5ma13dudzmn1lhu12w1a1r7mp78b88ds.js" async></script>
+		<!--<script src="//code.tidio.co/5ma13dudzmn1lhu12w1a1r7mp78b88ds.js" async></script>-->
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

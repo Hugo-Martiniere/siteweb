@@ -1239,8 +1239,234 @@ body {
 }
 
 
-/***********Ineret end */
+/*******************************/
+/********* Chat-bot *********/
+/*******************************/
+/* ====== Icône du chatbot ====== */
+#chat-icon {
+    position: fixed;
+    bottom: 60px; /* Remonté plus haut */
+    right: 30px;
+    background-color: #00233C; /* Bleu demandé */
+    border-radius: 50%;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999; /* Toujours au-dessus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+#chat-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#robot-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1); /* Robot en blanc */
+}
+
+/* ====== Fenêtre du chatbot ====== */
+.chat-window {
+    position: fixed;
+    bottom: 150px; /* Remonté plus haut */
+    right: 30px;
+    width: 360px;
+    background-color: white;
+    border-radius: 15px; /* Bordure arrondie */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 9999; /* Toujours au-dessus */
+
+    /* Cachée par défaut */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+/* Afficher la fenêtre */
+.chat-window.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* ====== En-tête du chat ====== */
+.chat-header {
+    background-color: #00233C; /* Bleu principal */
+    color: white;
+    padding: 14px;
+    border-radius: 15px 15px 0 0; /* Coins arrondis seulement en haut */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: white; /* Texte en blanc */
+}
+
+/* Bouton de fermeture */
+.chat-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chat-header button:hover {
+    transform: scale(1.2);
+}
+
+/* ====== Contenu du chat ====== */
+.chatbox {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-bottom: 30px; /* Ajout d'un espace en bas de la fenêtre */
+}
+
+/* ====== Messages du chat ====== */
+.chatbox p.user-message {
+    background-color: #005A7C; /* Bleu foncé */
+    color: white;
+    padding: 12px;
+    border-radius: 15px; /* Coins arrondis */
+    align-self: flex-end;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.chatbox p.bot-message {
+    background-color: #E3F2FD; /* Bleu clair */
+    color: #00233C;
+    padding: 12px;
+    border-radius: 15px; /* Coins arrondis */
+    align-self: flex-start;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ====== Champ de saisie ====== */
+.message-input {
+    display: flex;
+    align-items: center; /* Centrer verticalement le champ de texte et le bouton */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Zone de texte */
+input[type="text"] {
+    width: 75%;
+    padding: 12px;
+    border-radius: 25px 0 0 25px; /* Coins arrondis à gauche */
+    border: 2px solid #ddd;
+    font-size: 16px;
+    margin: 0; /* Enlever la marge pour éviter les espacements */
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00233C;
+}
+
+/* Bouton d'envoi */
+#send-btn {
+    width: 100px;
+    height: 50px;
+    background-color: #00233C; /* Bleu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 25px 25px 0; /* Coins arrondis à droite */
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 0; /* Enlever la marge du bas pour aligner correctement */
+}
+
+#send-btn:hover {
+    background-color: #004A67; /* Bleu plus foncé au survol */
+}
+
+#send-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Inverser l'image pour qu'elle soit blanche */
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ====== 🌍 Mode Responsive pour Mobile ====== */
+@media screen and (max-width: 768px) {
+    #chat-icon {
+        bottom: 40px; /* Ajusté pour mobile */
+        right: 20px;
+        padding: 14px;
+    }
+
+    #robot-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chat-window {
+        bottom: 120px; /* Ajusté pour mobile */
+        right: 10px;
+        width: 90%;
+        max-height: 400px;
+    }
+
+    .chat-header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button#send-btn {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+
+    .chatbox {
+        max-height: 300px;
+    }
+}
 
 /*******************************/
 /********* Service CSS *********/
