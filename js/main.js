@@ -172,6 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*Chat-bot*/
 // Toggle l'ouverture et la fermeture de la fenêtre de chat
 // Fonction pour basculer l'affichage de la fenêtre de chat
+// Fonction pour basculer l'affichage de la fenêtre de chat
 function toggleChatWindow() {
     const chatWindow = document.getElementById('chat-window');
     chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
@@ -193,26 +194,41 @@ function extractSiteContent() {
 
 // Fonction pour encoder le texte en utilisant l'API Hugging Face
 async function encodeText(text) {
-    const response = await fetch(
-        "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2", // Modèle d'embedding
-        {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer ${HUGGING_FACE_TOKEN}", // Votre token ici
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                inputs: text
-            })
-        }
-    );
+    try {
+        const response = await fetch(
+            "https://api-inference.huggingface.co/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", // Modèle multilingue
+            {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    inputs: text
+                })
+            }
+        );
 
-    const data = await response.json();
-    return data[0]; // Retourne l'embedding du texte
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Réponse de l'API Hugging Face:", data);
+        return data[0]; // Retourne l'embedding du texte
+    } catch (error) {
+        console.error("Erreur lors de l'encodage du texte:", error);
+        throw error;
+    }
 }
 
 // Fonction pour calculer la similarité cosinus entre deux embeddings
 function cosineSimilarity(embeddingA, embeddingB) {
+    if (!embeddingA || !embeddingB) {
+        console.error("L'un des embeddings est undefined.");
+        return 0;
+    }
+
     let dotProduct = 0;
     let magnitudeA = 0;
     let magnitudeB = 0;
@@ -226,13 +242,27 @@ function cosineSimilarity(embeddingA, embeddingB) {
     magnitudeA = Math.sqrt(magnitudeA);
     magnitudeB = Math.sqrt(magnitudeB);
 
+    if (magnitudeA === 0 || magnitudeB === 0) {
+        console.error("L'une des magnitudes est nulle.");
+        return 0;
+    }
+
     return dotProduct / (magnitudeA * magnitudeB);
 }
 
 // Fonction pour trouver la réponse la plus pertinente dans le contenu du site
 async function findAnswerInContent(question, siteContent) {
+    if (!question || !siteContent) {
+        console.error("La question ou le contenu du site est vide.");
+        return null;
+    }
+
     // Encoder la question
     const questionEmbedding = await encodeText(question);
+    if (!questionEmbedding) {
+        console.error("L'encodage de la question a échoué.");
+        return null;
+    }
 
     // Diviser le contenu du site en phrases
     const sentences = siteContent.split(/[.!?]/).filter(s => s.trim() !== '');
@@ -242,8 +272,12 @@ async function findAnswerInContent(question, siteContent) {
     // Comparer chaque phrase du site avec la question
     for (const sentence of sentences) {
         const sentenceEmbedding = await encodeText(sentence);
-        const similarity = cosineSimilarity(questionEmbedding, sentenceEmbedding);
+        if (!sentenceEmbedding) {
+            console.error("L'encodage de la phrase a échoué :", sentence);
+            continue;
+        }
 
+        const similarity = cosineSimilarity(questionEmbedding, sentenceEmbedding);
         if (similarity > bestMatch.similarity) {
             bestMatch = { sentence, similarity };
         }
@@ -323,179 +357,3 @@ document.getElementById('question').addEventListener('keydown', function (event)
 
 // Écouter le clic sur le bouton d'envoi
 document.getElementById('send-btn').addEventListener('click', sendMessage);
-
-
-
-// Lire la variable d'environnement
-const token = process.env.HUGGINGFACE_TOKEN;
-
-if (!token) {
-    console.error("❌ Erreur: Le token n'est pas défini !");
-    process.exit(1);
-}
-
-console.log("✅ Token récupéré avec succès !");
-
-// Exemple d'utilisation avec une requête API
-fetch('https://api.example.com/data', {
-    method: 'GET',
-    headers: {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json'
-    }
-})
-.then(response => response.json())
-.then(data => console.log("Données reçues:", data))
-.catch(error => console.error("Erreur:", error));
-
-
-async function encodeText(text) {
-    try {
-        const response = await fetch(
-            "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2",
-            {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    inputs: text
-                })
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("Réponse de l'API Hugging Face:", data);
-        return data[0]; // Retourne l'embedding du texte
-    } catch (error) {
-        console.error("Erreur lors de l'encodage du texte:", error);
-        throw error;
-    }
-}
-
-function cosineSimilarity(embeddingA, embeddingB) {
-    if (!embeddingA || !embeddingB) {
-        console.error("L'un des embeddings est undefined.");
-        return 0;
-    }
-
-    let dotProduct = 0;
-    let magnitudeA = 0;
-    let magnitudeB = 0;
-
-    for (let i = 0; i < embeddingA.length; i++) {
-        dotProduct += embeddingA[i] * embeddingB[i];
-        magnitudeA += embeddingA[i] * embeddingA[i];
-        magnitudeB += embeddingB[i] * embeddingB[i];
-    }
-
-    magnitudeA = Math.sqrt(magnitudeA);
-    magnitudeB = Math.sqrt(magnitudeB);
-
-    if (magnitudeA === 0 || magnitudeB === 0) {
-        console.error("L'une des magnitudes est nulle.");
-        return 0;
-    }
-
-    return dotProduct / (magnitudeA * magnitudeB);
-}
-
-
-
-
-async function encodeText(text) {
-    try {
-        const response = await fetch(
-            "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2",
-            {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    inputs: text
-                })
-            }
-        );
-
-        if (!response.ok) {
-            throw new Error(`Erreur HTTP: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("Réponse de l'API Hugging Face:", data);
-        return data[0]; // Retourne l'embedding du texte
-    } catch (error) {
-        console.error("Erreur lors de l'encodage du texte:", error);
-        throw error;
-    }
-}
-
-function cosineSimilarity(embeddingA, embeddingB) {
-    if (!embeddingA || !embeddingB) {
-        console.error("L'un des embeddings est undefined.");
-        return 0;
-    }
-
-    let dotProduct = 0;
-    let magnitudeA = 0;
-    let magnitudeB = 0;
-
-    for (let i = 0; i < embeddingA.length; i++) {
-        dotProduct += embeddingA[i] * embeddingB[i];
-        magnitudeA += embeddingA[i] * embeddingA[i];
-        magnitudeB += embeddingB[i] * embeddingB[i];
-    }
-
-    magnitudeA = Math.sqrt(magnitudeA);
-    magnitudeB = Math.sqrt(magnitudeB);
-
-    if (magnitudeA === 0 || magnitudeB === 0) {
-        console.error("L'une des magnitudes est nulle.");
-        return 0;
-    }
-
-    return dotProduct / (magnitudeA * magnitudeB);
-}
-
-async function findAnswerInContent(question, siteContent) {
-    if (!question || !siteContent) {
-        console.error("La question ou le contenu du site est vide.");
-        return null;
-    }
-
-    const questionEmbedding = await encodeText(question);
-    if (!questionEmbedding) {
-        console.error("L'encodage de la question a échoué.");
-        return null;
-    }
-
-    const sentences = siteContent.split(/[.!?]/).filter(s => s.trim() !== '');
-
-    let bestMatch = { sentence: '', similarity: -1 };
-
-    for (const sentence of sentences) {
-        const sentenceEmbedding = await encodeText(sentence);
-        if (!sentenceEmbedding) {
-            console.error("L'encodage de la phrase a échoué :", sentence);
-            continue;
-        }
-
-        const similarity = cosineSimilarity(questionEmbedding, sentenceEmbedding);
-        if (similarity > bestMatch.similarity) {
-            bestMatch = { sentence, similarity };
-        }
-    }
-
-    if (bestMatch.similarity > 0.5) {
-        return bestMatch.sentence;
-    } else {
-        return null; // Aucune réponse trouvée
-    }
-}
