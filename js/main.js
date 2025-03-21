@@ -198,7 +198,7 @@ async function encodeText(text) {
         {
             method: "POST",
             headers: {
-                "Authorization": "Bearer ${process.env.HUGGING_FACE_TOKEN}", // Votre token ici
+                "Authorization": "Bearer ${HUGGING_FACE_TOKEN}", // Votre token ici
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -323,3 +323,27 @@ document.getElementById('question').addEventListener('keydown', function (event)
 
 // Écouter le clic sur le bouton d'envoi
 document.getElementById('send-btn').addEventListener('click', sendMessage);
+
+
+
+// Lire la variable d'environnement
+const token = process.env.HUGGINGFACE_TOKEN;
+
+if (!token) {
+    console.error("❌ Erreur: Le token n'est pas défini !");
+    process.exit(1);
+}
+
+console.log("✅ Token récupéré avec succès !");
+
+// Exemple d'utilisation avec une requête API
+fetch('https://api.example.com/data', {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+    }
+})
+.then(response => response.json())
+.then(data => console.log("Données reçues:", data))
+.catch(error => console.error("Erreur:", error));
