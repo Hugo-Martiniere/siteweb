@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <title data-i18n="title">Hugo Martinière - Site Web</title>
+    <meta content="Portfolio Data Scientist" name="keywords">
+    <meta content="Portfolio Data Scientist" name="description">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRYH9BWKW2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-QRYH9BWKW2');
+	</script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-light navbar-light">
+        <div class="container-fluid">
+            <a href="Hugo_Martiniere.html" class="navbar-brand">DataFolio</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
+                    <a href="#home" class="nav-item nav-link active" data-i18n="home">Accueil</a>
+                    <a href="#about" class="nav-item nav-link" data-i18n="about">Qui je suis</a>
+                    <a href="#experience" class="nav-item nav-link" data-i18n="experience">Parcours</a>
+                    <a href="#portfolio" class="nav-item nav-link" data-i18n="portfolio">Compétences</a>
+                    <a href="#projets" class="nav-item nav-link" data-i18n="projets">Projets</a>
+                    <a href="#review" class="nav-item nav-link" data-i18n="review">Avis</a>
+                    <a href="#interet" class="nav-item nav-link" data-i18n="interet">Mes intérêts</a>
+                    <a href="#contact" class="nav-item nav-link" data-i18n="contact">Contact</a>
+
+                    <!-- Sélecteur de Langue -->
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="languageDropdown" data-toggle="dropdown">
+                            <img id="languageIcon" src="img/langue/france.png" width="20px">
+                            <span id="languageDropdownText" data-i18n="language">Langue</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('fr')">
+                                <img src="img/langue/france.png" width="20px"> Français
+                            </a>
+                            <a href="#" class="dropdown-item" onclick="changeLanguage('en')">
+                                <img src="img/langue/anglais.png" width="20px"> English
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav Bar End -->
+
+
+		 <!-- Hero Start -->
+	<div class="hero" id="home">
+		<div class="container-fluid">
+			<div class="row align-items-center">
+				<div class="col-sm-12 col-md-6">
+					<div class="hero-content">
+						<div class="hero-text">
+							<p data-i18n="hero-introduction"></p>
+							<h1 data-i18n="hero-name">Hugo Martinière</h1>
+							<h2></h2>
+							<div class="typed-text" data-i18n="hero-description">Data Analyst, Data Scientist, Data Engineer</div>
+						</div>
+						<div class="hero-btn">
+							<a class="btn" style="margin-bottom:10px" href="#contact" id="scrollToContactBtn" data-i18n="hero-contact-btn">Me contacter</a>
+							<a class="btn" style="margin-bottom:10px" id="cv-link" href="img/cv/Hugo_Martiniere_CV.pdf" data-i18n="hero-download-cv">📄 Télécharger mon CV</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<div class="hero-image">
+						<img src="img/photo.JPG" alt="Hero Image" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Hero End -->
+
+		<!-- Ajout du script JavaScript juste avant la balise </body> -->
+		<script>
+			// Cibler le bouton avec l'ID "scrollToContactBtn"
+			document.querySelector('#scrollToContactBtn').addEventListener('click', function(e) {
+				e.preventDefault();  // Empêche le comportement par défaut du lien
+				const target = document.querySelector('#contact');  // Cibler la section #contact
+				target.scrollIntoView({
+					behavior: 'smooth',  // Défilement fluide
+					block: 'start'  // Positionner la section en haut de la fenêtre
+				});
+			});
+		</script>
+
+        <!-- Hero End -->
+
+
+		<!-- About Start -->
+		<div class="about wow fadeInUp" data-wow-delay="0.1s" id="about" style="padding: 50px 0;">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="about-img">
+							<img src="img/quijesuis/icons.png" alt="Image">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-content">
+							<div class="section-header text-left">
+								<p data-i18n="about-title">À propos de moi</p>
+								<h2 data-i18n="about-subtitle">Étudiant en Master de Data Science</h2>
+							</div>
+							<div class="about-text">
+								<p data-i18n="about-description">
+									Bonjour, je suis Hugo, un Data Scientist terminant son Master en août 2025. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je suis à la recherche de ma prochaine opportunité dans un environnement innovant et collaboratif. Je vous invite à explorer mon site web où je partage mes projets, mes compétences et mes centres d'intérêt. Bonne visite !
+								</p>
+							</div>
+							<div class="skills">
+								<div class="skill-name">
+									<p data-i18n="skill-visualisation">Data Science</p><p>85%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<div class="skill-name">
+									<p data-i18n="skill-science">Data Visualisation</p><p>85%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<div class="skill-name">
+									<p data-i18n="skill-engineering">Data Engineering</p><p>70%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+							<a class="btn" href="#interet" id="scrollTointeretBtn" data-i18n="about-more-info">En savoir plus sur moi</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- About End -->
+
+		<script>
+			// Cibler le bouton avec l'ID "scrollTointeretBtn"
+			document.querySelector('#scrollTointeretBtn').addEventListener('click', function(e) {
+				e.preventDefault();  // Empêche le comportement par défaut du lien
+				const target = document.querySelector('#interet');  // Cibler la section #contact
+				target.scrollIntoView({
+					behavior: 'smooth',  // Défilement fluide
+					block: 'start'  // Positionner la section en haut de la fenêtre
+				});
+			});
+		</script>
+        <!-- About End -->
+        
+		<!-- Experience Start -->
+		<div class="experience" id="experience">
+			<div class="container">
+				<header class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+					<p data-i18n="experience-title">Parcours Académique</p>
+					<h2 data-i18n="experience-subtitle">Formations & Expériences Professionnelles</h2>
+				</header>
+				<div class="timeline">
+
+					<!-- Expérience Professionnelle - Alternant Data Scientist (Société Générale) - Mise en première position -->
+					<div class="timeline-item right wow slideInRight experiencepro" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-1-date">Septembre 2024 - Jusqu'à présent</div>
+							<h2 data-i18n="experience-1-role">Alternant Data Scientist</h2>
+							<h4 data-i18n="experience-1-company">Société Générale, La Défense, Paris</h4>
+							<img src="img/parcours/Logo_societe_general.png" alt="Logo Societe Generale" style="width:140px; height:auto; position:absolute; top:0px; right:10px;">
+							<p data-i18n="experience-1-description">
+								Extraction, analyse, réalisation et automatisation d'études statistiques sur des millions de données. Présentation et vulgarisation des résultats aux équipes métiers. Mise à jour des indicateurs de scoring. Utilisation des langages SQL, Python et Spark
+							</p>
+						</div>
+					</div>
+
+					<!-- Formation - Master 2 Data Science -->
+					<div class="timeline-item left wow slideInLeft formation" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px; ">
+							<div class="timeline-date" data-i18n="experience-2-date">2024 - Jusqu'à présent</div>
+							<h2 data-i18n="experience-2-role">Master en Science des Données, 2e année | Major de Promotion</h2>
+							<h4 data-i18n="experience-2-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:80px; height:auto; position:absolute; top:5px; right:5px;">
+							<p data-i18n="experience-2-description">
+								Approfondissement des techniques avancées en intelligence artificielle, notamment le Machine Learning et le Deep Learning pour la modélisation prédictive et l'entraînement de réseaux de neurones
+							</p>
+						</div>
+					</div>
+
+					<!-- Projet Data Science -->
+					<div class="timeline-item right wow slideInRight experiencepro" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-3-date">Janvier 2024 - Mai 2024</div>
+							<h2 data-i18n="experience-3-role">Projet Data Science</h2>
+							<h4 data-i18n="experience-3-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/Stade_Lavallois.png" alt="Logo du Stade Lavallois" style="width:70px; height:auto; position:absolute; top:5px; right:10px;">
+							<p data-i18n="experience-3-description">
+								Analyse et comparaison des critères de réussite physique entre la Ligue 1 et la Ligue 2 sur deux ans pour optimiser les stratégies du marché des transferts du club. Le projet, réalisé en collaboration avec le Stade Lavallois Mayenne FC, a porté sur plus de vingt critères de performance et près de 1000 matchs, avec un prétraitement des données, analyse et modélisation réalisés sous Python
+							</p>
+						</div>
+					</div>
+
+					<!-- Formation - Master 1 Data Science -->
+					<div class="timeline-item left wow slideInLeft formation" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
+							<div class="timeline-date" data-i18n="experience-4-date">2023 - 2024</div>
+							<h2 data-i18n="experience-4-role">Master en Data Science et Modélisation Statistique, 1ère année</h2>
+							<h4 data-i18n="experience-4-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:80px; height:auto; position:absolute; top:5px; right:5px;">
+							<p data-i18n="experience-4-description">
+								Spécialisation dans la modélisation statistique : Modèles linéaires généralisés, Séries Temporelles, Statistique Bayésienne, Méthode de Monté Carlo, Modèles de durées et analyse de Survie.
+							</p>
+						</div>
+					</div>
+
+					<!-- Licence Mathématiques -->
+					<div class="timeline-item right wow slideInRight formation" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-5-date">2022 - 2023</div>
+							<h2 data-i18n="experience-5-role">Licence Mathématiques, Informatique, Statistique parcours Statistique</h2>
+							<h4 data-i18n="experience-5-university">Université Bretagne Sud, UFR SSI, Vannes</h4>
+							<img src="img/parcours/SSI.png" alt="Logo de l'Université Bretagne Sud" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
+							<p data-i18n="experience-5-description">
+								Approfondissement de la théorie des statistiques, des tests d’hypothèses, des analyses factorielles et des méthodes de classification et de clustering, ainsi que renforcement des compétences en informatique, notamment en gestion et optimisation des bases de données
+							</p>
+						</div>
+					</div>
+
+					<!-- Stage chargé d'études statistiques -->
+					<div class="timeline-item left wow slideInLeft experiencepro" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px; margin-left: -50px;">
+							<div class="timeline-date" data-i18n="experience-6-date">Avril 2022 - Juin 2022</div>
+							<h2 data-i18n="experience-6-role">Stagiaire chargé d'études statistiques</h2>
+							<h4 data-i18n="experience-6-company">L'APRAS, Rennes</h4>
+							<img src="img/parcours/apras.jpg" alt="Logo de l'APRAS" style="width:100px; height:auto; position:absolute; top:5px; right:5px;">
+							<p data-i18n="experience-6-description">
+								Création de différents indices de vulnérabilité sur l’agglomération rennaise, automatisation de tableaux de bord et présentation des résultats aux équipes métiers.
+							</p>
+						</div>
+					</div>
+
+					<!-- DUT STID -->
+					<div class="timeline-item right wow slideInRight formation" data-wow-delay="0.1s">
+						<div class="timeline-text" style="width: 580px; padding: 20px;">
+							<div class="timeline-date" data-i18n="experience-7-date">2020 - 2022</div>
+							<h2 data-i18n="experience-7-role">DUT STID (Statistique et Informatique Décisionnelle)</h2>
+							<h4 data-i18n="experience-7-university">Institut Universitaire de Technologie, Vannes</h4>
+							<img src="img/parcours/IUT_png.png" alt="Logo de l'IUT Vannes" style="width:140px; height:auto; position:absolute; top:5px; right:0px;">
+							<p data-i18n="experience-7-description">
+								Conception et gestion de bases de données, requêtage, analyse et visualisation des données, développement web et programmation
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			if (window.innerWidth <= 767.98) { // Vérifie si l'écran est de petite taille
+				console.log("Modification des positions et animations..."); // Vérification
+
+				// Sélectionner et modifier uniquement les éléments .timeline-item.left
+				document.querySelectorAll(".timeline-item.left").forEach(item => {
+					item.classList.remove("left", "slideInLeft");
+					item.classList.add("right", "slideInRight");
+					console.log("Bloc déplacé de gauche à droite :", item); // Vérification
+				});
+
+				// Les éléments .timeline-item.right ne sont pas modifiés
+			}
+		});
+
+
+		</script>
+
+		<!-- Job Experience End -->
+
+				
+		<!-- Portfolio Start -->
+		<div class="portfolio" id="portfolio">
+			<div class="container">
+				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+					<p data-i18n="portfolio-expertise">Mon Expertise Technique</p>
+					<h2 data-i18n="portfolio-title">Langages & Logiciels</h2>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<ul id="portfolio-filter">
+							<li data-filter="*" class="filter-active" data-i18n="portfolio-all">Tout</li>
+							<li data-filter=".filter-1" data-i18n="portfolio-filter-1">Data Visualisation</li>
+							<li data-filter=".filter-2" data-i18n="portfolio-filter-2">Langage de programmation</li>
+							<li data-filter=".filter-3" data-i18n="portfolio-filter-3">Logiciel</li>
+							<li data-filter=".filter-4" data-i18n="portfolio-filter-4">Data Engineering</li>
+						</ul>
+					</div>
+				</div>
+				<div class="row portfolio-container">
+					<!-- Portfolio Items -->
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.0s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Power_BI_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Power BI</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.2s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Python_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Python</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.4s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Rstudio_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>R Studio</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.6s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Tableau_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Tableau</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SQL_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>SQL</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SPARK_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Spark</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SAS_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>SAS</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-1 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Shiny_400_300.png" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Shiny</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 filter-4 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/ORACLE_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Oracle</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Talend_400_300.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Talend</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Hive_400_300.png" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Hive</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 filter-4  wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/dataiku_400_300.png" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Dataiku</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-2 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/HTML_CSS.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>HTML & CSS</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/Access.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Access</h3>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-2.4 col-md-4 col-sm-6 portfolio-item filter-3 wow fadeInUp" data-wow-delay="0.8s">
+						<div class="portfolio-wrap">
+							<div class="portfolio-img">
+								<img src="img/skill/SuiteOffice.jpg" alt="Image">
+							</div>
+							<div class="portfolio-text">
+								<h3>Suite Office</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Portfolio End -->
+
+	<!-- Project start -->
+			<div class="projects-section" id="projets" style="background-color: #f8f9fa; padding: 50px 0;">
+			  <div class="container">
+				<div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+				  <p data-i18n="projects-title">Projets</p>
+				  <h2 data-i18n="projects-subtitle">Découvrez mes réalisations</h2>
+				</div>
+				<div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+				  <!-- Points de navigation sous forme de ronds -->
+				  <ol class="carousel-indicators">
+					<li data-target="#projectsCarousel" data-slide-to="0" class="active" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+					<li data-target="#projectsCarousel" data-slide-to="1" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+					<li data-target="#projectsCarousel" data-slide-to="2" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+					<li data-target="#projectsCarousel" data-slide-to="3" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+					<li data-target="#projectsCarousel" data-slide-to="4" style="border-radius: 50%; width: 12px; height: 12px; background-color: #6c757d;"></li>
+				  </ol>
+
+				  <!-- Contenu du carousel -->
+				  <div class="carousel-inner">
+					<!-- Premier Projet -->
+					<div class="carousel-item active">
+					  <div class="row align-items-center">
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-img">
+							<img src="img/projet/ligues_400_300.png" alt="Projet 1" class="img-fluid" style="max-width: 80%; border-radius: 10px;">
+						  </div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-text mx-3" style="margin-left: -70px; margin-right: 100px;">
+							<h3 id="spec-title" data-i18n="project-1-title">Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?</h3>
+							<p data-i18n="project-1-description">
+								Pour le Stade Levallois FC, j'ai identifié les différences athlétiques entre les deux premières divisions du football français, la Ligue 1 et la Ligue 2. De plus, j'ai modélisé la performance athlétique des équipes et leur classement final en fin de saison.
+							</p>
+							<p><strong data-i18n="used-languages">Languages utilisés :</strong> Python, R</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- Deuxième Projet -->
+					<div class="carousel-item">
+					  <div class="row align-items-center">
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-img">
+							<img src="img/projet/elmy.png" alt="Projet 2" class="img-fluid" style="max-width: 80%; border-radius: 10px;">
+						  </div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-text mx-3" style="margin-left: -70px; margin-right: 100px;">
+							<h3 id="spec-title" data-i18n="project-2-title">Prédiction de prix de l'électricité :</h3>
+							<p data-i18n="project-2-description">
+								Modélisation de l'écart de prix entre le marché Intraday et le marché SPOT (marché de l'électricité où les transactions s'effectuent pour une livraison le jour suivant) afin de prévoir son évolution à la hausse ou à la baisse pour les jours à venir.
+							</p>
+							<p><strong data-i18n="used-language">Language utilisé :</strong> Python</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- Troisième Projet -->
+					<div class="carousel-item">
+					  <div class="row align-items-center">
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-img">
+							<img src="img/projet/hopital.png" alt="Projet 3" class="img-fluid" style="max-width: 80%; border-radius: 10px; width: 40%;">
+						  </div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-text mx-3" style="margin-left: -70px; margin-right: 100px;">
+							<h3 id="spec-title" data-i18n="project-3-title">Hospitalisation : Classique ou Ambulatoire ?</h3>
+							<p data-i18n="project-3-description">
+								Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique, afin de déterminer si le mode ambulatoire présentait un risque accru.
+							</p>
+							<p><strong data-i18n="used-software">Logiciel utilisé :</strong> SAS</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- Quatrième Projet -->
+					<div class="carousel-item">
+					  <div class="row align-items-center">
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-img">
+							<img src="img/projet/protection.png" alt="Projet 4" class="img-fluid" style="max-width: 80%; border-radius: 10px; width: 40%;">
+						  </div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-text mx-3" style="margin-left: -70px; margin-right: 100px;">
+							<h3 id="spec-title" data-i18n="project-4-title">Modélisation des Prix d'une Assurance Automobile</h3>
+							<p data-i18n="project-4-description">
+								J'ai modélisé les taux pour deux couvertures d'assurance : (i) la couverture des dommages, qui protège contre la perte matérielle due aux accidents, et (ii) la couverture des bris de glace, qui couvre les dommages aux surfaces vitrées, afin de mieux comprendre les critères influençant la fixation de ces taux.
+							</p>
+							<p><strong data-i18n="used-software">Logiciel utilisé :</strong> SAS</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- Cinquième Projet -->
+					<div class="carousel-item">
+					  <div class="row align-items-center">
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-img">
+							
+							<img src="img/projet/Projet_3.jpg" alt="Projet 5" class="img-fluid" style="max-width: 80%; border-radius: 10px;">
+						  </div>
+						</div>
+						<div class="col-12 col-sm-12 col-md-6">
+						  <div class="project-text mx-3" style="margin-left: -70px; margin-right: 100px;">
+							<h3 id="spec-title" data-i18n="project-5-title">Réussir un Pénalty : Les Facteurs Clés</h3>
+							<p data-i18n="project-5-description">
+								Afin de comprendre les facteurs influençant le succès des penalties, j'ai comparé les performances des tireurs de penalty lors de la saison 2019-2020 des cinq grands championnats européens, en prenant en compte divers facteurs tels que l'identité du tireur, l'importance du penalty, le moment du match, etc.
+							</p>
+							<p><strong data-i18n="used-software">Logiciel utilisé :</strong> SAS</p>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+
+				  <!-- Contrôles de navigation (flèches inchangées) -->
+				  <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Précédent</span>
+				  </a>
+				  <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Suivant</span>
+				  </a>
+				</div>
+			  </div>
+			</div>
+
+			<!-- Script JS -->
+			<script>
+			  document.addEventListener('DOMContentLoaded', function() {
+				var carousel = new bootstrap.Carousel(document.getElementById('projectsCarousel'), {
+				  interval: 5000,
+				  ride: 'carousel'
+				});
+			  });
+			</script>
+
+
+
+
+		<!-- Testimonial Start -->
+		<div class="testimonial wow fadeInUp" data-wow-delay="0.1s" id="review">
+			<div class="container">
+				<div class="testimonial-icon">
+					<i class="fa fa-quote-left"></i>
+				</div>
+				<div class="owl-carousel testimonials-carousel" id="testimonial-container">
+					<!-- Avis 1 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/socgen.jpg" alt="Image" class="resize-image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-3-text">
+								Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+							</p>
+							<h3 data-i18n="testimonial-3-name">Beroldy Carole</h3>
+							<h4 data-i18n="testimonial-3-role">Tutrice entreprise alternance</h4>
+						</div>
+					</div>
+					<!-- Avis 2 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/SSI.jpg" alt="Image" class="resize-image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-4-text">
+								Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.
+							</p>
+							<h3 data-i18n="testimonial-4-name">Durrieu Gilles</h3>
+							<h4 data-i18n="testimonial-4-role">Tuteur université alternance</h4>
+						</div>
+					</div>
+					<!-- Avis 3 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/apras.jpg" alt="Image" class="resize-image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-1-text">
+								Rigoureux, consciencieux et engagé, Monsieur Martinière a apporté un réel soutien à nos travaux en cours et a pu améliorer et mettre en œuvre, durant cette période, ses compétences dans les logiciels et langages de programmation comme Access et SQL. Par ailleurs, il s'est très bien intégré à l'équipe de L'APRAS et a été unanimement apprécié.
+							</p>
+							<h3 data-i18n="testimonial-1-name">Poulard Irma</h3>
+							<h4 data-i18n="testimonial-1-role">Responsable de stage</h4>
+						</div>
+					</div>
+					<!-- Avis 4 -->
+					<div class="testimonial-item">
+						<div class="testimonial-img">
+							<img src="img/review/IUT_vannes.jpg" alt="Image">
+						</div>
+						<div class="testimonial-text">
+							<p data-i18n="testimonial-2-text">
+								J'ai eu la responsabilité d'encadrer Hugo Martinière pendant son stage à l'IUT de Vannes. Cette expérience s'est révélée très positive. Il a fait preuve d'un excellent niveau de sérieux et d'autonomie, accomplissant toujours ses tâches avec rigueur. Hugo s'est très bien adapté à son environnement de travail et a abordé ses missions de manière professionnelle. Sa curiosité et son implication ont été notables, lui permettant de progresser dans ses apprentissages. Il a également démontré des qualités relationnelles très appréciables. Je suis convaincu que toutes ses qualités apporteront une contribution très positive à son futur employeur.
+							</p>
+							<h3 data-i18n="testimonial-2-name">Béchet Nicolas</h3>
+							<h4 data-i18n="testimonial-2-role">Ancien professeur</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Testimonial End -->
+
+
+
+
+		<!-- Interet Start -->
+		<div class="about wow fadeInUp" data-wow-delay="0.1s" id="interet" style="margin-top:75px;  padding: 50px 0;">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-6">
+						<div class="interet-img">
+							<img src="img/passion/passion_2.jpg" alt="Image">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-content">
+							<div class="section-header text-center wow zoomIn">
+								<p data-i18n="interet-title">Ce qui m’anime</p>
+								<h3 data-i18n="interet-heading"></h3>
+							</div>
+							<div class="about-text">
+								<h3 data-i18n="interet-subheading"></h3>
+								<ul>
+									<li style="margin-bottom: 15px;">
+										<strong data-i18n="interet-challenge">Défis :</strong> <span data-i18n="interet-challenge-text">J’aime me dépasser, que ce soit en apprenant une langue ou en relevant des défis sportifs.</span>
+									</li>
+									<li style="margin-bottom: 15px;">
+										<strong data-i18n="interet-sport">Sport :</strong> <span data-i18n="interet-sport-text">Le football et le badminton, que j’ai pratiqués en club, sont au cœur de ma passion pour le sport.</span>
+									</li>
+									<li style="margin-bottom: 15px;">
+										<strong data-i18n="interet-innovation">Innovation :</strong> <span data-i18n="interet-innovation-text">Les avancées technologiques, notamment en intelligence artificielle, attisent ma curiosité.</span>
+									</li>
+									<li style="margin-bottom: 15px;">
+										<strong data-i18n="interet-travel">Voyages :</strong> <span data-i18n="interet-travel-text">J’adore explorer de nouveaux horizons, admirer des paysages et découvrir des cultures.</span>
+									</li>
+									<li style="margin-bottom: 15px;">
+										<strong data-i18n="interet-culture">Activités culturelles :</strong> <span data-i18n="interet-culture-text">J’apprécie les musées, le cinéma, la lecture et les reportages enrichissants.</span>
+									</li>
+								</ul>
+							</div>   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Interet End -->
+
+        
+		 <!-- Contact Start -->
+		<div class="contact wow fadeInUp" data-wow-delay="0.1s" id="contact">
+			<div class="container-fluid">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-4"></div>
+						<div class="col-md-8">
+							<div class="contact-form">
+								<!-- Texte d'introduction -->
+								<p class="text-white contact-intro mb-4" data-i18n="contact-intro">
+									Besoin d’informations ou envie de collaborer ? Envoyez-moi un message !
+								</p>
+
+								<div id="success"></div>
+								<form name="sentMessage" id="contactForm" novalidate="novalidate">
+									<div class="control-group">
+										<input type="text" class="form-control" id="name" placeholder="Votre Nom & Prénom" data-i18n="contact-name-placeholder" required="required" />
+										<p class="help-block"></p>
+									</div>
+									<div class="control-group">
+										<input type="email" class="form-control" id="email" placeholder="Votre Email" data-i18n="contact-email-placeholder" required="required" />
+										<p class="help-block"></p>
+									</div>
+									<div class="control-group">
+										<input type="text" class="form-control" id="subject" placeholder="Sujet" data-i18n="contact-subject-placeholder" required="required" />
+										<p class="help-block"></p>
+									</div>
+									<div class="control-group">
+										<textarea type="text" class="form-control" id="message" placeholder="Message" data-i18n="contact-message-placeholder" required="required"></textarea>
+										<p class="help-block"></p>
+									</div>
+									<div>
+										<button class="btn" type="submit" id="sendMessageButton" data-i18n="contact-send-button">Envoyer</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Contact End -->
+		
+		
+		<!-- Chat bot Start-->
+		<div id="chat-icon" onclick="toggleChatWindow()">
+			<img src="img/chatbot/robot.png" alt="Chatbot" id="robot-icon">
+		</div>
+
+		<!-- Fenêtre de chat cachée -->
+		<div id="chat-window" class="chat-window">
+			<div class="chat-header">
+				<h3>Chatbot</h3>
+				<button onclick="toggleChatWindow()">×</button>
+			</div>
+			<div id="chatbox" class="chatbox">
+				<!-- Les messages du chatbot apparaîtront ici -->
+			</div>
+			<div class="message-input">
+				<input type="text" id="question" placeholder="Posez une question..." onkeydown="if(event.key === 'Enter'){sendMessage();}">
+				<div id="send-btn" onclick="sendMessage()">
+					<img src="img/chatbot/envoi.png" alt="Envoyer" id="send-icon">
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Fonction pour afficher/masquer la fenêtre du chatbot avec animation
+			function toggleChatWindow() {
+				let chatWindow = document.getElementById('chat-window');
+				chatWindow.classList.toggle('show'); // Bascule la classe "show" pour afficher/masquer
+			}
+
+			// Vérification : Si l'élément #chat-icon est cliqué, la fenêtre s'ouvre
+			document.getElementById('chat-icon').addEventListener('click', toggleChatWindow);
+
+		</script>
+
+
+		<!-- Chat bot End-->
+
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Hugo Martinière</h2>
+                        <h3>Paris / Rennes / Vannes / France</h3>
+                        <div class="footer-menu">
+                            <!--<p>+012 345 67890</p>-->
+                            <!--<p>mail@gmail.com</p>-->
+                        </div>
+                        <div class="footer-social">
+                            <!--<a href=""><i class="fab fa-twitter"></i></a>
+							<a href=""><i class="fab fa-facebook-f"></i></a>
+							<a href=""><i class="fab fa-youtube"></i></a>
+							<a href=""><i class="fab fa-instagram"></i></a>-->
+							<a href="https://github.com/Hugo-Martiniere"> <i class ="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/hugo-martiniere/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Hugo Martinière Site-Web</a>, All Right Reserved | 
+					
+					<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+		<!--<script src="//code.tidio.co/5ma13dudzmn1lhu12w1a1r7mp78b88ds.js" async></script>-->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script> 
+		<script src="https://cdn.jsdelivr.net/npm/i18next@21.6.0/i18next.min.js"></script>
+
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Bosstrap responsive-->
+		<!-- Lien vers le JavaScript de Bootstrap -->
+		<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>-->
+		<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>-->
+
+				
+		<!-- Inclusion de la bibliothèque EmailJS -->
+		<script type="text/javascript"
+				src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+		</script>
+		<script type="text/javascript">
+		   (function(){
+			  emailjs.init({
+				publicKey: "YOUR_PUBLIC_KEY",
+			  });
+		   })();
+		</script>
+
+		<!-- Inclusion de ton script contact_2.js -->
+		<script src="mail/contact_2.js"></script>
+
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <!--<script src="mail/contact.js"></script>-->
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+		
+    </body>
+</html>

@@ -1,0 +1,275 @@
+{
+  "fr": {
+    "title": "Hugo Martinière - Site Web",
+    "hero-introduction": "",
+    "hero-name": "Hugo Martinière",
+    "hero-description": "Data Analyst, Data Scientist, Data Engineer",
+    "hero-contact-btn": "Me contacter",
+    "hero-download-cv": "📄 Télécharger mon CV",
+    "home": "Accueil",
+    "about": "Qui je suis",
+    "experience": "Parcours",
+    "portfolio": "Compétences",
+    "projets": "Projets",
+    "review": "Avis",
+    "interet": "Mes intérêts",
+    "contact": "Contact",
+    "language": "Langue",
+    "welcome": "Bienvenue sur mon portfolio",
+    "description": "Je suis un data scientist passionné par l'analyse de données.",
+	"about-title": "À propos de moi",
+	"about-subtitle": "Étudiant en Master de Data Science",
+	"about-description": "Bonjour, je m'appelle Hugo, un Data Scientist terminant son Master en août 2025. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je suis à la recherche de ma prochaine opportunité dans un environnement innovant et collaboratif. Je vous invite à explorer mon site web où je partage mes projets, mes compétences et mes centres d'intérêt. Bonne visite !",
+	"skill-visualisation": "Data Visualisation",
+	"skill-science": "Data Science",
+	"skill-engineering": "Data Engineering",
+	"about-more-info": "En savoir plus sur moi",
+	
+	"experience-title": "Parcours Académique",
+    "experience-subtitle": "Formations & Expériences Professionnelles",
+    "experience-1-date": "Septembre 2024 - Jusqu'à présent",
+    "experience-1-role": "Alternant Data Scientist",
+    "experience-1-company": "Société Générale, La Défense, Paris",
+    "experience-1-description": "Extraction, analyse, réalisation et automatisation d'études statistiques sur des millions de données. Présentation et vulgarisation des résultats aux équipes métiers. Mise à jour des indicateurs de scoring. Utilisation des langages SQL, Python et Spark",
+	
+    "experience-2-date": "2024 - Jusqu'à présent",
+    "experience-2-role": "Master en Science des Données, 2e année | Major de Promotion",
+    "experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-2-description": "Approfondissement des techniques avancées en intelligence artificielle, notamment le Machine Learning et le Deep Learning pour la modélisation prédictive et l'entraînement de réseaux de neurones.",
+	
+    "experience-3-date": "Janvier 2024 - Mai 2024",
+    "experience-3-role": "Projet Data Science",
+    "experience-3-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-3-description": "Analyse et comparaison des critères de réussite physique entre la Ligue 1 et la Ligue 2 sur deux ans pour optimiser les stratégies du marché des transferts du club. Le projet, réalisé en collaboration avec le Stade Lavallois Mayenne FC, a porté sur plus de vingt critères de performance et près de 1000 matchs, avec un prétraitement des données, analyse et modélisation réalisés sous Python",
+	
+    "experience-4-date": "2023 - 2024",
+    "experience-4-role": "Master en Data Science et Modélisation Statistique, 1ère année",
+    "experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-4-description": "Spécialisation dans la modélisation statistique : Modèles linéaires généralisés, Séries Temporelles, Statistique Bayésienne, Méthode de Monté Carlo, Modèles de durées et analyse de Survie ",
+	
+    "experience-5-date": "2022 - 2023",
+    "experience-5-role": "Licence Mathématiques, Informatique, Statistique parcours Statistique",
+    "experience-5-university": "Université Bretagne Sud, UFR SSI, Vannes",
+    "experience-5-description": "Approfondissement de la théorie des statistiques, des tests d’hypothèses, des analyses factorielles et des méthodes de classification et de clustering, ainsi que renforcement des compétences en informatique, notamment en gestion et optimisation des bases de données",
+	
+    "experience-6-date": "Avril 2022 - Juin 2022",
+    "experience-6-role": "Stagiaire chargé d'études statistiques",
+    "experience-6-company": "L'APRAS, Rennes",
+    "experience-6-description": "Création de différents indices de vulnérabilité sur l’agglomération rennaise, automatisation de tableaux de bord et présentation des résultats aux équipes métiers",
+	
+    "experience-7-date": "2020 - 2022",
+    "experience-7-role": "DUT STID (Statistique et Informatique Décisionnelle)",
+    "experience-7-university": "Institut Universitaire de Technologie, Vannes",
+    "experience-7-description": "Conception et gestion de bases de données, requêtage, analyse et visualisation des données, développement web et programmation",
+	
+	
+	"portfolio-expertise": "Mon Expertise Technique",
+    "portfolio-title": "Langages & Logiciels",
+    "portfolio-all": "Tout",
+    "portfolio-filter-1": "Data Visualisation",
+    "portfolio-filter-2": "Langage de programmation",
+    "portfolio-filter-3": "Logiciel",
+    "portfolio-filter-4": "Data Engineering",
+	
+	"projects-title": "Projets",
+    "projects-subtitle": "Découvrez mes réalisations",
+    "project-1-title": "Ligue 1 vs Ligue 2 : Quelle Différence Athlétique ?",
+    "project-1-description": "Pour le Stade Levallois FC, j'ai identifié les différences athlétiques entre les deux premières divisions du football français, la Ligue 1 et la Ligue 2. De plus, j'ai modélisé la performance athlétique des équipes et leur classement final en fin de saison.",
+    "project-2-title": "Prédiction de prix de l'électricité :",
+    "project-2-description": "J'ai modélisé l'écart de prix entre le marché Intraday et le marché SPOT (le marché de l'électricité où les transactions sont effectuées pour une livraison le jour suivant) afin de prévoir ses fluctuations dans les prochains jours.",
+    "project-3-title": "Hospitalisation : Classique ou Ambulatoire ?",
+    "project-3-description": "Dans un contexte de développement des soins ambulatoires, j'ai comparé les risques de complications dans les 30 jours suivant une hospitalisation ambulatoire par rapport à une hospitalisation classique, afin de déterminer si le mode ambulatoire présentait un risque accru.",
+    "project-4-title": "Modélisation des Prix d'une Assurance Automobile",
+    "project-4-description": "J'ai modélisé les taux pour deux couvertures d'assurance : (i) la couverture des dommages, qui protège contre la perte matérielle due aux accidents, et (ii) la couverture des bris de glace, qui couvre les dommages aux surfaces vitrées, afin de mieux comprendre les critères influençant la fixation de ces taux.",
+    "project-5-title": "Réussir un Pénalty : Les Facteurs Clés",
+    "project-5-description": "Afin de comprendre les facteurs influençant le succès des penalties, j'ai comparé les performances des tireurs de penalty lors de la saison 2019-2020 des cinq grands championnats européens, en prenant en compte divers facteurs tels que l'identité du tireur, l'importance du penalty, le moment du match, etc.",
+    "used-softwares": "Logiciels utilisés : ",
+	"used-software": "Logiciel utilisé : ",
+	"used-languages": "Lagages utilisés :",
+	"used-language": "Lagage utilisé :",
+	
+	"testimonial-1-text": "Rigoureux, consciencieux et engagé, Monsieur Martinière a apporté un réel soutien à nos travaux en cours et a pu améliorer et mettre en œuvre, durant cette période, ses compétences dans les logiciels et langages de programmation comme Access et SQL. Par ailleurs, il s'est très bien intégré à l'équipe de L'APRAS et a été unanimement apprécié.",
+    "testimonial-1-name": "Poulard Irma",
+    "testimonial-1-role": "Responsable de stage",
+    
+    "testimonial-2-text": "J'ai eu la responsabilité d'encadrer Hugo Martinière pendant son stage à l'IUT de Vannes. Cette expérience s'est révélée très positive. Il a fait preuve d'un excellent niveau de sérieux et d'autonomie, accomplissant toujours ses tâches avec rigueur. Hugo s'est très bien adapté à son environnement de travail et a abordé ses missions de manière professionnelle. Sa curiosité et son implication ont été notables, lui permettant de progresser dans ses apprentissages. Il a également démontré des qualités relationnelles très appréciables. Je suis convaincu que toutes ses qualités apporteront une contribution très positive à son futur employeur.",
+    "testimonial-2-name": "Béchet Nicolas",
+    "testimonial-2-role": "Ancien professeur",
+
+    "testimonial-3-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-3-name": "Beroldy Carole",
+    "testimonial-3-role": "Tutrice entreprise alternance",
+	
+    "testimonial-4-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-4-name": "Durrieu Gilles",
+    "testimonial-4-role": "Tuteur université alternance",
+	
+	"interet-title": "Ce qui m’anime",
+    "interet-heading": "",
+    "interet-subheading": "",
+
+    "interet-challenge": "Défis : ",
+    "interet-challenge-text": "J’aime me dépasser, que ce soit en apprenant une langue ou en relevant des défis sportifs.",
+
+    "interet-sport": "Sport : ",
+    "interet-sport-text": "Le football et le badminton, que j’ai pratiqués en club, sont au cœur de ma passion pour le sport.",
+
+    "interet-innovation": "Innovation : ",
+    "interet-innovation-text": "Les avancées technologiques, notamment en intelligence artificielle, attisent ma curiosité.",
+
+    "interet-travel": "Voyages : ",
+    "interet-travel-text": "J’adore explorer de nouveaux horizons, admirer des paysages et découvrir des cultures.",
+
+    "interet-culture": "Activités culturelles : ",
+    "interet-culture-text": "J’apprécie les musées, le cinéma, la lecture et les reportages enrichissants.",
+	
+	"contact-intro": "Besoin d’informations ou envie de collaborer ? Envoyez-moi un message !",
+    "contact-name-placeholder": "Votre Nom & Prénom",
+    "contact-email-placeholder": "Votre Email",
+    "contact-subject-placeholder": "Sujet",
+    "contact-message-placeholder": "Message",
+    "contact-send-button": "Envoyer"
+  
+	
+	
+  },
+  "en": {
+    "title": "Hugo Martinière - Website",
+    "hero-introduction": "",
+    "hero-name": "Hugo Martinière",
+    "hero-description": "Data Analyst, Data Scientist, Data Engineer",
+    "hero-contact-btn": "Contact Me",
+    "hero-download-cv": "📄 Download My CV",
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "portfolio": "Skills",
+    "projets": "Projects",
+    "review": "Reviews",
+    "interet": "My Interests",
+    "contact": "Contact",
+    "language": "Language",
+    "welcome": "Welcome to my portfolio",
+    "description": "I am a data scientist passionate about data analysis.",
+	"about-title": "About Me",
+	"about-subtitle": "Data Science Master's student",
+	"about-description": "Hello, I'm Hugo Martinière, a Data Scientist finishing his Master's degree in August 2025. Passionate about data exploration, machine learning, and artificial intelligence, I'm looking for my next opportunity in an innovate and collaborative environment. I invite you to explore my website where I share my projects, skills, and interests. Enjoy your visit!",
+	"skill-visualisation": "Data Visualisation",
+	"skill-science": "Data Science",
+	"skill-engineering": "Data Engineering",
+	"about-more-info": "Learn more about me"
+	,
+	"experience-title": "Academic Journey",
+	"experience-subtitle": "Education & Professional Experiences",
+	
+	"experience-1-date": "September 2024 - Present",
+	"experience-1-role": "Data Scientist Intern",
+	"experience-1-company": "Société Générale, La Défense, Paris",
+	"experience-1-description": "Extraction, analysis, execution, and automation of statistical studies on millions of data points. Presentation and simplification of results to business teams. Updating of scoring indicators. Use of SQL, Python, and Spark",
+	
+	"experience-2-date": "2024 - Present",
+	"experience-2-role": "Master’s in Data Science, Year 2 | Class Valedictorian",
+	"experience-2-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-2-description": "Deepening of advanced techniques in artificial intelligence, particularly Machine Learning and Deep Learning for predictive modeling and neural network training",
+	
+	"experience-3-date": "January 2024 - May 2024",
+	"experience-3-role": "Data Science Project",
+	"experience-3-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-3-description": "Analysis and comparison of physical success criteria between Ligue 1 and Ligue 2 over two years to optimize the club's transfer market strategies. The project, in collaboration with Stade Lavallois Mayenne FC, focused on over twenty performance criteria and nearly 1000 matches, with data preprocessing, analysis, and modeling done using Python",
+	
+	"experience-4-date": "2023 - 2024",
+	"experience-4-role": "Master’s in Data Science and Statistical Modeling, Year 1",
+	"experience-4-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-4-description": "Specialization in statistical modeling: Generalized Linear Models, Time Series, Bayesian Statistics, Monte Carlo Method, Duration Models, and Survival Analysis",
+	
+	"experience-5-date": "2022 - 2023",
+	"experience-5-role": "Bachelor's Degree in Mathematics, \nComputer Science, Statistics ",
+	"experience-5-university": "Université Bretagne Sud, UFR SSI, Vannes",
+	"experience-5-description": "Deepening of statistical theory, hypothesis testing, factor analysis, and classification and clustering methods, as well as strengthening computer science skills, particularly in database management and optimization",
+	
+	  
+	"experience-6-date": "April 2022 - June 2022",
+	"experience-6-role": "Intern - Statistical Study Manager",
+	"experience-6-company": "L'APRAS, Rennes",
+	"experience-6-description": "Creation of various vulnerability indices for the Rennes metropolitan area, automation of dashboards, and presentation of results to business teams",
+	
+	"experience-7-date": "2020 - 2022",
+	"experience-7-role": "DUT STID (Statistical and \nDecision-Making Computing)",
+	"experience-7-university": "University Institute of Technology, Vannes",
+	"experience-7-description": "Database design and management, querying, data analysis and visualization, web development, and programming",
+	
+	"portfolio-expertise": "My Technical Expertise",
+    "portfolio-title": "Languages & Software",
+    "portfolio-all": "All",
+    "portfolio-filter-1": "Data Visualization",
+    "portfolio-filter-2": "Programming Languages",
+    "portfolio-filter-3": "Software",
+    "portfolio-filter-4": "Data Engineering", 
+	
+	"projects-title": "Projects",
+    "projects-subtitle": "Discover my work",
+    "project-1-title": "Ligue 1 vs Ligue 2: What Are the Athletic Differences?",
+    "project-1-description": "For the Stade Levallois FC, I identified the athletic differences between the top two divisions of French football, Ligue 1 and Ligue 2. Additionally, I modeled the athletic perfomrance of the teams and their final season ranking",
+    "project-2-title": "Electricity Price Prediction:",
+    "project-2-description": "I modeled the price gap between the Intraday market and the SPOT market (the electricity market where transactions are made for next-day delivery) to forecast its fluctuations in the coming days.",
+    "project-3-title": "Hospitalization: Classic or Ambulatory?",
+    "project-3-description": "In the context of growing ambulatory care, I compared the complication risks within 30 days of ambulatory hospitalization versus traditional hospitalization to determine if ambulatory care presented an increased risk.",
+    "project-4-title": "Modeling Car Insurance Prices",
+    "project-4-description": "I modeled the rates for two insurance covers: (i) damage coverage, which protects against material loss due to accidents, and (ii) glass breakage coverage, which covers damage to glass surfaces, to better understand the criteria influencing the setting of these rates.",
+    "project-5-title": "Scoring a Penalty: Key Factors",
+    "project-5-description": "In order to understand the factors driving penalty success, I compared the performances of penalty takers during the 2019-2020 season of the five major European leagues, considering various factors such as the taker's identity, the importance of the penalty, the period of the game, etc.",
+    "used-software": "Software used : ",
+	"used-softwares": "Softwares used : ",
+	"used-languages": "Laguages used :",
+	"used-language": "Laguage used :",
+	
+	
+	
+	"testimonial-1-text": "Rigorous, conscientious, and committed, Mr. Martinière has provided significant support to our ongoing work and has been able to enhance and apply his skills in software and programming languages such as Access and SQL during this period. Furthermore, he has integrated very well into the APRAS team and has been unanimously appreciated.",
+    "testimonial-1-name": "Poulard Irma",
+    "testimonial-1-role": "Internship Supervisor",
+
+    "testimonial-2-text": "I had the responsibility of supervising Hugo Martinière during his internship at the IUT of Vannes. This experience was very positive. He demonstrated an excellent level of seriousness and autonomy, always completing his tasks with precision. Hugo adapted very well to his work environment and approached his missions professionally. His curiosity and involvement were noticeable, allowing him to make progress in his learning. He also showed very valuable interpersonal qualities. I am convinced that all his qualities will make a positive contribution to his future employer.",
+    "testimonial-2-name": "Béchet Nicolas",
+    "testimonial-2-role": "Former Teacher",
+
+    "testimonial-3-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-3-name": "Beroldy Carole",
+    "testimonial-3-role": "Corporate apprenticeship supervisor",
+	
+    "testimonial-4-text": "Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit. Lorem ipsum dolor sit amet consec adipis elit. Etiam accums lacus eget velit tincid, quis suscip justo dictum. Lorem ipsum dolor sit amet consec adipis elit.",
+    "testimonial-4-name": "Durrieu Gilles",
+    "testimonial-4-role": "University apprenticeship supervisor",
+	
+	"interet-title": "What motivates me",
+    "interet-heading": "",
+    "interet-subheading": "",
+
+    "interet-challenge": "Challenges : ",
+    "interet-challenge-text": "I love pushing myself, whether it's learning a language or taking on sports challenges.",
+
+    "interet-sport": "Sport : ",
+    "interet-sport-text": "Football and badminton, which I have practiced in a club, are at the heart of my passion for sports.",
+
+    "interet-innovation": "Innovation : ",
+    "interet-innovation-text": "Technological advancements, especially in artificial intelligence, spark my curiosity.",
+
+    "interet-travel": "Travel : ",
+    "interet-travel-text": "I love exploring new horizons, admiring landscapes, and discovering cultures.",
+
+    "interet-culture": "Cultural activities : ",
+    "interet-culture-text": "I enjoy museums, cinema, reading, and enriching documentaries.",
+	
+    "contact-intro": "Need information or want to collaborate? Send me a message!",
+    "contact-name-placeholder": "Your Name",
+    "contact-email-placeholder": "Your Email",
+    "contact-subject-placeholder": "Subject",
+    "contact-message-placeholder": "Message",
+    "contact-send-button": "Send"
+  
+
+
+ 
+  }
+}
+

@@ -1,0 +1,2427 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+body {
+    color: #797979; /*Fond des ecriture global en blanc*/
+    background: #ffffff; /*Met le fond de couleur blanc*/
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: #414141;
+}
+
+a {
+    color: #313131;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #00233C;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+
+
+/* Style global pour tous les boutons */
+.btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff; /*change l'ecriture du bouton learn more*/
+    background: #00233C; /*change le fond du bouton leanr more*/ 
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 50px #00233C;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+}
+
+.btn:hover {
+    color: #00233C;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #00233C; /*fait des effet lorsquon passe dessus*/
+    border-color: #00233C;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between; /* Espace entre le texte et le bouton */
+    align-items: flex-start; /* Aligne les éléments au sommet du conteneur */
+}
+
+
+.btn_read_more {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: #00233C;
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 50px #00233C;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: -10px; /* Ajuste la position du bouton vers le haut */
+}
+
+
+
+.btn_read_more:hover {
+    color: #00233C;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #00233C; /*fait des effet lorsquon passe dessus*/
+    border-color: #00233C;
+}
+
+
+
+
+#loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    z-index: 999;
+}
+
+#loader.show {
+    -webkit-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    -o-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    transition: opacity .6s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .loader {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 5px solid #dddddd;
+    border-top: 5px solid #00233C;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 8px 0;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9;
+}
+
+.back-to-top i {
+    color: #ffffff;
+}
+
+.back-to-top:hover i {
+    color: #414141;
+}
+/* Par défaut, pour les grands écrans */
+body {
+    font-size: 16px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/**********************************/
+/*********** Adaptabilite **********/
+/**********************************/
+* {
+    box-sizing: border-box;
+}
+
+
+/* Pour les écrans de bureau (plus de 1024px) */
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px; /* Taille de texte plus grande pour les grands écrans */
+    }
+}
+
+/* Pour les tablettes et petits écrans (de 768px à 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    body {
+        font-size: 14px; /* Taille de texte réduite */
+    }
+}
+
+/* Pour les téléphones (moins de 768px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px; /* Taille de texte encore plus petite */
+    }
+
+    .menu {
+        display: block; /* Modifier le menu pour qu'il devienne un menu burger */
+    }
+
+    .container {
+        width: 100%; /* Utiliser toute la largeur pour éviter les marges inutiles */
+    }
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px !important;
+	margin-left: 148px;
+}
+
+
+/**********************************/
+/*********** Nav Bar CSS **********/
+/**********************************/
+.navbar {
+    position: relative;
+    transition: .5s;
+    z-index: 999;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    font-size: 45px;
+    line-height: 0px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 0;
+    background: #f8f9fa;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        position: absolute;
+        width: 100%;
+        padding: 30px 60px;
+        background: transparent !important;
+        border-bottom: 1px dashed rgba(256, 256, 256, .2);
+        z-index: 9;
+    }
+
+    .navbar.nav-sticky {
+        padding: 10px 60px;
+        background: #ffffff !important;
+    }
+
+    .navbar .navbar-brand {
+        color: #ffffff;
+    }
+
+    .navbar.nav-sticky .navbar-brand {
+        color: #00233C;
+    }
+
+    .navbar-light .navbar-nav .nav-link,
+    .navbar-light .navbar-nav .nav-link:focus {
+        padding: 10px 10px 8px 10px;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        transition: transform 0.3s ease, font-size 0.3s ease; /* Transition pour la taille et le mouvement */
+    }
+
+    .navbar-light.nav-sticky .navbar-nav .nav-link,
+    .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
+        color: #414141;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: #111111;
+        transform: translateY(3px); /* Déplace l'onglet légèrement vers le bas */
+        font-size: 17px; /* Augmente la taille du texte */
+    }
+
+    .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
+    .navbar-light.nav-sticky .navbar-nav .nav-link.active {
+        color: #00233C; /* Couleur du texte au survol */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 15px;
+        background: #ffffff !important;
+    }
+
+    .navbar .navbar-brand {
+        color: #00233C;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 15px;
+    }
+
+    .navbar a.nav-link {
+        padding: 5px;
+    }
+
+    .navbar .dropdown-menu {
+        box-shadow: none;
+    }
+}
+
+
+
+/*******************************/
+/********** Hero CSS ***********/
+/*******************************/
+.hero {
+    position: relative;
+    width: 100%;
+    margin-bottom: 45px;
+    padding: 120px 0 0 0;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 35, 60, .95), rgba(0, 35, 60, .95)), url(../img/hero-bg.jpg); /*changer le fond de la banniere*/*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .container-fluid {
+    padding: 0;
+}
+
+.hero .hero-image {
+    position: relative;
+    text-align: right;
+    padding-right: 205px;
+}
+
+.hero .hero-image img {
+    max-width: 50%;
+    max-height: 50%;
+	border-radius: 50% ;
+}
+
+.hero .hero-content {
+    position: relative;
+    padding-left: 75px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-text p {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+	text-align: justify;  /* Justifie le texte */
+
+	
+}
+
+.hero .hero-text h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero .hero-text h2 {
+    display: inline-block;
+    margin: 0;
+    height: 35px;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.hero .hero-text .typed-text {
+    display: none;
+}
+
+.hero .hero-text .typed-cursor {
+    font-size: 35px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+.hero .hero-btn .btn {
+    margin-top: 35px;
+    color: #00233C;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.hero .hero-btn .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+
+
+.hero .hero-btn .btn:first-child {
+    margin-right: 10px;
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 60px;
+    }
+    
+    .hero .hero-content {
+        padding: 0 15px;
+    }
+    
+    .hero .hero-text p {
+        font-size: 20px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 45px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 25px;
+        height: 25px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 12px 30px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .hero,
+    .hero .hero-text,
+    .hero .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 35px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 22px;
+        height: 22px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 10px 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero .hero-text h2 {
+        font-size: 18px;
+        height: 18px;
+    }
+    
+    .hero .hero-btn .btn {
+        padding: 8px 10px;
+        letter-spacing: 0;
+    }
+}
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.section-header p {
+    display: inline-block;
+    margin: 0 30px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #FFFFFF; /*couleur des fond des petit titres "WHAT I DO,  Learn About Me*/
+}
+
+.section-header p::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    top: 11px;
+    right: 0;
+    left: -30px;
+    background: #00233C;
+    z-index: -1;
+}
+
+.section-header p::after {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    top: 11px;
+    left: 3px;
+    background: #00233C;
+    z-index: 1;
+}
+
+.section-header h2 {
+    margin: 0;
+    position: relative;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+@media (max-width: 767.98px) {
+    .section-header h2 {
+        font-size: 30px;
+    }
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    margin: -45px 0 45px 0;
+}
+
+.about .col-lg-6 {
+    padding: 0;
+}
+/* Justifie le texte dans la section "À propos de moi" */
+.about-text p {
+    text-align: justify;  /* Justifie le texte dans la section */
+    margin-bottom: 15px;   /* Ajoute une marge inférieure pour l'espacement */
+}
+
+
+.about .section-header {
+    margin-bottom: 30px;
+}
+
+.about .about-img {
+    position: relative;
+    height: 100%;
+}
+
+.about .about-img img {
+    position: relative;
+    width: 105%;
+    height: 110%;
+    object-fit: cover;
+}
+
+.about .about-content {
+    padding: 0 30px;
+}
+
+.about .about-text p {
+    font-size: 16px;
+}
+
+.about .skills {
+    margin-bottom: 30px;
+}
+
+.about .skill-name {
+    margin-top: 15px;
+}
+
+.about .skill-name p {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.about .skill-name p:last-child {
+    float: right;
+}
+
+.about .progress {
+    height: 10px;
+    border-radius: 10px;
+    background: #dddddd;
+}
+
+.about .progress .progress-bar {
+    width: 0px;
+    background: #00233C;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.about .about-text a.btn {
+    margin-top: 15px;
+}
+
+@media (max-width: 991.98px) {
+    .about .about-content {
+        padding: 45px 15px 0 15px;
+    }
+}
+
+
+/*******************************/
+/******* Experience CSS ********/
+/*******************************/
+/* Style général pour l'expérience */
+.experience {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.experience .timeline {
+    position: relative;
+    width: 100%;
+}
+
+.experience .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #00233C;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.experience .timeline .timeline-item {
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.experience .timeline .timeline-item.left {
+    left: 0;
+    padding-right: 30px;
+}
+
+.experience .timeline .timeline-item.right {
+    left: 50%;
+    padding-left: 30px;
+}
+
+/* Style des points */
+.experience .timeline .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #8A2BE2;  /* Bordure violette */
+    border-radius: 16px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.right::after {
+    left: -8px;
+}
+
+.experience .timeline .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
+}
+
+.experience .timeline .timeline-item.right::before {
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
+}
+
+.experience .timeline .timeline-date {
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00233C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+.experience .timeline .timeline-item.left .timeline-date {
+    text-align: left;
+    left: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-item.right .timeline-date {
+    text-align: right;
+    right: calc(100% + 55px);
+}
+
+.experience .timeline .timeline-text {
+    padding: 30px;
+    background: #ffffff;
+    position: relative;
+    border-right: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à gauche */
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    padding-right: 40px; /* Ajout d'un espacement à droite pour éviter le chevauchement avec le logo */
+}
+
+.experience .timeline .timeline-item.right .timeline-text {
+    border-left: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à droite */
+    padding-left: 40px; /* Ajout d'un espacement à gauche pour éviter le chevauchement avec le logo */
+}
+
+.experience .timeline .timeline-text img {
+    width: 60px !important;
+    height: auto !important;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin-top: 10px; /* Ajout d'un peu de marge en haut */
+}
+
+.experience .timeline .timeline-text h2 {
+    margin: 0 0 5px 0;
+    font-size: 18px !important;
+    font-weight: 600;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
+}
+
+.experience .timeline .timeline-text h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px !important;
+    font-style: italic;
+    font-weight: 400;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
+}
+
+.experience .timeline .timeline-text p {
+    margin: 0;
+    font-size: 14px !important;
+    padding-right: 50px; /* Ajout d'espace pour éviter le chevauchement avec le logo */
+	text-align: justify;  /* Justifie le texte */
+
+}
+
+/* Correction pour déplacer la flèche */
+.experience .timeline .timeline-item.left::before {
+    right: 5px !important;  /* Déplace la flèche de 100px vers la gauche */
+    border-color: transparent #dddddd transparent transparent;
+}
+
+
+
+/* Media Query pour les petits écrans */
+@media (max-width: 767.98px) {
+    .experience .timeline::after {
+        left: 8px; /* Réduit la ligne centrale pour mieux s'adapter aux petits écrans */
+    }
+
+    .experience .timeline .timeline-item {
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .experience .timeline .timeline-item.left {
+        padding-right: 0;
+    }
+
+    .experience .timeline .timeline-item.right {
+        left: 0%;
+        padding-left: 30px;
+    }
+
+    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.right::after {
+        left: 0;
+    }
+
+    .experience .timeline .timeline-item.left::before,
+    .experience .timeline .timeline-item.right::before {
+        /* Ajoutons explicitement ici le déplacement */
+        left: 10px !important;  /* Déplace la flèche de 100px vers la gauche */
+        border-color: transparent #dddddd transparent transparent;
+    }
+
+    /* Ajustement pour ajouter une marge supplémentaire pour les flèches */
+
+
+    /* Ajout de marges supplémentaires pour le texte afin d'éviter le chevauchement avec le logo */
+    .experience .timeline .timeline-item.left .timeline-text {
+        padding-left: 90px; /* Ajout d'un espace supplémentaire à gauche pour le texte */
+    }
+
+    .experience .timeline .timeline-item.right .timeline-text {
+        padding-right: 90px; /* Ajout d'un espace supplémentaire à droite pour le texte */
+    }
+
+    /* Ajouter un espacement supplémentaire pour éviter le chevauchement avec les logos */
+    .experience .timeline .timeline-text p {
+        margin: 0;
+        font-size: 14px !important; /* Taille de police réduite pour les petits écrans */
+        padding-right: 10px; /* Ajoute de l'espace à droite pour éviter le chevauchement avec le logo */
+    }
+
+    .experience .timeline .timeline-date {
+        padding-right: 40px !important; /* Augmente l'espace à droite pour éviter tout chevauchement */
+    }
+
+    /* Ajustement de la taille du texte pour les petits écrans */
+    .experience .timeline .timeline-item.left .timeline-date,
+    .experience .timeline .timeline-item.right .timeline-date {
+        position: relative;
+        top: 0;
+        right: auto;
+        left: 0;
+        text-align: left;
+        margin-bottom: 10px;
+        font-size: 16px; /* Réduire la taille de la date sur mobile */
+    }
+
+    /* Ajustement de la largeur du texte pour les petits écrans */
+    .experience .timeline .timeline-text {
+        width: 100% !important; /* Réduit la largeur du texte à 100% */
+        padding: 20px;  /* Ajuste les paddings si nécessaire */
+        margin-left: 0 !important; /* Élimine le décalage négatif */
+    }
+
+    /* Augmenter la taille du texte */
+    .experience .timeline .timeline-text h2 {
+        font-size: 16px !important;  /* Augmente la taille du titre */
+    }
+
+    .experience .timeline .timeline-text h4 {
+        font-size: 14px !important;  /* Augmente la taille du sous-titre */
+    }
+
+    .experience .timeline .timeline-text p {
+        font-size: 15px !important;  /* Augmente la taille du texte */
+    }
+}
+
+
+.experience .timeline .timeline-item img[alt="Logo du Stade Lavallois"] {
+    width: 50px !important;
+    height: auto !important;
+}
+
+.experience .timeline .timeline-item img[alt="Logo Societe Generale"] {
+    width: 80px !important;
+    height: auto !important;
+}
+
+
+/* Style des points pour les expériences professionnelles */
+.experience .timeline .timeline-item.experiencepro::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #8A2BE2;  /* Bordure violette pour expérience pro */
+    border-radius: 16px;
+    z-index: 1;
+}
+
+/* Style des points pour les formations */
+.experience .timeline .timeline-item.formation::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 48px;
+    right: -8px;
+    background: #ffffff;  /* Fond blanc à l'intérieur du point */
+    border: 2px solid #40E0D0;  /* Bordure verte pour les formations */
+    border-radius: 16px;
+    z-index: 1;
+}
+/* Style général pour les éléments */
+.experience .timeline .timeline-item .timeline-text {
+    padding: 25px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .08);
+    padding-right: 40px;
+    border-right: 5px solid #dddddd; /* Bordure grise par défaut à droite */
+}
+
+/* Éléments à gauche */
+.experience .timeline .timeline-item.left .timeline-text {
+    border-right: 5px solid #dddddd; /* Bordure droite grise par défaut pour les éléments à gauche */
+}
+
+/* Éléments à droite : enlever la bordure droite et appliquer la bordure gauche */
+.experience .timeline .timeline-item.right .timeline-text {
+    border-right: none; /* Enlever la bordure droite pour les éléments à droite */
+    border-left: 5px solid #dddddd; /* Bordure gauche grise par défaut pour les éléments à droite */
+}
+
+/* Changer la couleur de la bordure et du triangle pour les expériences professionnelles à gauche */
+.experience .timeline .timeline-item.left.experiencepro .timeline-text {
+    border-right: 5px solid #8A2BE2; /* Bordure violette pour les expériences professionnelles à gauche */
+}
+
+.experience .timeline .timeline-item.left.experiencepro::before {
+    border-color: transparent transparent transparent #8A2BE2; /* Triangle violet pour les expériences professionnelles à gauche */
+}
+
+/* Changer la couleur de la bordure et du triangle pour les formations à gauche */
+.experience .timeline .timeline-item.left.formation .timeline-text {
+    border-right: 5px solid #40E0D0; /* Bordure turquoise pour les formations à gauche */
+}
+
+.experience .timeline .timeline-item.left.formation::before {
+    border-color: transparent transparent transparent #40E0D0; /* Triangle turquoise pour les formations à gauche */
+
+}
+
+/* Changer la couleur de la bordure et du triangle pour les expériences professionnelles à droite */
+.experience .timeline .timeline-item.right.experiencepro .timeline-text {
+    border-left: 5px solid #8A2BE2; /* Bordure violette pour les expériences professionnelles à droite */
+}
+
+.experience .timeline .timeline-item.right.experiencepro::before {
+    border-color: transparent #8A2BE2 transparent transparent; /* Triangle violet pour les expériences professionnelles à droite */
+}
+
+/* Changer la couleur de la bordure et du triangle pour les formations à droite */
+.experience .timeline .timeline-item.right.formation .timeline-text {
+    border-left: 5px solid #40E0D0; /* Bordure turquoise pour les formations à droite */
+}
+
+.experience .timeline .timeline-item.right.formation::before {
+    border-color: transparent #40E0D0 transparent transparent; /* Triangle turquoise pour les formations à droite */
+}
+
+/************Projects*******************/
+/* Global Styles */
+.projects-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-top: 75px;
+	margin-bottom: 75px;
+}
+
+/* Styles pour les images des projets */
+.project-img img {
+    width: 100%; /* Adapte la largeur à celle du conteneur parent */
+    height: auto; /* Maintient les proportions */
+    max-width: 300px; /* Taille maximale de largeur */
+    object-fit: contain; /* Adapte l'image sans la couper */
+    border-radius: 10px; /* Optionnel : coins arrondis */
+    display: block; /* Pour centrer l'image */
+    margin-left: auto; /* Centrer horizontalement */
+    margin-right: auto; /* Centrer horizontalement */
+}
+
+/* Fond du titre ayant la même couleur que celui de la section */
+.projects-section .section-header {
+    margin-bottom: 40px;
+    background-color: #00233C; /* Fond sombre pour la section du titre */
+    padding: 30px 0;  /* Espacement autour du texte du titre */
+    border-radius: 20px;
+}
+
+/* Style des titres dans la section */
+.projects-section .section-header p {
+    font-size: 18px;
+    color: #FFFFFF; /* Texte blanc sur fond sombre */
+    background-color: #00233C; /* Conserver le fond sombre */
+}
+
+.projects-section .section-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF; /* Texte blanc sur fond sombre */
+    background-color: #00233C; /* Fond sombre */
+}
+
+/* Adjusts image size in general for the project carousel */
+.project-img img {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-left: 100px;
+}
+
+/* Text Styles in Project */
+.project-text {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-left: -100px;
+}
+
+.project-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-text p {
+    font-size: 16px;
+    color: #6c757d;
+}
+
+/* Style for carousel controls */
+.carousel-indicators li {
+    background-color: #00233C;
+}
+
+.carousel-indicators .active {
+    background-color: #414141;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -30px;
+    z-index: 1;
+}
+
+/* Media query to adjust images for smaller screens */
+@media (max-width: 767px) {
+    /* Réduit les images à 50% pour les petits écrans (mobile) */
+    .carousel-item:nth-child(3) .project-img img,
+    .carousel-item:nth-child(4) .project-img img {
+        width: 50%; /* Réduit les images à 50% */
+        max-width: 200px;  /* Largeur maximale pour éviter qu'elles deviennent trop grandes */
+    }
+
+    /* Ajuste la taille générale des images sur petits écrans */
+    .project-img img {
+        width: 50%; /* Réduit les images à 50% pour tous les projets */
+        margin-left: auto;  /* Centrer l'image horizontalement */
+        margin-right: auto;
+        max-width: 200px;  /* Largeur maximale pour éviter qu'elles deviennent trop grandes */
+    }
+
+    /* Ajuste la taille des titres des projets */
+    .project-text h3 {
+        font-size: 20px; /* Réduit légèrement la taille des titres des projets */
+    }
+
+    /* Ajuste la taille du texte dans les projets */
+    .project-text p {
+        font-size: 14px; /* Réduit légèrement la taille du texte */
+    }
+
+    /* Ajuste les contrôles du carousel (flèches) */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: none; /* Aucune modification de couleur des flèches, elles restent noires */
+    }
+
+    /* Ajuste les indicateurs du carousel (ronds) */
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Media query pour les écrans plus grands (PC) */
+@media (min-width: 768px) {
+    /* Réduit les images "Hospitalisation" et "Assurance Automobile" à 80% uniquement sur PC */
+    .carousel-item:nth-child(3) .project-img img,
+    .carousel-item:nth-child(4) .project-img img {
+        width: 80%; /* Réduit ces images spécifiques à 80% */
+        max-width: 400px;  /* Largeur maximale pour éviter les images trop grandes */
+		margin-right: 50px;  /* Centrer l'image horizontalement */
+    }
+}
+
+/* Flèches de navigation (noires transparentes) */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent; /* Fond transparent pour la zone de clic */
+    border: none; /* Pas de bordure */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(14%) sepia(22%) saturate(2704%) hue-rotate(202deg) brightness(88%) contrast(96%);
+}
+
+
+
+/***********Projects end */
+
+/*******************************/
+/********* review *********/
+/*******************************/
+
+.resize-image {
+    width: 120px !important;
+    height: auto !important;
+}
+/* Ajuster la taille du texte pour les petits écrans (téléphones) */
+/* Ajuster la taille du texte pour les petits écrans (téléphones) */
+@media screen and (max-width: 768px) {
+    .testimonial-text p {
+        font-size: 12px !important; /* Réduit la taille du texte du paragraphe */
+        line-height: 1.4 !important; /* Augmente un peu l'espace entre les lignes pour plus de lisibilité */
+    }
+
+    .testimonial-text h3 {
+        font-size: 10px !important; /* Réduit la taille du nom du témoignage */
+    }
+
+    .testimonial-text h4 {
+        font-size: 9px !important; /* Réduit la taille du rôle */
+    }
+}
+
+
+/***********review end */
+
+
+/*******************************/
+/********* Interet  *********/
+/*******************************/
+/* Style de la section interet */
+.interet-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    margin-top: 00px;
+}
+
+/* Style pour l'image dans la section "interet" */
+.interet-img img {
+    width: 100%; /* Par défaut, l'image occupe 100% de la largeur disponible */
+    height: auto; /* Garder les proportions de l'image */
+    object-fit: cover; /* Permet de couvrir l'espace tout en maintenant l'aspect */
+    border-radius: 10px; /* Coins arrondis pour l'image */
+    display: block; /* Permet de centrer l'image */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media query pour les écrans petits (moins de 767px de large) */
+@media (max-width: 767px) {
+    /* Réduire la taille de l'image à 50% sur les petits écrans */
+    .interet-img img {
+        width: 100%; /* Image à 50% de la largeur du conteneur */
+        max-width: 300px; /* Largeur maximale pour éviter qu'elle soit trop grande */
+    }
+}
+
+/* Autres styles de la section */
+.about-content {
+    padding: 20px;
+}
+
+.section-header p {
+    font-size: 18px;
+    color: #414141; /* Texte de sous-titre */
+    background-color: #FFFFFF; /* Fond blanc pour le sous-titre */
+}
+
+.section-header h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00233C; /* Titre principal en bleu marine */
+}
+
+.about-text h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text li {
+    font-size: 16px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+
+/*******************************/
+/********* Chat-bot *********/
+/*******************************/
+/* ====== Icône du chatbot ====== */
+#chat-icon {
+    position: fixed;
+    bottom: 60px; /* Remonté plus haut */
+    right: 30px;
+    background-color: #00233C; /* Bleu demandé */
+    border-radius: 50%;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 9999; /* Toujours au-dessus */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#chat-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+#robot-icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1); /* Robot en blanc */
+}
+
+/* ====== Fenêtre du chatbot ====== */
+.chat-window {
+    position: fixed;
+    bottom: 150px; /* Remonté plus haut */
+    right: 30px;
+    width: 360px;
+    background-color: white;
+    border-radius: 15px; /* Bordure arrondie */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 9999; /* Toujours au-dessus */
+
+    /* Cachée par défaut */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    visibility: hidden;
+}
+
+/* Afficher la fenêtre */
+.chat-window.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* ====== En-tête du chat ====== */
+.chat-header {
+    background-color: #00233C; /* Bleu principal */
+    color: white;
+    padding: 14px;
+    border-radius: 15px 15px 0 0; /* Coins arrondis seulement en haut */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: white; /* Texte en blanc */
+}
+
+/* Bouton de fermeture */
+.chat-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chat-header button:hover {
+    transform: scale(1.2);
+}
+
+/* ====== Contenu du chat ====== */
+.chatbox {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-bottom: 30px; /* Ajout d'un espace en bas de la fenêtre */
+}
+
+/* ====== Messages du chat ====== */
+.chatbox p.user-message {
+    background-color: #005A7C; /* Bleu foncé */
+    color: white;
+    padding: 12px;
+    border-radius: 15px; /* Coins arrondis */
+    align-self: flex-end;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.chatbox p.bot-message {
+    background-color: #E3F2FD; /* Bleu clair */
+    color: #00233C;
+    padding: 12px;
+    border-radius: 15px; /* Coins arrondis */
+    align-self: flex-start;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ====== Champ de saisie ====== */
+.message-input {
+    display: flex;
+    align-items: center; /* Centrer verticalement le champ de texte et le bouton */
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Zone de texte */
+input[type="text"] {
+    width: 75%;
+    padding: 12px;
+    border-radius: 25px 0 0 25px; /* Coins arrondis à gauche */
+    border: 2px solid #ddd;
+    font-size: 16px;
+    margin: 0; /* Enlever la marge pour éviter les espacements */
+    box-sizing: border-box;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #00233C;
+}
+
+/* Bouton d'envoi */
+#send-btn {
+    width: 100px;
+    height: 50px;
+    background-color: #00233C; /* Bleu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 25px 25px 0; /* Coins arrondis à droite */
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 0; /* Enlever la marge du bas pour aligner correctement */
+}
+
+#send-btn:hover {
+    background-color: #004A67; /* Bleu plus foncé au survol */
+}
+
+#send-icon {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Inverser l'image pour qu'elle soit blanche */
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bot-message.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ====== 🌍 Mode Responsive pour Mobile ====== */
+@media screen and (max-width: 768px) {
+    #chat-icon {
+        bottom: 40px; /* Ajusté pour mobile */
+        right: 20px;
+        padding: 14px;
+    }
+
+    #robot-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chat-window {
+        bottom: 120px; /* Ajusté pour mobile */
+        right: 10px;
+        width: 90%;
+        max-height: 400px;
+    }
+
+    .chat-header {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    input[type="text"] {
+        width: 70%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button#send-btn {
+        padding: 9px 20px;
+        font-size: 12px;
+    }
+
+    .chatbox {
+        max-height: 300px;
+    }
+}
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.service .service-item {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: ease-out 0.5s;
+}
+
+.service .service-item:hover {
+    box-shadow: inset 800px 0 0 0 #00233C;
+}
+
+.service .service-icon {
+    position: relative;
+    width: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #00233C;
+    background: #ffffff;
+}
+
+.service .service-icon i {
+    position: relative;
+    font-size: 60px;
+    color: #00233C;
+    transition: .3s;
+}
+
+.service .service-item:hover i {
+    font-size: 75px;
+}
+
+.service .service-text {
+    position: relative;
+    width: calc(100% - 120px);
+    padding: 0 30px;
+}
+
+.service .service-text h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 1s;
+}
+
+.service .service-text p {
+    margin: 0;
+    font-size: 16px;
+    transition: 1s;
+}
+
+.service .service-item:hover .service-text h3,
+.service .service-item:hover .service-text p {
+    color: #ffffff;
+}
+
+@media (max-width: 575.98px) {
+    .service .service-text h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .service .service-text p {
+        font-size: 14px;
+    }
+}
+
+
+/*******************************/
+/* Portfolio CSS */
+
+/* Conteneur général */
+.portfolio {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.portfolio #portfolio-filter {
+    padding: 0;
+	margin-bottom: 200px; 
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.portfolio #portfolio-filter li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #00233C;
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 50px #00233C;
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+}
+
+.portfolio #portfolio-filter li:hover,
+.portfolio #portfolio-filter li.filter-active {
+    color: #00233C;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #00233C;
+    border-color: #00233C;
+}
+
+/* Ajustement de l'image et du texte */
+.portfolio .portfolio-item {
+    position: relative;
+    margin-bottom: 0; /* Réduit l'écart entre les éléments */
+}
+
+.portfolio .portfolio-wrap {
+    position: relative;
+    width: 100%;
+	border-radius: 8px; /* Ajouter des coins arrondis */
+
+	
+}
+
+.portfolio .portfolio-img {
+    position: relative;
+    overflow: hidden;
+    z-index: -1; /* S'assurer que l'image soit derrière le contenu */
+}
+
+.portfolio .portfolio-img img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: .0s;
+}
+
+/* Supprimer le décalage dans l'effet hover */
+.portfolio .portfolio-item:hover img {
+    margin-left: 0; /* Supprime le décalage */
+}
+
+/* Ajuster le texte */
+.portfolio .portfolio-text {
+    position: relative;
+    height: 54px; /* Augmenter la hauteur */
+    width: calc(100% - 30px);
+    margin: 0 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrer le texte horizontalement et verticalement */
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    border-radius: 8px; /* Ajouter des coins arrondis */
+    text-align: center; /* Centrer le texte */
+}
+
+.portfolio .portfolio-text h3 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;  /* Retirer les marges pour bien centrer */
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center; /* S'assurer que le texte est centré */
+}
+
+/* Portfolio Special */
+#portfolio-special .portfolio-text {
+    margin-top: -20px; /* Ajuste la position du bouton dans les éléments spéciaux */
+    position: relative;
+    height: auto;
+    width: calc(100% - 30px);
+    margin: 0 15px 15px 15px;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+}
+
+/* Bouton dans le texte */
+.portfolio .portfolio-text a.btn {
+    width: 50px;
+    height: 50px;
+    padding: 0 0 2px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 100;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Effet de hover pour le bouton */
+.portfolio .portfolio-item:hover a.btn {
+    color: #00233C;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #00233C;
+    border-color: #00233C;
+}
+
+.portfolio .portfolio-item:hover .portfolio-text {
+    background: #f7f7f7;  /* Change légèrement la couleur de fond au survol */
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2); /* Ajouter un léger ombrage */
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Effet de transition sur l'image */
+}
+
+/* Effet lors du survol sur l'image */
+.portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.20); /* Agrandir l'image de 5% */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ajouter une ombre légère */
+}
+
+@media (min-width: 1024px) {
+    .portfolio-item {
+        width: 19.2% !important; /* Force 5 éléments par ligne sur les écrans de PC */
+        padding: 10px; /* Ajustez la marge si nécessaire */
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .portfolio .portfolio-item {
+        width: 33.33%; /* 3 éléments par ligne sur mobile */
+    }
+
+    /* Réduire la taille des titres et des textes sur mobile */
+    .portfolio .portfolio-text h3 {
+        font-size: 8px; /* Taille plus petite pour les titres */
+    }
+
+    .portfolio .portfolio-text a.btn {
+        font-size: 10px; /* Réduire la taille du bouton */
+		height: 30px; /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+
+    }
+
+    /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+    .portfolio .portfolio-text {
+        height: 30px; /* Réduire la hauteur du rectangle contenant le texte et le bouton */
+
+    }
+}
+
+
+
+/*******************************/
+
+
+/********* Banner CSS **********/
+/*******************************/
+.banner {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    padding: 90px 0;
+    background: #fffff;
+}
+
+.banner .container {
+    max-width: 750px;
+    text-align: center;
+}
+
+.banner .section-header {
+    margin-bottom: 20px;
+}
+
+.banner .section-header p {
+    color: #414141;
+    background: transparent;
+}
+
+.banner .section-header p::after {
+    display: none;
+}
+
+.banner .section-header h2 {
+    color: #ffffff;
+}
+
+.banner .section-header h2 span {
+    color: #414141;
+    font-size: 50px;
+}
+
+.banner .banner-text p {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.banner .banner-text .btn {
+    margin-top: 15px;
+    color: #00233C;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.banner .banner-text .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+
+/*******************************/
+/********* Pricing CSS *********/
+/*******************************/
+.price {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.price .row {
+    padding: 0 15px;
+}
+
+.price .col-md-4 {
+    padding: 0;
+}
+
+.price .price-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: #ffffff;
+}
+
+.price .featured-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.price .price-header,
+.price .price-body,
+.price .price-footer {
+    position: relative;
+    text-align: center;
+}
+
+.price .price-header {
+    padding: 45px 0 30px 0;
+    color: #414141;
+}
+
+.price .price-item.featured-item .price-header {
+    color: #00233C;
+}
+
+.price .price-title h2 {
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.price .price-prices h2 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.price .price-prices h2 small {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 9px;
+    margin-left: -12px;
+}
+
+.price .price-prices h2 span {
+    margin-left: 1px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.price .price-item.featured-item h2 {
+    color: #00233C;
+}
+
+.price .price-body {
+    padding: 0 0 20px 0;
+}
+
+.price .price-description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.price .price-description ul li {
+    padding: 0 0 20px 0;
+}
+
+.price .price-item .price-action {
+    padding-bottom: 45px;
+}
+
+.price .price-item .price-action .btn {
+    color: #ffffff;
+    background: #414141;
+    box-shadow: inset 0 0 0 50px #414141;
+}
+
+.price .price-item .price-action .btn:hover {
+    color: #414141;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #414141;
+    border-color: #414141;
+}
+
+.price .price-item.featured-item .price-action .btn {
+    color: #ffffff;
+    background: #00233C;
+    box-shadow: inset 0 0 0 50px #00233C;
+}
+
+.price .price-item.featured-item .price-action .btn:hover {
+    color: #00233C;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #00233C;
+    border-color: #00233C;
+}
+
+
+/*******************************/
+/*********** Team CSS **********/
+/*******************************/
+.team {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.team .team-item {
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: inset 0 0 0 0 transparent;
+    transition: ease-out 0.5s;
+}
+
+.team .team-img {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+}
+
+.team .team-img img {
+    position: relative;
+    width: 100%;
+    transition: .5s;
+}
+
+.team .team-text {
+    position: relative;
+    width: 50%;
+    padding: 0 30px;
+}
+
+.team .team-text h2 {
+    color: #00233C;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    transition: 1s;
+}
+
+.team .team-text h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: 1s;
+}
+
+.team .team-text p {
+    margin-bottom: 20px;
+    transition: 1s;
+}
+
+.team .team-social {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.team .team-social a.btn {
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+.team .team-item:hover {
+    box-shadow: inset 800px 0 0 0 #00233C;
+}
+
+.team .team-item:hover .team-img img {
+    transform: scale(1.2);
+}
+
+.team .team-item:hover .team-text h2,
+.team .team-item:hover .team-text h4,
+.team .team-item:hover .team-text p {
+    color: #ffffff;
+}
+
+.team .team-item:hover .team-social a.btn {
+    background: #ffffff;
+}
+
+.team .team-item:hover .team-social a.btn:hover {
+    border-color: #ffffff;
+}
+
+@media(max-width: 575.98px) {
+    .team .team-text {
+        padding: 0 15px;
+    }
+    
+    .team .team-text h2 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .team .team-text h4 {
+        margin-bottom: 5px;
+    }
+
+    .team .team-text p {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+    position: relative;
+    margin: 45px 0;
+    padding: 40px 0;
+    background: #00233C;
+}
+
+.testimonial .container {
+    max-width: 1000px;
+}
+
+.testimonial .testimonial-icon {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.testimonial .testimonial-icon i {
+    font-size: 60px;
+    color: rgba(256, 256, 256, .5);
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.testimonial .testimonial-img {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.testimonial .testimonial-item img {
+    margin: 0 auto;
+    width: 120px;
+    padding: 10px;
+    border: 5px dotted #ffffff;
+    border-radius: 100px;
+}
+
+.testimonial .testimonial-text {
+    position: relative;
+    margin-top: -70px;
+    padding: 65px 35px 30px 35px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 500px;
+}
+
+.testimonial .testimonial-item p {
+    font-size: 18px;
+    font-style: italic;
+}
+
+.testimonial .testimonial-text h3 {
+    color: #00233C;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.testimonial .testimonial-text h4 {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.testimonial .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(256, 256, 256, .5);
+}
+
+.testimonial .owl-dot.active {
+    background: #ffffff;
+}
+
+
+/*******************************/
+/********* Contact CSS *********/
+/*****************************contact_mail_2.jpg**/
+/* Contact Section Styles */
+.contact {
+    position: relative;
+    width: 100%;
+    margin: 45px 0;
+    background: #00233C;
+}
+
+.contact .container-fluid {
+    position: relative;
+    padding: 0; /* Retirer le padding par défaut pour avoir un contrôle total */
+}
+
+.contact .container-fluid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%; /* Taille de l'image sur les grands écrans */
+    height: 100%;
+    background: url(../img/contact/e-mail.png) no-repeat center;
+    background-size: contain; /* L'image doit s'adapter sans déformation */
+    filter: invert(1); /* Inverse uniquement l’image */
+    z-index: 1;
+}
+
+.contact .contact-intro {
+    font-weight: bold; /* Mettre le texte en gras */
+    padding-bottom: 30px;
+    color: #ffffff; /* Couleur du texte en blanc pour contraster */
+    z-index: 2; /* Placer au-dessus de l'image */
+}
+
+.contact .contact-form {
+    position: relative;
+    padding: 90px 0;
+    background: #00233C;
+    z-index: 2; /* Placer au-dessus de l'image de fond */
+    color: white;
+}
+
+.contact .contact-form input,
+.contact .contact-form textarea {
+    color: #ffffff;
+    padding: 15px 0;
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid rgba(256, 256, 256, .5);
+}
+
+.contact .contact-form .form-control::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.contact .contact-form .btn {
+    margin-top: 35px;
+    color: #00233C;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 50px #ffffff;
+}
+
+.contact .contact-form .btn:hover {
+    color: #ffffff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    border-color: #ffffff;
+}
+
+.contact .help-block ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 14px;
+    font-style: italic;
+    color: #ffffff;
+}
+
+/* Masquer l'image de fond sur les petits écrans */
+@media (max-width: 767.98px) {
+    .contact .container-fluid::before {
+        display: none; /* Masquer l'image de fond uniquement sur les petits écrans */
+    }
+
+    /* Ajustements pour les petits écrans */
+    .contact .contact-form {
+        padding: 50px 15px; /* Réduire le padding du formulaire */
+    }
+
+    .contact .contact-intro {
+        font-size: 16px; /* Ajuster la taille du texte pour les petits écrans */
+    }
+
+    .contact .contact-form input,
+    .contact .contact-form textarea {
+        width: 100%; /* Champs du formulaire prennent toute la largeur sur mobile */
+        margin-bottom: 20px; /* Espacement entre les champs */
+    }
+
+    .contact .contact-form .btn {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+        margin-top: 20px;
+    }
+}
+
+
+/*******************************/
+/*********** Blog CSS **********/
+/*******************************/
+.blog {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.blog .blog-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.blog .blog-img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog .blog-img img {
+    width: 100%;
+    transition: .5s;
+}
+
+.blog .blog-item:hover img {
+    transform: scale(1.1);
+}
+
+.blog .blog-text {
+    position: relative;
+    padding: 30px;
+    border-right: 1px solid rgba(0, 0, 0, .07);
+    border-bottom: 1px solid rgba(0, 0, 0, .07);
+    border-left: 1px solid rgba(0, 0, 0, .07);
+}
+
+.blog .blog-text h2 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.blog .blog-text p {
+    margin-bottom: 10px;
+}
+
+.blog .blog-item a.btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+
+.blog .blog-item a.btn i {
+    margin-left: 5px;
+}
+
+.blog .blog-meta {
+    position: relative;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.blog .blog-meta p {
+    margin: 0 10px 0 0;
+    font-size: 13px;
+}
+
+.blog .blog-meta i {
+    color: #414141;
+    margin-right: 5px;
+}
+
+.blog .blog-meta p:last-child {
+    margin: 0;
+}
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 45px;
+    background: #00233C; /* couleur background banner bas*/
+}
+
+.footer .container-fluid {
+    padding: 60px 0 0 0;
+}
+
+.footer .footer-info {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.footer .footer-info h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer .footer-info h3 {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer .footer-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer-menu p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu p:last-child {
+    border: none;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #414141;
+}
+
+.footer .copyright {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer .copyright::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    top: 0;
+    left: 25%;
+    background: rgba(256, 256, 256, .2);
+}
+
+.footer .copyright p {
+    margin: 0;
+    color: #ffffff;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer .copyright p a:hover {
+    color: #414141;
+}
+
+
