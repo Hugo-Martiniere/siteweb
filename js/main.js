@@ -347,3 +347,155 @@ fetch('https://api.example.com/data', {
 .then(response => response.json())
 .then(data => console.log("Données reçues:", data))
 .catch(error => console.error("Erreur:", error));
+
+
+async function encodeText(text) {
+    try {
+        const response = await fetch(
+            "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2",
+            {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    inputs: text
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Réponse de l'API Hugging Face:", data);
+        return data[0]; // Retourne l'embedding du texte
+    } catch (error) {
+        console.error("Erreur lors de l'encodage du texte:", error);
+        throw error;
+    }
+}
+
+function cosineSimilarity(embeddingA, embeddingB) {
+    if (!embeddingA || !embeddingB) {
+        console.error("L'un des embeddings est undefined.");
+        return 0;
+    }
+
+    let dotProduct = 0;
+    let magnitudeA = 0;
+    let magnitudeB = 0;
+
+    for (let i = 0; i < embeddingA.length; i++) {
+        dotProduct += embeddingA[i] * embeddingB[i];
+        magnitudeA += embeddingA[i] * embeddingA[i];
+        magnitudeB += embeddingB[i] * embeddingB[i];
+    }
+
+    magnitudeA = Math.sqrt(magnitudeA);
+    magnitudeB = Math.sqrt(magnitudeB);
+
+    if (magnitudeA === 0 || magnitudeB === 0) {
+        console.error("L'une des magnitudes est nulle.");
+        return 0;
+    }
+
+    return dotProduct / (magnitudeA * magnitudeB);
+}
+
+
+
+
+async function encodeText(text) {
+    try {
+        const response = await fetch(
+            "https://api-inference.huggingface.co/models/sentence-transformers/all-mpnet-base-v2",
+            {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    inputs: text
+                })
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log("Réponse de l'API Hugging Face:", data);
+        return data[0]; // Retourne l'embedding du texte
+    } catch (error) {
+        console.error("Erreur lors de l'encodage du texte:", error);
+        throw error;
+    }
+}
+
+function cosineSimilarity(embeddingA, embeddingB) {
+    if (!embeddingA || !embeddingB) {
+        console.error("L'un des embeddings est undefined.");
+        return 0;
+    }
+
+    let dotProduct = 0;
+    let magnitudeA = 0;
+    let magnitudeB = 0;
+
+    for (let i = 0; i < embeddingA.length; i++) {
+        dotProduct += embeddingA[i] * embeddingB[i];
+        magnitudeA += embeddingA[i] * embeddingA[i];
+        magnitudeB += embeddingB[i] * embeddingB[i];
+    }
+
+    magnitudeA = Math.sqrt(magnitudeA);
+    magnitudeB = Math.sqrt(magnitudeB);
+
+    if (magnitudeA === 0 || magnitudeB === 0) {
+        console.error("L'une des magnitudes est nulle.");
+        return 0;
+    }
+
+    return dotProduct / (magnitudeA * magnitudeB);
+}
+
+async function findAnswerInContent(question, siteContent) {
+    if (!question || !siteContent) {
+        console.error("La question ou le contenu du site est vide.");
+        return null;
+    }
+
+    const questionEmbedding = await encodeText(question);
+    if (!questionEmbedding) {
+        console.error("L'encodage de la question a échoué.");
+        return null;
+    }
+
+    const sentences = siteContent.split(/[.!?]/).filter(s => s.trim() !== '');
+
+    let bestMatch = { sentence: '', similarity: -1 };
+
+    for (const sentence of sentences) {
+        const sentenceEmbedding = await encodeText(sentence);
+        if (!sentenceEmbedding) {
+            console.error("L'encodage de la phrase a échoué :", sentence);
+            continue;
+        }
+
+        const similarity = cosineSimilarity(questionEmbedding, sentenceEmbedding);
+        if (similarity > bestMatch.similarity) {
+            bestMatch = { sentence, similarity };
+        }
+    }
+
+    if (bestMatch.similarity > 0.5) {
+        return bestMatch.sentence;
+    } else {
+        return null; // Aucune réponse trouvée
+    }
+}
