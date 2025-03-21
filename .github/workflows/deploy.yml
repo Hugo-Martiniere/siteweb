@@ -1,4 +1,4 @@
-name: Deploy Static Site
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -16,5 +16,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Publier le contenu à la racine du dépôt
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}  # Utilisez votre PAT ici
+          publish_dir: ./  # Dossier à publier (racine du projet)
