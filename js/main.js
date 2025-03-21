@@ -198,7 +198,7 @@ async function encodeText(text) {
         {
             method: "POST",
             headers: {
-                "Authorization": "Bearer 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", // Votre token ici
+                "Authorization": "Bearer ${process.env.HUGGING_FACE_TOKEN}", // Votre token ici
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
