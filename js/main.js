@@ -193,34 +193,29 @@ function extractSiteContent() {
 }
 
 // Fonction pour encoder le texte en utilisant l'API Hugging Face
+
 async function encodeText(text) {
     try {
-        const response = await fetch(
-            "https://api-inference.huggingface.co/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", // Modèle multilingue
-            {
-                method: "POST",
-                headers: {
-                    "Authorization": `Bearer ${HUGGING_FACE_TOKEN}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    inputs: text
-                })
-            }
-        );
+        const response = await fetch('https://votre-backend.com/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ text })
+        });
 
         if (!response.ok) {
             throw new Error(`Erreur HTTP: ${response.status}`);
         }
 
         const data = await response.json();
-        console.log("Réponse de l'API Hugging Face:", data);
-        return data[0]; // Retourne l'embedding du texte
+        return data; // Retourne l'embedding du texte
     } catch (error) {
         console.error("Erreur lors de l'encodage du texte:", error);
         throw error;
     }
 }
+
 
 // Fonction pour calculer la similarité cosinus entre deux embeddings
 function cosineSimilarity(embeddingA, embeddingB) {
