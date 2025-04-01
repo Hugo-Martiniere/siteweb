@@ -78,19 +78,20 @@
     }, {offset: '80%'});
 
 
-    // Testimonials carousel
-    $(".testimonials-carousel").owlCarousel({
-        center: true,
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0:{
-                items:1
-            }
-        }
-    });
-    
+	$(".testimonials-carousel").owlCarousel({
+		center: true,
+		autoplay: true,  
+		autoplayTimeout: 15000, // Temps d'affichage (5 secondes par slide)
+		smartSpeed: 800, // Vitesse de transition (0.8 seconde)
+		dots: true,
+		loop: true,
+		responsive: {
+			0: {
+				items: 1
+			}
+		}
+	});
+
     
     
     // Portfolio filter
