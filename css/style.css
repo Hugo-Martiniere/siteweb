@@ -1,3 +1,6 @@
+
+
+
 /*******************************/
 /********* General CSS *********/
 /*******************************/
@@ -35,8 +38,13 @@ a:focus {
 }
 
 .container-fluid {
-    max-width: 1366px;
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 !important;
 }
+
+
 
 
 
@@ -754,13 +762,81 @@ body {
 }
 
 .experience .timeline .timeline-text {
-    padding: 30px;
+   /*padding: 30px;*/
     background: #ffffff;
     position: relative;
     border-right: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à gauche */
     box-shadow: 0 0 60px rgba(0, 0, 0, .08);
     padding-right: 40px; /* Ajout d'un espacement à droite pour éviter le chevauchement avec le logo */
+    max-height: 80px; /* hauteur réduite par défaut */
+    overflow: hidden;
+    transition: max-height 0.6s ease;
 }
+.experience .timeline .timeline-item:hover .timeline-text {
+    max-height: 600px; /* ou auto si contenu variable, mais auto n'est pas animé */
+}
+/* Bullets setup */
+.bullet {
+  display: block;
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateY(10px);
+  color: #222; /* couleur du texte des bullets */
+}
+
+.bullet-main {
+    font-weight: 700; /* plus épais que "bold" */
+    color: #000000; /* noir pur */
+}
+
+
+.sub-bullets {
+    margin-left: 20px;
+    display: block;
+}
+
+.bullet {
+    display: block;
+}
+
+
+/* Animation au survol */
+.timeline-item:hover .bullet {
+  animation: bulletFade 0.6s ease forwards;
+}
+
+/* Délais d'animation pour chaque bullet */
+.timeline-item:hover .bullet:nth-of-type(1) { animation-delay: 0.2s; }
+.timeline-item:hover .bullet:nth-of-type(2) { animation-delay: 0.4s; }
+.timeline-item:hover .bullet:nth-of-type(3) { animation-delay: 0.6s; }
+.timeline-item:hover .bullet:nth-of-type(4) { animation-delay: 0.8s; }
+.timeline-item:hover .bullet:nth-of-type(5) { animation-delay: 1.0s; }
+.timeline-item:hover .bullet:nth-of-type(6) { animation-delay: 1.2s; }
+
+/* Keyframes animation */
+@keyframes bulletFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.timeline-item:hover .bullet {
+    animation-play-state: running;
+}
+
+
+
+.experience .timeline .timeline-text p {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.experience .timeline .timeline-item:hover .timeline-text p {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .experience .timeline .timeline-item.right .timeline-text {
     border-left: 5px solid #dddddd;  /* Bordure grise par défaut pour les éléments à droite */
@@ -798,6 +874,19 @@ body {
 	text-align: justify;  /* Justifie le texte */
 
 }
+
+.experience .timeline .timeline-text p {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.experience .timeline .timeline-item:hover .timeline-text p {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 
 /* Correction pour déplacer la flèche */
 .experience .timeline .timeline-item.left::before {
@@ -894,6 +983,7 @@ body {
         font-size: 15px !important;  /* Augmente la taille du texte */
     }
 }
+
 
 
 .experience .timeline .timeline-item img[alt="Logo du Stade Lavallois"] {
