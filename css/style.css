@@ -568,11 +568,16 @@ body {
     }
 
     .hero .hero-image .speech-bubble::after {
-        left: 150%;                  /* pointe vers le centre de la bulle */
-        transform: translateX(-50%);
-        top: -20px;
-        border-color: transparent transparent #f1f1f1 transparent;
-    }
+    content: '';
+    position: absolute;
+    bottom: -10px;       /* sous la bulle */
+    left: 50%;           /* centre horizontal */
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f1f1f1 transparent transparent transparent;
+}
+
 }
 
 
