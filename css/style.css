@@ -542,16 +542,7 @@ body {
     text-align: left;
 }
 
-/* 🎯 Triangle à gauche (desktop) */
-.hero .hero-image .speech-bubble::after {
-    content: '';
-    position: absolute;
-    top: 30px;             /* Ajuste verticalement selon le contenu */
-    left: -10px;           /* Place le triangle juste à gauche */
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent #f1f1f1 transparent transparent;
-}
+
 
 /* 🌀 Animation pulse */
 @keyframes pulse {
@@ -569,16 +560,7 @@ body {
         position: relative;
     }
 
-    .hero .hero-image .speech-bubble::after {
-        content: "";
-        position: absolute;
-        top: -20px;
-        left: 50%;                    /* centre le triangle */
-        transform: translateX(-50%);
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent #f1f1f1 transparent;
-    }
+
 }
 
 
