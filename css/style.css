@@ -568,7 +568,7 @@ body {
     }
 
     .hero .hero-image .speech-bubble::after {
-        left: 50%;                  /* pointe vers le centre de la bulle */
+        left: 150%;                  /* pointe vers le centre de la bulle */
         transform: translateX(-50%);
         top: -20px;
         border-color: transparent transparent #f1f1f1 transparent;
