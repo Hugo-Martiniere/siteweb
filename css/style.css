@@ -558,16 +558,15 @@ body {
     100% { transform: scale(1); }
 }
 
-/* Mobile : place la bulle sous la photo et centré */
+/* Mobile : place la bulle sous la photo et centrée */
 @media (max-width: 767.98px) {
     .hero .hero-image .speech-bubble {
-        position: relative;
-        left: 50%;                  /* place le coin gauche au milieu */
-        transform: translateX(-50%); /* centre exactement la bulle */
-        margin: 15px 0 0 0;         /* espace au-dessus */
-        display: block;
+        display: block;             /* force la bulle à se comporter comme un block */
+        width: fit-content;         /* largeur selon le texte */
+        margin: 15px auto 0 auto;   /* centre horizontalement */
+        position: relative;         /* garde la flèche correctement */
     }
-    
+
     .hero .hero-image .speech-bubble::after {
         left: 50%;                  /* pointe vers le centre de la bulle */
         transform: translateX(-50%);
@@ -575,6 +574,7 @@ body {
         border-color: transparent transparent #f1f1f1 transparent;
     }
 }
+
 
 /*******************************/
 /******* Section Header ********/
