@@ -572,7 +572,7 @@ body {
 
     .hero .hero-image .speech-bubble::after {
         top: -10px;                  /* Triangle au-dessus de la bulle */
-        left: 30px;                  /* Ajuste horizontalement */
+        left: 0px;                  /* Ajuste horizontalement */
         border-width: 10px;
         border-style: solid;
         border-color: transparent transparent #f1f1f1 transparent;
