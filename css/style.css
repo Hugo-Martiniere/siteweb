@@ -561,23 +561,26 @@ body {
 }
 
 /* 📱 Responsive (mobile) */
-@media screen and (max-width: 768px) {
+@media (max-width: 767.98px) {
     .hero .hero-image .speech-bubble {
-        top: auto;
-        bottom: 20px;                /* Bulle en bas de l’image */
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
+        display: block;
+        width: fit-content;
+        margin: 15px auto 0 auto;
+        position: relative;
     }
 
     .hero .hero-image .speech-bubble::after {
-        top: -10px;                  /* Triangle au-dessus de la bulle */
-        left: 0px;                  /* Ajuste horizontalement */
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;                    /* centre le triangle */
+        transform: translateX(-50%);
         border-width: 10px;
         border-style: solid;
         border-color: transparent transparent #f1f1f1 transparent;
     }
 }
+
 
 
 
