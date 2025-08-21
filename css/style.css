@@ -839,7 +839,12 @@ body {
   margin-bottom: 4px;
   opacity: 1;
   transform: translateY(0);
+  margin-left: 15px;   /* décale le texte pour faire l’effet bullet */
+  text-indent: -10px;  /* optionnel, pour que le • dépasse légèrement */
 }
+
+
+
 
 .bullet-main {
     font-weight: 700; /* plus épais que "bold" */
