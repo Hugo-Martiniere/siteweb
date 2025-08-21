@@ -524,11 +524,11 @@ body {
 }
 
 
-
+/* 🌍 Style par défaut (desktop) */
 .hero .hero-image .speech-bubble {
     position: absolute;
     top: 20%;
-    left: 60%;      /* À droite de l’image */
+    left: 60%;        /* Bulle à droite de l’image */
     margin-left: 20px;
     background: #f1f1f1;
     border-radius: 10px;
@@ -542,43 +542,44 @@ body {
     text-align: left;
 }
 
+/* 🎯 Triangle à gauche (desktop) */
 .hero .hero-image .speech-bubble::after {
     content: '';
     position: absolute;
-    top: 30%;
-    left: -10px;
+    top: 30px;             /* Ajuste verticalement selon le contenu */
+    left: -10px;           /* Place le triangle juste à gauche */
     border-width: 10px;
     border-style: solid;
     border-color: transparent #f1f1f1 transparent transparent;
 }
 
+/* 🌀 Animation pulse */
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
 
-/* Mobile : place la bulle sous la photo et centrée */
-@media (max-width: 767.98px) {
+/* 📱 Responsive (mobile) */
+@media screen and (max-width: 768px) {
     .hero .hero-image .speech-bubble {
-        display: block;             /* force la bulle à se comporter comme un block */
-        width: fit-content;         /* largeur selon le texte */
-        margin: 15px auto 0 auto;   /* centre horizontalement */
-        position: relative;         /* garde la flèche correctement */
+        top: auto;
+        bottom: 20px;                /* Bulle en bas de l’image */
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
     }
 
     .hero .hero-image .speech-bubble::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;       /* sous la bulle */
-    left: 50%;           /* centre horizontal */
-    transform: translateX(-50%);
-    border-width: 10px;
-    border-style: solid;
-    border-color: #f1f1f1 transparent transparent transparent;
+        top: -10px;                  /* Triangle au-dessus de la bulle */
+        left: 30px;                  /* Ajuste horizontalement */
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #f1f1f1 transparent;
+    }
 }
 
-}
+
 
 
 /*******************************/
