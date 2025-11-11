@@ -18,8 +18,8 @@
     "welcome": "Bienvenue sur mon portfolio",
     "description": "Je suis un data scientist passionné par l'analyse de données.",
 	"about-title": "À propos de moi",
-	"about-subtitle": "Étudiant en Master de Data Science",
-	"about-description": "Bonjour, je m'appelle Hugo, un Data Scientist terminant son Master en août 2025. Passionné par l'exploration des données, le machine learning et l'intelligence artificielle, je suis à la recherche de ma prochaine opportunité dans un environnement innovant et collaboratif. Je vous invite à explorer mon site web où je partage mes projets, mes compétences et mes centres d'intérêt. Bonne visite !",
+	"about-subtitle": "Data Scientist",
+	"about-description": "Bonjour, je suis Hugo, Data Scientist chez Kering. Je suis passionné par l’analyse de données, le machine learning et l’intelligence artificielle. Sur ce site, je partage mes projets, mes compétences et mes centres d’intérêt autour de la data. Bonne visite !",
 	"skill-visualisation": "Data Visualisation",
 	"skill-science": "Data Science",
 	"skill-engineering": "Data Engineering",
@@ -27,6 +27,16 @@
 	
     "experience-title": "Parcours Académique",
     "experience-subtitle": "Formations & Expériences Professionnelles",
+
+    "experience-0-date": "Nov 2025 - Jusqu'à Présent",
+    "experience-0-role": "Data Scientist",
+    "experience-0-company": "Kering, Paris",
+    "experience-0-bullet-1": "• Analyse et traitement de données pour soutenir les décisions stratégiques.",
+    "experience-0-bullet-2": "• Développement et mise en production de modèles analytiques et prédictifs.",
+    "experience-0-bullet-3": "• Présentation des résultats et recommandations aux équipes métiers.",
+
+
+
     "experience-1-date": "Sept 2024 - Août 2025",
     "experience-1-role": "Alternant Data Scientist",
     "experience-1-company": "Société Générale, La Défense, Paris",
@@ -176,8 +186,8 @@
     "welcome": "Welcome to my portfolio",
     "description": "I am a data scientist passionate about data analysis.",
 	"about-title": "About Me",
-	"about-subtitle": "Data Science Master's student",
-	"about-description": "Hello, I'm Hugo Martinière, a Data Scientist finishing his Master's degree in August 2025. Passionate about data exploration, machine learning, and artificial intelligence, I'm looking for my next opportunity in an innovate and collaborative environment. I invite you to explore my website where I share my projects, skills, and interests. Enjoy your visit!",
+	"about-subtitle": "Data Scientist",
+	"about-description": "Hello, I am Hugo, Data Scientist at Kering. I am passionate about data analysis, machine learning, and artificial intelligence. On this site, I share my projects, my skills, and my interests related to data. Enjoy your visit!",
 	"skill-visualisation": "Data Visualisation",
 	"skill-science": "Data Science",
 	"skill-engineering": "Data Engineering",
@@ -185,6 +195,14 @@
 	,
 	"experience-title": "Academic Journey",
 	"experience-subtitle": "Education & Professional Experiences",
+
+    "experience-0-date": "Nov 2025 - Present",
+    "experience-0-role": "Data Scientist",
+    "experience-0-company": "Kering, Paris",
+    "experience-0-bullet-1": "• Analysis and processing of data to support strategic decisions.",
+    "experience-0-bullet-2": "• Development and deployment of analytical and predictive models.",
+    "experience-0-bullet-3": "• Presentation of results and recommendations to business teams.",
+
 	
     "experience-1-date": "Sept 2024 - August 2025",
     "experience-1-role": "Data Scientist Intern",
